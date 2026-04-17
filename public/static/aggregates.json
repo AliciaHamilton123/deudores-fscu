@@ -7,8 +7,12 @@
     "total_utm": 52323904.0,
     "avg_utm": 171.7,
     "median_utm": 113.2,
-    "total_clp": 3809180211200,
-    "utm_clp": 72800,
+    "total_clp": 3656865326656,
+    "total_usd": 4125897335,
+    "utm_clp": 69889,
+    "usd_clp": 886.32,
+    "utm_usd": 78.85,
+    "fecha_conversion": "2026-04-17",
     "patrimonio_alto": 146032,
     "con_vehiculos": 176447,
     "con_propiedades": 94982
@@ -554,13 +558,6 @@
       "utm_total": 207228.0
     },
     {
-      "comuna": "La Reina",
-      "cod_comuna": 13113.0,
-      "region": "Metropolitana",
-      "n": 1530,
-      "utm_total": 216061.0
-    },
-    {
       "comuna": "Quinta Normal",
       "cod_comuna": 13126.0,
       "region": "Metropolitana",
@@ -573,6 +570,13 @@
       "region": "Metropolitana",
       "n": 1530,
       "utm_total": 238309.0
+    },
+    {
+      "comuna": "La Reina",
+      "cod_comuna": 13113.0,
+      "region": "Metropolitana",
+      "n": 1530,
+      "utm_total": 216061.0
     },
     {
       "comuna": "Penco",
@@ -652,18 +656,18 @@
       "utm_total": 195480.0
     },
     {
-      "comuna": "Independencia",
-      "cod_comuna": 13108.0,
-      "region": "Metropolitana",
-      "n": 1251,
-      "utm_total": 216197.0
-    },
-    {
       "comuna": "Los Andes",
       "cod_comuna": 5301.0,
       "region": "Valparaíso",
       "n": 1251,
       "utm_total": 167176.0
+    },
+    {
+      "comuna": "Independencia",
+      "cod_comuna": 13108.0,
+      "region": "Metropolitana",
+      "n": 1251,
+      "utm_total": 216197.0
     },
     {
       "comuna": "Huechuraba",
@@ -687,18 +691,18 @@
       "utm_total": 182917.0
     },
     {
-      "comuna": "Pedro Aguirre Cerda",
-      "cod_comuna": 13121.0,
-      "region": "Metropolitana",
-      "n": 1124,
-      "utm_total": 175013.0
-    },
-    {
       "comuna": "Alto Hospicio",
       "cod_comuna": 1107.0,
       "region": "Tarapacá",
       "n": 1124,
       "utm_total": 158093.0
+    },
+    {
+      "comuna": "Pedro Aguirre Cerda",
+      "cod_comuna": 13121.0,
+      "region": "Metropolitana",
+      "n": 1124,
+      "utm_total": 175013.0
     },
     {
       "comuna": "Peñaflor",
@@ -1072,18 +1076,18 @@
       "utm_total": 66841.0
     },
     {
-      "comuna": "Calbuco",
-      "cod_comuna": 10102.0,
-      "region": "Los Lagos",
-      "n": 497,
-      "utm_total": 60044.0
-    },
-    {
       "comuna": "Loncoche",
       "cod_comuna": 9109.0,
       "region": "La Araucanía",
       "n": 497,
       "utm_total": 60831.0
+    },
+    {
+      "comuna": "Calbuco",
+      "cod_comuna": 10102.0,
+      "region": "Los Lagos",
+      "n": 497,
+      "utm_total": 60044.0
     },
     {
       "comuna": "Los Vilos",
@@ -1205,18 +1209,18 @@
       "utm_total": 56546.0
     },
     {
-      "comuna": "Pirque",
-      "cod_comuna": 13202.0,
-      "region": "Metropolitana",
-      "n": 404,
-      "utm_total": 64020.0
-    },
-    {
       "comuna": "Yungay",
       "cod_comuna": 16109.0,
       "region": "Ñuble",
       "n": 404,
       "utm_total": 48048.0
+    },
+    {
+      "comuna": "Pirque",
+      "cod_comuna": 13202.0,
+      "region": "Metropolitana",
+      "n": 404,
+      "utm_total": 64020.0
     },
     {
       "comuna": "Quellon",
@@ -1380,13 +1384,6 @@
       "utm_total": 33828.0
     },
     {
-      "comuna": "Lanco",
-      "cod_comuna": 14103.0,
-      "region": "Los Ríos",
-      "n": 322,
-      "utm_total": 37650.0
-    },
-    {
       "comuna": "San Esteban",
       "cod_comuna": 5304.0,
       "region": "Valparaíso",
@@ -1399,6 +1396,13 @@
       "region": "Maule",
       "n": 322,
       "utm_total": 39217.0
+    },
+    {
+      "comuna": "Lanco",
+      "cod_comuna": 14103.0,
+      "region": "Los Ríos",
+      "n": 322,
+      "utm_total": 37650.0
     },
     {
       "comuna": "Cabildo",
@@ -1457,18 +1461,18 @@
       "utm_total": 35980.0
     },
     {
-      "comuna": "San Jose De Maipo",
-      "cod_comuna": 13203.0,
-      "region": "Metropolitana",
-      "n": 283,
-      "utm_total": 49550.0
-    },
-    {
       "comuna": "Collipulli",
       "cod_comuna": 9202.0,
       "region": "La Araucanía",
       "n": 283,
       "utm_total": 36459.0
+    },
+    {
+      "comuna": "San Jose De Maipo",
+      "cod_comuna": 13203.0,
+      "region": "Metropolitana",
+      "n": 283,
+      "utm_total": 49550.0
     },
     {
       "comuna": "Putaendo",
@@ -1506,18 +1510,18 @@
       "utm_total": 33750.0
     },
     {
-      "comuna": "Futrono",
-      "cod_comuna": 14202.0,
-      "region": "Los Ríos",
-      "n": 260,
-      "utm_total": 30225.0
-    },
-    {
       "comuna": "Huasco",
       "cod_comuna": 3304.0,
       "region": "Atacama",
       "n": 260,
       "utm_total": 46237.0
+    },
+    {
+      "comuna": "Futrono",
+      "cod_comuna": 14202.0,
+      "region": "Los Ríos",
+      "n": 260,
+      "utm_total": 30225.0
     },
     {
       "comuna": "San Nicolas",
@@ -1695,11 +1699,11 @@
       "utm_total": 30295.0
     },
     {
-      "comuna": "Pinto",
-      "cod_comuna": 16106.0,
-      "region": "Ñuble",
+      "comuna": "Tierra Amarilla",
+      "cod_comuna": 3103.0,
+      "region": "Atacama",
       "n": 201,
-      "utm_total": 27523.0
+      "utm_total": 30756.0
     },
     {
       "comuna": "Mejillones",
@@ -1709,11 +1713,11 @@
       "utm_total": 26326.0
     },
     {
-      "comuna": "Tierra Amarilla",
-      "cod_comuna": 3103.0,
-      "region": "Atacama",
+      "comuna": "Pinto",
+      "cod_comuna": 16106.0,
+      "region": "Ñuble",
       "n": 201,
-      "utm_total": 30756.0
+      "utm_total": 27523.0
     },
     {
       "comuna": "Pozo Almonte",
@@ -1751,13 +1755,6 @@
       "utm_total": 25464.0
     },
     {
-      "comuna": "Santa Maria",
-      "cod_comuna": 5706.0,
-      "region": "Valparaíso",
-      "n": 189,
-      "utm_total": 25315.0
-    },
-    {
       "comuna": "Teodoro Schmidt",
       "cod_comuna": 9117.0,
       "region": "La Araucanía",
@@ -1772,25 +1769,18 @@
       "utm_total": 19514.0
     },
     {
+      "comuna": "Santa Maria",
+      "cod_comuna": 5706.0,
+      "region": "Valparaíso",
+      "n": 189,
+      "utm_total": 25315.0
+    },
+    {
       "comuna": "Dalcahue",
       "cod_comuna": 10205.0,
       "region": "Los Lagos",
       "n": 188,
       "utm_total": 22463.0
-    },
-    {
-      "comuna": "Maullin",
-      "cod_comuna": 10108.0,
-      "region": "Los Lagos",
-      "n": 184,
-      "utm_total": 22178.0
-    },
-    {
-      "comuna": "Cholchol",
-      "cod_comuna": 9121.0,
-      "region": "La Araucanía",
-      "n": 184,
-      "utm_total": 24614.0
     },
     {
       "comuna": "Peumo",
@@ -1805,6 +1795,20 @@
       "region": "Valparaíso",
       "n": 184,
       "utm_total": 31998.0
+    },
+    {
+      "comuna": "Maullin",
+      "cod_comuna": 10108.0,
+      "region": "Los Lagos",
+      "n": 184,
+      "utm_total": 22178.0
+    },
+    {
+      "comuna": "Cholchol",
+      "cod_comuna": 9121.0,
+      "region": "La Araucanía",
+      "n": 184,
+      "utm_total": 24614.0
     },
     {
       "comuna": "San Pablo",
@@ -1828,18 +1832,18 @@
       "utm_total": 18128.0
     },
     {
-      "comuna": "Tolten",
-      "cod_comuna": 9118.0,
-      "region": "La Araucanía",
-      "n": 178,
-      "utm_total": 24446.0
-    },
-    {
       "comuna": "Florida",
       "cod_comuna": 8104.0,
       "region": "Biobío",
       "n": 178,
       "utm_total": 22648.0
+    },
+    {
+      "comuna": "Tolten",
+      "cod_comuna": 9118.0,
+      "region": "La Araucanía",
+      "n": 178,
+      "utm_total": 24446.0
     },
     {
       "comuna": "Santa Barbara",
@@ -1905,18 +1909,18 @@
       "utm_total": 21730.0
     },
     {
-      "comuna": "Codegua",
-      "cod_comuna": 6102.0,
-      "region": "O’Higgins",
-      "n": 152,
-      "utm_total": 21223.0
-    },
-    {
       "comuna": "Peralillo",
       "cod_comuna": 6307.0,
       "region": "O’Higgins",
       "n": 152,
       "utm_total": 18415.0
+    },
+    {
+      "comuna": "Codegua",
+      "cod_comuna": 6102.0,
+      "region": "O’Higgins",
+      "n": 152,
+      "utm_total": 21223.0
     },
     {
       "comuna": "Zapallar",
@@ -1933,18 +1937,18 @@
       "utm_total": 22399.0
     },
     {
-      "comuna": "Yerbas Buenas",
-      "cod_comuna": 7408.0,
-      "region": "Maule",
-      "n": 143,
-      "utm_total": 17604.0
-    },
-    {
       "comuna": "Punitaqui",
       "cod_comuna": 4304.0,
       "region": "Coquimbo",
       "n": 143,
       "utm_total": 23695.0
+    },
+    {
+      "comuna": "Yerbas Buenas",
+      "cod_comuna": 7408.0,
+      "region": "Maule",
+      "n": 143,
+      "utm_total": 17604.0
     },
     {
       "comuna": "Ñiquen",
@@ -1954,18 +1958,18 @@
       "utm_total": 14559.0
     },
     {
-      "comuna": "Licanten",
-      "cod_comuna": 7303.0,
-      "region": "Maule",
-      "n": 141,
-      "utm_total": 16909.0
-    },
-    {
       "comuna": "Paiguano",
       "cod_comuna": 4105.0,
       "region": "Coquimbo",
       "n": 141,
       "utm_total": 25938.0
+    },
+    {
+      "comuna": "Licanten",
+      "cod_comuna": 7303.0,
+      "region": "Maule",
+      "n": 141,
+      "utm_total": 16909.0
     },
     {
       "comuna": "Petorca",
@@ -1989,13 +1993,6 @@
       "utm_total": 14171.0
     },
     {
-      "comuna": "Rauco",
-      "cod_comuna": 7305.0,
-      "region": "Maule",
-      "n": 135,
-      "utm_total": 16414.0
-    },
-    {
       "comuna": "Pelluhue",
       "cod_comuna": 7203.0,
       "region": "Maule",
@@ -2008,6 +2005,13 @@
       "region": "O’Higgins",
       "n": 135,
       "utm_total": 20560.0
+    },
+    {
+      "comuna": "Rauco",
+      "cod_comuna": 7305.0,
+      "region": "Maule",
+      "n": 135,
+      "utm_total": 16414.0
     },
     {
       "comuna": "Catemu",
@@ -2031,18 +2035,18 @@
       "utm_total": 15848.0
     },
     {
-      "comuna": "Maria Pinto",
-      "cod_comuna": 13504.0,
-      "region": "Metropolitana",
-      "n": 132,
-      "utm_total": 17116.0
-    },
-    {
       "comuna": "Melipeuco",
       "cod_comuna": 9110.0,
       "region": "La Araucanía",
       "n": 132,
       "utm_total": 13194.0
+    },
+    {
+      "comuna": "Maria Pinto",
+      "cod_comuna": 13504.0,
+      "region": "Metropolitana",
+      "n": 132,
+      "utm_total": 17116.0
     },
     {
       "comuna": "Curepto",
@@ -2066,18 +2070,18 @@
       "utm_total": 13643.0
     },
     {
-      "comuna": "Pencahue",
-      "cod_comuna": 7107.0,
-      "region": "Maule",
-      "n": 128,
-      "utm_total": 15823.0
-    },
-    {
       "comuna": "Cisnes",
       "cod_comuna": 11202.0,
       "region": "Aysén",
       "n": 128,
       "utm_total": 20534.0
+    },
+    {
+      "comuna": "Pencahue",
+      "cod_comuna": 7107.0,
+      "region": "Maule",
+      "n": 128,
+      "utm_total": 15823.0
     },
     {
       "comuna": "Panquehue",
@@ -2150,18 +2154,18 @@
       "utm_total": 14488.0
     },
     {
-      "comuna": "Canela",
-      "cod_comuna": 4202.0,
-      "region": "Coquimbo",
-      "n": 111,
-      "utm_total": 12368.0
-    },
-    {
       "comuna": "Contulmo",
       "cod_comuna": 8204.0,
       "region": "Biobío",
       "n": 111,
       "utm_total": 15125.0
+    },
+    {
+      "comuna": "Canela",
+      "cod_comuna": 4202.0,
+      "region": "Coquimbo",
+      "n": 111,
+      "utm_total": 12368.0
     },
     {
       "comuna": "Negrete",
@@ -2192,18 +2196,18 @@
       "utm_total": 13180.0
     },
     {
-      "comuna": "Corral",
-      "cod_comuna": 14102.0,
-      "region": "Los Ríos",
-      "n": 104,
-      "utm_total": 15030.0
-    },
-    {
       "comuna": "Pelarco",
       "cod_comuna": 7106.0,
       "region": "Maule",
       "n": 104,
       "utm_total": 13701.0
+    },
+    {
+      "comuna": "Corral",
+      "cod_comuna": 14102.0,
+      "region": "Los Ríos",
+      "n": 104,
+      "utm_total": 15030.0
     },
     {
       "comuna": "Placilla",
@@ -2248,18 +2252,18 @@
       "utm_total": 11924.0
     },
     {
-      "comuna": "Tirua",
-      "cod_comuna": 8207.0,
-      "region": "Biobío",
-      "n": 95,
-      "utm_total": 9279.0
-    },
-    {
       "comuna": "Trehuaco",
       "cod_comuna": 16207.0,
       "region": "Ñuble",
       "n": 95,
       "utm_total": 10262.0
+    },
+    {
+      "comuna": "Tirua",
+      "cod_comuna": 8207.0,
+      "region": "Biobío",
+      "n": 95,
+      "utm_total": 9279.0
     },
     {
       "comuna": "Queilen",
@@ -2269,18 +2273,18 @@
       "utm_total": 10423.0
     },
     {
-      "comuna": "Ercilla",
-      "cod_comuna": 9204.0,
-      "region": "La Araucanía",
-      "n": 92,
-      "utm_total": 11929.0
-    },
-    {
       "comuna": "Vichuquen",
       "cod_comuna": 7309.0,
       "region": "Maule",
       "n": 92,
       "utm_total": 9933.0
+    },
+    {
+      "comuna": "Ercilla",
+      "cod_comuna": 9204.0,
+      "region": "La Araucanía",
+      "n": 92,
+      "utm_total": 11929.0
     },
     {
       "comuna": "Cochrane",
@@ -2318,11 +2322,11 @@
       "utm_total": 10332.0
     },
     {
-      "comuna": "Chile Chico",
-      "cod_comuna": 11401.0,
-      "region": "Aysén",
+      "comuna": "Chaiten",
+      "cod_comuna": 10401.0,
+      "region": "Los Lagos",
       "n": 82,
-      "utm_total": 10258.0
+      "utm_total": 9932.0
     },
     {
       "comuna": "Los Sauces",
@@ -2332,18 +2336,11 @@
       "utm_total": 7981.0
     },
     {
-      "comuna": "Chaiten",
-      "cod_comuna": 10401.0,
-      "region": "Los Lagos",
+      "comuna": "Chile Chico",
+      "cod_comuna": 11401.0,
+      "region": "Aysén",
       "n": 82,
-      "utm_total": 9932.0
-    },
-    {
-      "comuna": "Portezuelo",
-      "cod_comuna": 16205.0,
-      "region": "Ñuble",
-      "n": 80,
-      "utm_total": 9118.0
+      "utm_total": 10258.0
     },
     {
       "comuna": "Maria Elena",
@@ -2351,6 +2348,13 @@
       "region": "Antofagasta",
       "n": 80,
       "utm_total": 11009.0
+    },
+    {
+      "comuna": "Portezuelo",
+      "cod_comuna": 16205.0,
+      "region": "Ñuble",
+      "n": 80,
+      "utm_total": 9118.0
     },
     {
       "comuna": "Lumaco",
@@ -2395,18 +2399,18 @@
       "utm_total": 9186.0
     },
     {
-      "comuna": "Futaleufu",
-      "cod_comuna": 10402.0,
-      "region": "Los Lagos",
-      "n": 67,
-      "utm_total": 7075.0
-    },
-    {
       "comuna": "Quilaco",
       "cod_comuna": 8308.0,
       "region": "Biobío",
       "n": 67,
       "utm_total": 12240.0
+    },
+    {
+      "comuna": "Futaleufu",
+      "cod_comuna": 10402.0,
+      "region": "Los Lagos",
+      "n": 67,
+      "utm_total": 7075.0
     },
     {
       "comuna": "Huara",
@@ -2444,11 +2448,11 @@
       "utm_total": 7528.0
     },
     {
-      "comuna": "Cabo De Hornos",
-      "cod_comuna": 12201.0,
-      "region": "Magallanes",
+      "comuna": "Alhue",
+      "cod_comuna": 13502.0,
+      "region": "Metropolitana",
       "n": 51,
-      "utm_total": 5913.0
+      "utm_total": 8773.0
     },
     {
       "comuna": "Cochamo",
@@ -2458,18 +2462,11 @@
       "utm_total": 5444.0
     },
     {
-      "comuna": "Alhue",
-      "cod_comuna": 13502.0,
-      "region": "Metropolitana",
+      "comuna": "Cabo De Hornos",
+      "cod_comuna": 12201.0,
+      "region": "Magallanes",
       "n": 51,
-      "utm_total": 8773.0
-    },
-    {
-      "comuna": "Puqueldon",
-      "cod_comuna": 10206.0,
-      "region": "Los Lagos",
-      "n": 46,
-      "utm_total": 5754.0
+      "utm_total": 5913.0
     },
     {
       "comuna": "Empedrado",
@@ -2477,6 +2474,13 @@
       "region": "Maule",
       "n": 46,
       "utm_total": 5997.0
+    },
+    {
+      "comuna": "Puqueldon",
+      "cod_comuna": 10206.0,
+      "region": "Los Lagos",
+      "n": 46,
+      "utm_total": 5754.0
     },
     {
       "comuna": "La Estrella",
@@ -2556,18 +2560,18 @@
       "utm_total": 2889.0
     },
     {
-      "comuna": "O'Higgins",
-      "cod_comuna": 11302.0,
-      "region": "Aysén",
-      "n": 18,
-      "utm_total": 2233.0
-    },
-    {
       "comuna": "Lago Verde",
       "cod_comuna": 11102.0,
       "region": "Aysén",
       "n": 18,
       "utm_total": 1884.0
+    },
+    {
+      "comuna": "O'Higgins",
+      "cod_comuna": 11302.0,
+      "region": "Aysén",
+      "n": 18,
+      "utm_total": 2233.0
     },
     {
       "comuna": "Primavera",
@@ -2693,6 +2697,16 @@
       "n": 5686
     },
     {
+      "rango_edad": "46-55",
+      "sexo": "Masculino",
+      "n": 38720
+    },
+    {
+      "rango_edad": "36-45",
+      "sexo": "Masculino",
+      "n": 81717
+    },
+    {
       "rango_edad": "18-25",
       "sexo": "Femenino",
       "n": 240
@@ -2711,16 +2725,6 @@
       "rango_edad": "36-45",
       "sexo": "Femenino",
       "n": 73376
-    },
-    {
-      "rango_edad": "46-55",
-      "sexo": "Masculino",
-      "n": 38720
-    },
-    {
-      "rango_edad": "36-45",
-      "sexo": "Masculino",
-      "n": 81717
     },
     {
       "rango_edad": "18-25",
@@ -3425,14 +3429,14 @@
       "utm_avg": 184.6
     },
     {
-      "company": "particular",
-      "n": 117,
-      "utm_avg": 187.3
-    },
-    {
       "company": "falabella",
       "n": 117,
       "utm_avg": 162.2
+    },
+    {
+      "company": "particular",
+      "n": 117,
+      "utm_avg": 187.3
     },
     {
       "company": "deloitte",
@@ -3455,11 +3459,6 @@
       "utm_avg": 171.8
     },
     {
-      "company": "agrosuper",
-      "n": 104,
-      "utm_avg": 160.6
-    },
-    {
       "company": "smu",
       "n": 104,
       "utm_avg": 176.0
@@ -3468,6 +3467,11 @@
       "company": "pontificia universidad católica de valparaíso",
       "n": 104,
       "utm_avg": 102.6
+    },
+    {
+      "company": "agrosuper",
+      "n": 104,
+      "utm_avg": 160.6
     },
     {
       "company": "universidad de talca",
@@ -3490,14 +3494,14 @@
       "utm_avg": 192.5
     },
     {
-      "company": "universidad santo tomás (cl)",
-      "n": 93,
-      "utm_avg": 199.9
-    },
-    {
       "company": "universidad de valparaíso",
       "n": 93,
       "utm_avg": 123.2
+    },
+    {
+      "company": "universidad santo tomás (cl)",
+      "n": 93,
+      "utm_avg": 199.9
     },
     {
       "company": "achs",
@@ -3510,14 +3514,9 @@
       "utm_avg": 157.8
     },
     {
-      "company": "fundación integra, chile",
+      "company": "escuela",
       "n": 89,
-      "utm_avg": 172.7
-    },
-    {
-      "company": "ey",
-      "n": 89,
-      "utm_avg": 105.5
+      "utm_avg": 194.0
     },
     {
       "company": "bhp",
@@ -3525,9 +3524,14 @@
       "utm_avg": 157.2
     },
     {
-      "company": "escuela",
+      "company": "ey",
       "n": 89,
-      "utm_avg": 194.0
+      "utm_avg": 105.5
+    },
+    {
+      "company": "fundación integra, chile",
+      "n": 89,
+      "utm_avg": 172.7
     },
     {
       "company": "bureau veritas",
@@ -3713,69 +3717,19 @@
       "utm_avg": 177.6
     },
     {
-      "universidad_principal": "U.ARTURO PRAT",
-      "company": "universidad arturo prat",
-      "n": 6,
-      "utm_avg": 112.2
-    },
-    {
       "universidad_principal": "U.DE ATACAMA",
       "company": "universidad de atacama",
       "n": 6,
       "utm_avg": 146.4
+    },
+    {
+      "universidad_principal": "U.ARTURO PRAT",
+      "company": "universidad arturo prat",
+      "n": 6,
+      "utm_avg": 112.2
     }
   ],
   "perfil_x_region": [
-    {
-      "region": "O’Higgins",
-      "perfil": "8. Resto",
-      "n": 7731
-    },
-    {
-      "region": "Coquimbo",
-      "perfil": "7. Alto patrimonio s/LK",
-      "n": 8572
-    },
-    {
-      "region": "Antofagasta",
-      "perfil": "5. Operativo",
-      "n": 222
-    },
-    {
-      "region": "Metropolitana",
-      "perfil": "1. Ejecutivo",
-      "n": 1668
-    },
-    {
-      "region": "O’Higgins",
-      "perfil": "2. Gerente",
-      "n": 509
-    },
-    {
-      "region": "Valparaíso",
-      "perfil": "3. Académico",
-      "n": 1249
-    },
-    {
-      "region": "Coquimbo",
-      "perfil": "4. Profesional",
-      "n": 1243
-    },
-    {
-      "region": "Antofagasta",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 519
-    },
-    {
-      "region": "Ñuble",
-      "perfil": "1. Ejecutivo",
-      "n": 113
-    },
-    {
-      "region": "Aysén",
-      "perfil": "1. Ejecutivo",
-      "n": 25
-    },
     {
       "region": "Antofagasta",
       "perfil": "7. Alto patrimonio s/LK",
@@ -3800,31 +3754,6 @@
       "region": "Coquimbo",
       "perfil": "5. Operativo",
       "n": 239
-    },
-    {
-      "region": "Antofagasta",
-      "perfil": "8. Resto",
-      "n": 5752
-    },
-    {
-      "region": "O’Higgins",
-      "perfil": "5. Operativo",
-      "n": 198
-    },
-    {
-      "region": "Antofagasta",
-      "perfil": "2. Gerente",
-      "n": 448
-    },
-    {
-      "region": "O’Higgins",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 480
-    },
-    {
-      "region": "Arica Y Parinacota",
-      "perfil": "1. Ejecutivo",
-      "n": 76
     },
     {
       "region": "Maule",
@@ -3897,159 +3826,29 @@
       "n": 97
     },
     {
-      "region": "Arica Y Parinacota",
-      "perfil": "8. Resto",
-      "n": 5743
-    },
-    {
-      "region": "Arica Y Parinacota",
-      "perfil": "2. Gerente",
-      "n": 167
-    },
-    {
-      "region": "Metropolitana",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 4003
-    },
-    {
-      "region": "Metropolitana",
-      "perfil": "5. Operativo",
-      "n": 1264
-    },
-    {
       "region": "Antofagasta",
-      "perfil": "1. Ejecutivo",
-      "n": 130
-    },
-    {
-      "region": "Ñuble",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 313
-    },
-    {
-      "region": "Aysén",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 62
-    },
-    {
-      "region": "Ñuble",
-      "perfil": "5. Operativo",
-      "n": 114
-    },
-    {
-      "region": "Aysén",
-      "perfil": "5. Operativo",
-      "n": 27
-    },
-    {
-      "region": "La Araucanía",
       "perfil": "8. Resto",
-      "n": 13451
-    },
-    {
-      "region": "Los Ríos",
-      "perfil": "1. Ejecutivo",
-      "n": 133
-    },
-    {
-      "region": "La Araucanía",
-      "perfil": "2. Gerente",
-      "n": 436
-    },
-    {
-      "region": "Valparaíso",
-      "perfil": "8. Resto",
-      "n": 25798
-    },
-    {
-      "region": "Metropolitana",
-      "perfil": "7. Alto patrimonio s/LK",
-      "n": 43763
-    },
-    {
-      "region": "Ñuble",
-      "perfil": "7. Alto patrimonio s/LK",
-      "n": 2544
-    },
-    {
-      "region": "Aysén",
-      "perfil": "7. Alto patrimonio s/LK",
-      "n": 713
-    },
-    {
-      "region": "Valparaíso",
-      "perfil": "2. Gerente",
-      "n": 1393
-    },
-    {
-      "region": "Metropolitana",
-      "perfil": "4. Profesional",
-      "n": 8844
-    },
-    {
-      "region": "Coquimbo",
-      "perfil": "1. Ejecutivo",
-      "n": 229
+      "n": 5752
     },
     {
       "region": "O’Higgins",
-      "perfil": "3. Académico",
-      "n": 368
+      "perfil": "5. Operativo",
+      "n": 198
     },
     {
-      "region": "Ñuble",
-      "perfil": "4. Profesional",
-      "n": 604
-    },
-    {
-      "region": "Aysén",
-      "perfil": "4. Profesional",
-      "n": 127
-    },
-    {
-      "region": "Biobío",
-      "perfil": "8. Resto",
-      "n": 25260
-    },
-    {
-      "region": "Los Lagos",
-      "perfil": "8. Resto",
-      "n": 9482
-    },
-    {
-      "region": "(sin región)",
-      "perfil": "3. Académico",
-      "n": 122
-    },
-    {
-      "region": "Maule",
-      "perfil": "3. Académico",
-      "n": 443
-    },
-    {
-      "region": "Magallanes",
-      "perfil": "3. Académico",
-      "n": 88
-    },
-    {
-      "region": "Los Lagos",
+      "region": "Antofagasta",
       "perfil": "2. Gerente",
       "n": 448
     },
     {
-      "region": "Biobío",
-      "perfil": "2. Gerente",
-      "n": 1011
+      "region": "O’Higgins",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 480
     },
     {
-      "region": "Atacama",
+      "region": "Arica Y Parinacota",
       "perfil": "1. Ejecutivo",
-      "n": 77
-    },
-    {
-      "region": "Tarapacá",
-      "perfil": "1. Ejecutivo",
-      "n": 82
+      "n": 76
     },
     {
       "region": "Coquimbo",
@@ -4127,39 +3926,224 @@
       "n": 241
     },
     {
-      "region": "La Araucanía",
+      "region": "O’Higgins",
+      "perfil": "8. Resto",
+      "n": 7731
+    },
+    {
+      "region": "Coquimbo",
       "perfil": "7. Alto patrimonio s/LK",
-      "n": 7747
+      "n": 8572
     },
     {
-      "region": "Los Lagos",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 541
-    },
-    {
-      "region": "Biobío",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 1373
-    },
-    {
-      "region": "Biobío",
+      "region": "Antofagasta",
       "perfil": "5. Operativo",
-      "n": 600
+      "n": 222
     },
     {
-      "region": "La Araucanía",
+      "region": "Metropolitana",
+      "perfil": "1. Ejecutivo",
+      "n": 1668
+    },
+    {
+      "region": "O’Higgins",
+      "perfil": "2. Gerente",
+      "n": 509
+    },
+    {
+      "region": "Valparaíso",
+      "perfil": "3. Académico",
+      "n": 1249
+    },
+    {
+      "region": "Coquimbo",
       "perfil": "4. Profesional",
-      "n": 1403
+      "n": 1243
+    },
+    {
+      "region": "Antofagasta",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 519
+    },
+    {
+      "region": "Ñuble",
+      "perfil": "1. Ejecutivo",
+      "n": 113
+    },
+    {
+      "region": "Aysén",
+      "perfil": "1. Ejecutivo",
+      "n": 25
+    },
+    {
+      "region": "Magallanes",
+      "perfil": "7. Alto patrimonio s/LK",
+      "n": 2357
+    },
+    {
+      "region": "Maule",
+      "perfil": "7. Alto patrimonio s/LK",
+      "n": 5071
+    },
+    {
+      "region": "Atacama",
+      "perfil": "8. Resto",
+      "n": 4451
+    },
+    {
+      "region": "Tarapacá",
+      "perfil": "8. Resto",
+      "n": 2526
+    },
+    {
+      "region": "(sin región)",
+      "perfil": "7. Alto patrimonio s/LK",
+      "n": 327
     },
     {
       "region": "Los Lagos",
-      "perfil": "5. Operativo",
-      "n": 212
+      "perfil": "1. Ejecutivo",
+      "n": 216
+    },
+    {
+      "region": "Biobío",
+      "perfil": "1. Ejecutivo",
+      "n": 359
+    },
+    {
+      "region": "(sin región)",
+      "perfil": "4. Profesional",
+      "n": 395
+    },
+    {
+      "region": "Magallanes",
+      "perfil": "4. Profesional",
+      "n": 254
+    },
+    {
+      "region": "Maule",
+      "perfil": "4. Profesional",
+      "n": 1270
+    },
+    {
+      "region": "Atacama",
+      "perfil": "2. Gerente",
+      "n": 259
+    },
+    {
+      "region": "Tarapacá",
+      "perfil": "2. Gerente",
+      "n": 190
+    },
+    {
+      "region": "Valparaíso",
+      "perfil": "8. Resto",
+      "n": 25798
+    },
+    {
+      "region": "Metropolitana",
+      "perfil": "7. Alto patrimonio s/LK",
+      "n": 43763
+    },
+    {
+      "region": "Ñuble",
+      "perfil": "7. Alto patrimonio s/LK",
+      "n": 2544
+    },
+    {
+      "region": "Aysén",
+      "perfil": "7. Alto patrimonio s/LK",
+      "n": 713
+    },
+    {
+      "region": "Valparaíso",
+      "perfil": "2. Gerente",
+      "n": 1393
+    },
+    {
+      "region": "Metropolitana",
+      "perfil": "4. Profesional",
+      "n": 8844
+    },
+    {
+      "region": "Coquimbo",
+      "perfil": "1. Ejecutivo",
+      "n": 229
+    },
+    {
+      "region": "O’Higgins",
+      "perfil": "3. Académico",
+      "n": 368
+    },
+    {
+      "region": "Ñuble",
+      "perfil": "4. Profesional",
+      "n": 604
+    },
+    {
+      "region": "Aysén",
+      "perfil": "4. Profesional",
+      "n": 127
     },
     {
       "region": "Los Ríos",
-      "perfil": "3. Académico",
-      "n": 219
+      "perfil": "8. Resto",
+      "n": 5352
+    },
+    {
+      "region": "La Araucanía",
+      "perfil": "1. Ejecutivo",
+      "n": 289
+    },
+    {
+      "region": "Maule",
+      "perfil": "5. Operativo",
+      "n": 228
+    },
+    {
+      "region": "(sin región)",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 296
+    },
+    {
+      "region": "Maule",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 598
+    },
+    {
+      "region": "Magallanes",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 161
+    },
+    {
+      "region": "(sin región)",
+      "perfil": "5. Operativo",
+      "n": 82
+    },
+    {
+      "region": "Los Ríos",
+      "perfil": "2. Gerente",
+      "n": 203
+    },
+    {
+      "region": "Magallanes",
+      "perfil": "5. Operativo",
+      "n": 59
+    },
+    {
+      "region": "La Araucanía",
+      "perfil": "8. Resto",
+      "n": 13451
+    },
+    {
+      "region": "Los Ríos",
+      "perfil": "1. Ejecutivo",
+      "n": 133
+    },
+    {
+      "region": "La Araucanía",
+      "perfil": "2. Gerente",
+      "n": 436
     },
     {
       "region": "Metropolitana",
@@ -4247,49 +4231,84 @@
       "n": 236
     },
     {
-      "region": "Los Ríos",
-      "perfil": "8. Resto",
-      "n": 5352
+      "region": "La Araucanía",
+      "perfil": "7. Alto patrimonio s/LK",
+      "n": 7747
+    },
+    {
+      "region": "Los Lagos",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 541
+    },
+    {
+      "region": "Biobío",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 1373
+    },
+    {
+      "region": "Biobío",
+      "perfil": "5. Operativo",
+      "n": 600
     },
     {
       "region": "La Araucanía",
-      "perfil": "1. Ejecutivo",
-      "n": 289
+      "perfil": "4. Profesional",
+      "n": 1403
     },
     {
-      "region": "Maule",
+      "region": "Los Lagos",
       "perfil": "5. Operativo",
-      "n": 228
-    },
-    {
-      "region": "(sin región)",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 296
-    },
-    {
-      "region": "Maule",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 598
-    },
-    {
-      "region": "Magallanes",
-      "perfil": "6. LinkedIn s/clasif",
-      "n": 161
-    },
-    {
-      "region": "(sin región)",
-      "perfil": "5. Operativo",
-      "n": 82
+      "n": 212
     },
     {
       "region": "Los Ríos",
-      "perfil": "2. Gerente",
-      "n": 203
+      "perfil": "3. Académico",
+      "n": 219
+    },
+    {
+      "region": "Biobío",
+      "perfil": "8. Resto",
+      "n": 25260
+    },
+    {
+      "region": "Los Lagos",
+      "perfil": "8. Resto",
+      "n": 9482
+    },
+    {
+      "region": "(sin región)",
+      "perfil": "3. Académico",
+      "n": 122
+    },
+    {
+      "region": "Maule",
+      "perfil": "3. Académico",
+      "n": 443
     },
     {
       "region": "Magallanes",
-      "perfil": "5. Operativo",
-      "n": 59
+      "perfil": "3. Académico",
+      "n": 88
+    },
+    {
+      "region": "Los Lagos",
+      "perfil": "2. Gerente",
+      "n": 448
+    },
+    {
+      "region": "Biobío",
+      "perfil": "2. Gerente",
+      "n": 1011
+    },
+    {
+      "region": "Atacama",
+      "perfil": "1. Ejecutivo",
+      "n": 77
+    },
+    {
+      "region": "Tarapacá",
+      "perfil": "1. Ejecutivo",
+      "n": 82
     },
     {
       "region": "Los Lagos",
@@ -4347,64 +4366,49 @@
       "n": 45
     },
     {
-      "region": "Magallanes",
-      "perfil": "7. Alto patrimonio s/LK",
-      "n": 2357
-    },
-    {
-      "region": "Maule",
-      "perfil": "7. Alto patrimonio s/LK",
-      "n": 5071
-    },
-    {
-      "region": "Atacama",
+      "region": "Arica Y Parinacota",
       "perfil": "8. Resto",
-      "n": 4451
+      "n": 5743
     },
     {
-      "region": "Tarapacá",
-      "perfil": "8. Resto",
-      "n": 2526
-    },
-    {
-      "region": "(sin región)",
-      "perfil": "7. Alto patrimonio s/LK",
-      "n": 327
-    },
-    {
-      "region": "Los Lagos",
-      "perfil": "1. Ejecutivo",
-      "n": 216
-    },
-    {
-      "region": "Biobío",
-      "perfil": "1. Ejecutivo",
-      "n": 359
-    },
-    {
-      "region": "(sin región)",
-      "perfil": "4. Profesional",
-      "n": 395
-    },
-    {
-      "region": "Magallanes",
-      "perfil": "4. Profesional",
-      "n": 254
-    },
-    {
-      "region": "Maule",
-      "perfil": "4. Profesional",
-      "n": 1270
-    },
-    {
-      "region": "Atacama",
+      "region": "Arica Y Parinacota",
       "perfil": "2. Gerente",
-      "n": 259
+      "n": 167
     },
     {
-      "region": "Tarapacá",
-      "perfil": "2. Gerente",
-      "n": 190
+      "region": "Metropolitana",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 4003
+    },
+    {
+      "region": "Metropolitana",
+      "perfil": "5. Operativo",
+      "n": 1264
+    },
+    {
+      "region": "Antofagasta",
+      "perfil": "1. Ejecutivo",
+      "n": 130
+    },
+    {
+      "region": "Ñuble",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 313
+    },
+    {
+      "region": "Aysén",
+      "perfil": "6. LinkedIn s/clasif",
+      "n": 62
+    },
+    {
+      "region": "Ñuble",
+      "perfil": "5. Operativo",
+      "n": 114
+    },
+    {
+      "region": "Aysén",
+      "perfil": "5. Operativo",
+      "n": 27
     }
   ],
   "condicion_propietario": [

@@ -15,8 +15,10 @@ DATA = Path("/Users/antonio/deudores-fscu/data")
 OUT = Path("/Users/antonio/deudores-fscu/app/static/aggregates.json")
 K = 10
 
-# UTM Abril 2026 (valor nominal aprox. para presentar en CLP)
-UTM_CLP = 72800  # ~CLP por UTM — actualizar con valor oficial del mes de publicación
+# Conversiones de moneda — valores al 2026-04-17 (SII + Banco Central)
+UTM_CLP = 69889     # UTM Abril 2026 (sii.cl / mindicador.cl)
+USD_CLP = 886.32    # Dólar observado al 2026-04-17 (bcentral / mindicador.cl)
+UTM_USD = UTM_CLP / USD_CLP  # ≈ 78.85 USD por UTM
 
 con = duckdb.connect(":memory:")
 con.execute(f"""
@@ -97,7 +99,11 @@ out["resumen"] = {
     "total": r[0], "en_linkedin": r[1], "pct_linkedin": r[2],
     "con_monto": r[3], "total_utm": r[4], "avg_utm": r[5], "median_utm": r[6],
     "total_clp": int((r[4] or 0) * UTM_CLP),
+    "total_usd": int((r[4] or 0) * UTM_USD),
     "utm_clp": UTM_CLP,
+    "usd_clp": USD_CLP,
+    "utm_usd": round(UTM_USD, 2),
+    "fecha_conversion": "2026-04-17",
     "patrimonio_alto": r[7], "con_vehiculos": r[8], "con_propiedades": r[9],
 }
 

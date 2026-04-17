@@ -17,15 +17,28 @@ Chart.defaults.plugins.legend.labels.boxWidth = 8;
 const fmt = n => (n ?? 0).toLocaleString('es-CL');
 const fmtCLP = n => {
     if (n == null) return '—';
-    if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + ' billones';
-    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + ' mil millones';
-    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
-    return '$' + fmt(n);
+    if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + ' bln CLP';
+    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + ' mil M CLP';
+    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M CLP';
+    return '$' + fmt(n) + ' CLP';
 };
+const fmtUSD = n => {
+    if (n == null) return '—';
+    if (n >= 1e9) return 'US$ ' + (n/1e9).toFixed(2) + 'B';
+    if (n >= 1e6) return 'US$ ' + (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return 'US$ ' + (n/1e3).toFixed(0) + 'K';
+    return 'US$ ' + fmt(n);
+};
+// Conversores — factores inyectados desde el JSON (resumen.utm_clp, resumen.utm_usd)
+let UTM2CLP = 0, UTM2USD = 0, USD2CLP = 0, CONV_FECHA = '';
+const utm2clp = u => u * UTM2CLP;
+const utm2usd = u => u * UTM2USD;
 
 async function load() {
-    const r = await fetch('/static/aggregates.json?v=2');
+    const r = await fetch('/static/aggregates.json?v=3');
     const d = await r.json();
+    UTM2CLP = d.resumen.utm_clp; UTM2USD = d.resumen.utm_usd; USD2CLP = d.resumen.usd_clp;
+    CONV_FECHA = d.resumen.fecha_conversion || '';
     renderHero(d);
     renderKPIs(d);
     renderMontos(d);
@@ -48,9 +61,9 @@ function renderKPIs(d) {
     const r = d.resumen;
     const kpis = [
         { label: 'Deudores totales', value: fmt(r.total), sub: 'Año tributario 2026' },
-        { label: 'Cartera vencida total', value: fmtCLP(r.total_clp), sub: `${fmt(Math.round(r.total_utm))} UTM`, accent: true },
-        { label: 'Deuda promedio', value: fmt(Math.round(r.avg_utm)) + ' UTM', sub: `~${fmtCLP(Math.round(r.avg_utm * r.utm_clp))} por deudor` },
-        { label: 'Deuda mediana', value: fmt(Math.round(r.median_utm)) + ' UTM', sub: `~${fmtCLP(Math.round(r.median_utm * r.utm_clp))} por deudor` },
+        { label: 'Cartera vencida total', value: fmtCLP(r.total_clp), sub: `${fmtUSD(r.total_usd)} · ${fmt(Math.round(r.total_utm))} UTM`, accent: true },
+        { label: 'Deuda promedio', value: fmt(Math.round(r.avg_utm)) + ' UTM', sub: `${fmtCLP(utm2clp(r.avg_utm))} · ${fmtUSD(utm2usd(r.avg_utm))}` },
+        { label: 'Deuda mediana', value: fmt(Math.round(r.median_utm)) + ' UTM', sub: `${fmtCLP(utm2clp(r.median_utm))} · ${fmtUSD(utm2usd(r.median_utm))}` },
         { label: 'Identificados en LinkedIn', value: fmt(r.en_linkedin), sub: `${r.pct_linkedin}% del total` },
         { label: 'Patrimonio alto (decil 8-10)', value: fmt(r.patrimonio_alto), sub: `${(100*r.patrimonio_alto/r.total).toFixed(1)}%` },
     ];
@@ -66,12 +79,13 @@ function renderKPIs(d) {
 function renderMontos(d) {
     const r = d.resumen;
     document.getElementById('montos-cov').textContent = fmt(r.con_monto) + ' / ' + fmt(r.total);
-    document.getElementById('montos-total-clp').textContent = fmtCLP(r.total_clp) + ' CLP (' + fmt(Math.round(r.total_utm)) + ' UTM)';
+    document.getElementById('montos-total-clp').textContent = fmtCLP(r.total_clp) + ' · ' + fmtUSD(r.total_usd) + ' · ' + fmt(Math.round(r.total_utm)) + ' UTM';
 
     const kpis = [
-        { label: 'Deuda promedio', value: fmt(Math.round(r.avg_utm)) + ' UTM', sub: fmtCLP(Math.round(r.avg_utm * r.utm_clp)) },
-        { label: 'Deuda mediana', value: fmt(Math.round(r.median_utm)) + ' UTM', sub: fmtCLP(Math.round(r.median_utm * r.utm_clp)) },
-        { label: 'Total cartera vencida', value: fmtCLP(r.total_clp), sub: fmt(Math.round(r.total_utm)) + ' UTM', accent: true },
+        { label: 'Deuda promedio', value: fmt(Math.round(r.avg_utm)) + ' UTM', sub: fmtCLP(utm2clp(r.avg_utm)) + ' · ' + fmtUSD(utm2usd(r.avg_utm)) },
+        { label: 'Deuda mediana', value: fmt(Math.round(r.median_utm)) + ' UTM', sub: fmtCLP(utm2clp(r.median_utm)) + ' · ' + fmtUSD(utm2usd(r.median_utm)) },
+        { label: 'Total cartera vencida', value: fmtCLP(r.total_clp), sub: fmtUSD(r.total_usd) + ' · ' + fmt(Math.round(r.total_utm)) + ' UTM', accent: true },
+        { label: 'Factores de conversión', value: `UTM = $${fmt(r.utm_clp)}`, sub: `USD = $${r.usd_clp} · al ${r.fecha_conversion}` },
     ];
     document.getElementById('kpis-montos').innerHTML = kpis.map(k => `
         <div class="kpi">
@@ -130,7 +144,7 @@ function renderUniversidad(d) {
             indexAxis: 'y', responsive: true,
             plugins: {
                 legend: { display: false },
-                tooltip: { callbacks: { label: ctx => `${fmt(ctx.parsed.x)} UTM · ${fmtCLP(ctx.parsed.x * d.resumen.utm_clp)}` } },
+                tooltip: { callbacks: { label: ctx => `${fmt(ctx.parsed.x)} UTM · ${fmtCLP(utm2clp(ctx.parsed.x))} · ${fmtUSD(utm2usd(ctx.parsed.x))}` } },
             },
         },
     });

@@ -138,6 +138,15 @@
       <div class="card-label">Evolución deudores por universidad (top 10)</div>
       <div class="chart-wrap tall"><canvas id="chartEvolUniv"></canvas></div>
     </div></div>
+
+    <div class="section-tag" style="margin-top:40px">Cronicidad de la morosidad</div>
+    <div class="section-title">¿Cuánto se repiten los mismos deudores?</div>
+    <div class="section-desc">Muchos deudores aparecen en las nóminas año tras año. Este análisis muestra cuántos años consecutivos figura el mismo RUT entre 2022 y 2026.</div>
+    <div class="kpi-grid cols-4 mb-sm" id="kpiCronicidad"></div>
+    <div class="grid-2">
+      <div class="card"><div class="card-label">¿En cuántos años aparece cada deudor?</div><div class="chart-wrap tall"><canvas id="chartCronicidad"></canvas></div><div class="card-note">Sobre el universo total de RUTs vistos en las 5 nóminas. "5" = estuvo moroso en los 5 años sin salir.</div></div>
+      <div class="card"><div class="card-label">Deudores 2026 · ¿estaban también en año X?</div><div class="chart-wrap tall"><canvas id="chartRetencion"></canvas></div><div class="card-note">De los 335.152 deudores del 2026, qué porcentaje ya figuraba en cada año previo.</div></div>
+    </div>
   </div>
 
   <div class="tab-content" id="tab-xray">
@@ -402,6 +411,37 @@ function renderEvolucion() {
       scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=1000?(v/1000)+'k':v } } }
     }
   });
+
+  // ═══ Cronicidad ═══
+  const cr = D.cronicidad;
+  document.getElementById('kpiCronicidad').innerHTML =
+    kpiCard('Crónicos (5 años)', fmt(cr.cronicos_5_anos), cr.pct_cronicos + '% del 2026', 'users', 'red') +
+    kpiCard('Nuevos 2026', fmt(cr.nuevos_2026), cr.pct_nuevos + '% sin historial previo', 'users', 'green') +
+    kpiCard('Retención vs 2022', D.retencion_2026_vs_year[0].pct + '%', fmt(D.retencion_2026_vs_year[0].n) + ' del 2026 ya estaban en 2022', 'chart', 'amber') +
+    kpiCard('Retención vs 2025', D.retencion_2026_vs_year[3].pct + '%', fmt(D.retencion_2026_vs_year[3].n) + ' del 2026 ya estaban en 2025', 'chart');
+
+  const rep = D.repetidores;
+  new Chart(document.getElementById('chartCronicidad'), {
+    type: 'bar', data: { labels: rep.map(x => x.n_years + (x.n_years === 1 ? ' año' : ' años')),
+      datasets: [{ label: 'Deudores', data: rep.map(x => x.deudores),
+        backgroundColor: rep.map(x => x.n_years === 5 ? C.red : x.n_years === 4 ? C.amber : x.n_years === 1 ? C.green : C.blue),
+        borderRadius: {topLeft:4,topRight:4}, borderSkipped: false }]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => fmt(ctx.parsed.y) + ' deudores · ' + rep[ctx.dataIndex].pct + '%' } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=1000?(v/1000)+'k':v }, beginAtZero: true } }
+    }
+  });
+  const ret = D.retencion_2026_vs_year;
+  new Chart(document.getElementById('chartRetencion'), {
+    type: 'bar', data: { labels: ret.map(x => String(x.year)),
+      datasets: [{ label: '% ya estaban', data: ret.map(x => x.pct),
+        backgroundColor: ret.map(x => x.pct >= 90 ? C.red : x.pct >= 80 ? C.amber : C.blue),
+        borderRadius: {topLeft:4,topRight:4}, borderSkipped: false }]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.parsed.y + '% · ' + fmt(ret[ctx.dataIndex].n) + ' deudores ya figuraban' } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' }, beginAtZero: true, max: 100 } }
+    }
+  });
 }
 
 function renderXrayInit() {
@@ -657,7 +697,7 @@ function donut(id, labels, values) {
   });
 }
 
-fetch('/static/aggregates.json?v=7').then(r => r.json()).then(d => {
+fetch('/static/aggregates.json?v=8').then(r => r.json()).then(d => {
   D = d;
   renderMain();
   initTab('general');

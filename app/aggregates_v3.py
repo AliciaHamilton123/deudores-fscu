@@ -224,6 +224,37 @@ for y0, y1 in [(2022,2023),(2023,2024),(2024,2025),(2025,2026)]:
     })
 out["flujos"] = flujos_transiciones
 
+# ═══ REPETIDORES (cronicidad) ═══
+# ¿En cuántos años aparece cada deudor?
+by_years = con.execute("""
+WITH years_per_rut AS (SELECT rut_dv, COUNT(DISTINCT year) n_years FROM nominas GROUP BY rut_dv)
+SELECT n_years, COUNT(*) deudores,
+       ROUND(100.0*COUNT(*)/SUM(COUNT(*)) OVER(),1) pct
+FROM years_per_rut GROUP BY 1 ORDER BY 1
+""").fetchdf().to_dict(orient="records")
+out["repetidores"] = by_years
+
+# Retención: de los 2026, ¿cuántos estaban en cada año anterior?
+total_2026 = con.execute("SELECT COUNT(DISTINCT rut_dv) FROM nominas WHERE year=2026").fetchone()[0]
+retencion = []
+for y in [2022, 2023, 2024, 2025]:
+    n = con.execute(f"""SELECT COUNT(DISTINCT a.rut_dv) FROM (SELECT rut_dv FROM nominas WHERE year=2026) a
+    INNER JOIN (SELECT rut_dv FROM nominas WHERE year={y}) b ON a.rut_dv=b.rut_dv""").fetchone()[0]
+    retencion.append({"year": y, "n": n, "pct": round(100*n/total_2026, 1)})
+out["retencion_2026_vs_year"] = retencion
+
+# Nuevos 2026 (no estaban en ningún año previo)
+nuevos = con.execute("""SELECT COUNT(DISTINCT rut_dv) FROM nominas WHERE year=2026
+AND rut_dv NOT IN (SELECT rut_dv FROM nominas WHERE year<2026)""").fetchone()[0]
+cronicos = con.execute("SELECT COUNT(*) FROM (SELECT rut_dv FROM nominas GROUP BY rut_dv HAVING COUNT(DISTINCT year)=5)").fetchone()[0]
+out["cronicidad"] = {
+    "total_2026": total_2026,
+    "cronicos_5_anos": cronicos,
+    "pct_cronicos": round(100*cronicos/total_2026, 1),
+    "nuevos_2026": nuevos,
+    "pct_nuevos": round(100*nuevos/total_2026, 1),
+}
+
 # ═══ JUSTICIA ═══
 out["justicia_resumen"] = {
     "total": out["resumen"]["total"],

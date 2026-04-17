@@ -45,7 +45,7 @@ FROM pdf_nom GROUP BY rut_dv
 """)
 
 con.execute("""
-CREATE TABLE full AS
+CREATE TABLE full_t AS
 SELECT
     e.*,
     p.monto_utm,
@@ -57,7 +57,7 @@ LEFT JOIN pdf_agg p ON e.rut_dv = p.rut_dv
 """)
 
 # Guardar join completo para futuros análisis
-con.execute(f"COPY full TO '{DATA}/deudores_full.parquet' (FORMAT parquet, COMPRESSION zstd)")
+con.execute(f"COPY full_t TO '{DATA}/deudores_full.parquet' (FORMAT parquet, COMPRESSION zstd)")
 
 # Métricas del join
 m = con.execute("""
@@ -68,7 +68,7 @@ SELECT
     ROUND(AVG(monto_utm),2) avg_utm,
     ROUND(MEDIAN(monto_utm),2) median_utm,
     ROUND(MAX(monto_utm),2) max_utm
-FROM full
+FROM full_t
 """).fetchone()
 print(f"Join: {m[0]:,} total | {m[1]:,} con monto | total {m[2]:,.0f} UTM | avg {m[3]} | median {m[4]} | max {m[5]}")
 
@@ -91,7 +91,7 @@ SELECT
     SUM(CASE WHEN decil_avaluo >= 8 THEN 1 ELSE 0 END) patrimonio_alto,
     SUM(CASE WHEN total_vehiculos >= 1 THEN 1 ELSE 0 END) con_vehiculos,
     SUM(CASE WHEN total_propiedades >= 1 THEN 1 ELSE 0 END) con_propiedades
-FROM full
+FROM full_t
 """).fetchone()
 out["resumen"] = {
     "total": r[0], "en_linkedin": r[1], "pct_linkedin": r[2],
@@ -107,7 +107,7 @@ SELECT COALESCE(region,'(sin región)') region, COUNT(*) n,
        ROUND(SUM(monto_utm)) utm_total,
        ROUND(AVG(monto_utm),1) utm_avg,
        ROUND(100.0*COUNT(*)/SUM(COUNT(*)) OVER(),2) pct
-FROM full GROUP BY 1 ORDER BY 2 DESC
+FROM full_t GROUP BY 1 ORDER BY 2 DESC
 """)
 
 MACROZONAS = {
@@ -133,13 +133,13 @@ out["por_comuna"] = table("""
 SELECT COALESCE(comuna,'(sin comuna)') comuna, cod_comuna,
        COALESCE(region,'(sin región)') region,
        COUNT(*) n, ROUND(SUM(monto_utm)) utm_total
-FROM full GROUP BY 1,2,3 ORDER BY 4 DESC
+FROM full_t GROUP BY 1,2,3 ORDER BY 4 DESC
 """)
 
 # ═══ DEMOGRAFÍA ═══
 out["por_sexo"] = table("""
 SELECT COALESCE(sexo,'(sin dato)') sexo, COUNT(*) n, ROUND(SUM(monto_utm)) utm_total, ROUND(AVG(monto_utm),1) utm_avg
-FROM full GROUP BY 1 ORDER BY 2 DESC
+FROM full_t GROUP BY 1 ORDER BY 2 DESC
 """)
 
 out["por_edad"] = table("""
@@ -149,7 +149,7 @@ SELECT
         WHEN edad < 56 THEN '46-55' WHEN edad < 66 THEN '56-65' WHEN edad >= 66 THEN '66+'
         ELSE '(sin dato)' END rango_edad,
     COUNT(*) n, ROUND(AVG(monto_utm),1) utm_avg, ROUND(SUM(monto_utm)) utm_total
-FROM full GROUP BY 1
+FROM full_t GROUP BY 1
 ORDER BY CASE rango_edad WHEN '18-25' THEN 1 WHEN '26-35' THEN 2 WHEN '36-45' THEN 3
     WHEN '46-55' THEN 4 WHEN '56-65' THEN 5 WHEN '66+' THEN 6 ELSE 7 END
 """)
@@ -160,17 +160,17 @@ SELECT CASE
     WHEN edad < 56 THEN '46-55' WHEN edad < 66 THEN '56-65' WHEN edad >= 66 THEN '66+'
     ELSE '(sin dato)' END rango_edad,
     COALESCE(sexo,'(sin dato)') sexo, COUNT(*) n
-FROM full GROUP BY 1,2
+FROM full_t GROUP BY 1,2
 """)
 
 out["por_decil"] = table("""
 SELECT COALESCE(CAST(decil_avaluo AS VARCHAR),'(sin decil)') decil, COUNT(*) n, ROUND(AVG(monto_utm),1) utm_avg
-FROM full GROUP BY 1 ORDER BY decil
+FROM full_t GROUP BY 1 ORDER BY decil
 """)
 
 out["por_nse"] = table("""
 SELECT COALESCE(nse,'(sin dato)') nse, COUNT(*) n, ROUND(AVG(monto_utm),1) utm_avg
-FROM full GROUP BY 1 ORDER BY 2 DESC
+FROM full_t GROUP BY 1 ORDER BY 2 DESC
 """)
 
 # ═══ PATRIMONIO ═══
@@ -180,7 +180,7 @@ SELECT CASE
     WHEN total_vehiculos = 1 THEN '1' WHEN total_vehiculos = 2 THEN '2'
     WHEN total_vehiculos <= 4 THEN '3-4' ELSE '5+' END bucket,
     COUNT(*) n
-FROM full GROUP BY 1 ORDER BY bucket
+FROM full_t GROUP BY 1 ORDER BY bucket
 """)
 
 out["por_propiedades"] = table("""
@@ -189,7 +189,7 @@ SELECT CASE
     WHEN total_propiedades = 1 THEN '1' WHEN total_propiedades = 2 THEN '2'
     WHEN total_propiedades <= 4 THEN '3-4' ELSE '5+' END bucket,
     COUNT(*) n
-FROM full GROUP BY 1 ORDER BY bucket
+FROM full_t GROUP BY 1 ORDER BY bucket
 """)
 
 # ═══ MONTO (nuevo) ═══
@@ -204,7 +204,7 @@ SELECT CASE
     WHEN monto_utm < 2000 THEN '1.000-2.000 UTM'
     ELSE '2.000+ UTM' END bucket,
     COUNT(*) n, ROUND(SUM(monto_utm)) utm_total, ROUND(AVG(monto_utm),1) utm_avg
-FROM full GROUP BY 1
+FROM full_t GROUP BY 1
 ORDER BY CASE bucket
     WHEN '0-50 UTM' THEN 1 WHEN '50-100 UTM' THEN 2 WHEN '100-200 UTM' THEN 3
     WHEN '200-500 UTM' THEN 4 WHEN '500-1.000 UTM' THEN 5 WHEN '1.000-2.000 UTM' THEN 6
@@ -218,7 +218,7 @@ SELECT universidad_principal AS universidad,
        ROUND(SUM(monto_utm)) utm_total,
        ROUND(AVG(monto_utm),1) utm_avg,
        ROUND(MEDIAN(monto_utm),1) utm_median
-FROM full WHERE universidad_principal IS NOT NULL
+FROM full_t WHERE universidad_principal IS NOT NULL
 GROUP BY 1 ORDER BY 2 DESC
 """)
 
@@ -226,23 +226,23 @@ GROUP BY 1 ORDER BY 2 DESC
 out["por_seniority"] = table("""
 SELECT COALESCE(seniority,'(sin dato)') seniority, COUNT(*) n,
        ROUND(AVG(monto_utm),1) utm_avg, ROUND(SUM(monto_utm)) utm_total
-FROM full WHERE en_linkedin GROUP BY 1 ORDER BY 2 DESC
+FROM full_t WHERE en_linkedin GROUP BY 1 ORDER BY 2 DESC
 """)
 
 out["por_tier"] = table("""
 SELECT COALESCE(tier,'(sin dato)') tier, COUNT(*) n, ROUND(AVG(monto_utm),1) utm_avg
-FROM full WHERE en_linkedin GROUP BY 1 ORDER BY 2 DESC
+FROM full_t WHERE en_linkedin GROUP BY 1 ORDER BY 2 DESC
 """)
 
 out["top_industrias"] = table("""
 SELECT industry, COUNT(*) n, ROUND(AVG(monto_utm),1) utm_avg
-FROM full WHERE en_linkedin AND industry IS NOT NULL
+FROM full_t WHERE en_linkedin AND industry IS NOT NULL
 GROUP BY 1 ORDER BY 2 DESC LIMIT 30
 """)
 
 out["top_empresas"] = table("""
 SELECT company, COUNT(*) n, ROUND(AVG(monto_utm),1) utm_avg
-FROM full WHERE en_linkedin AND company IS NOT NULL
+FROM full_t WHERE en_linkedin AND company IS NOT NULL
   AND company NOT IN ('autónomo','independiente','profesional independiente','colegio')
 GROUP BY 1 ORDER BY 2 DESC LIMIT 50
 """)
@@ -261,7 +261,7 @@ WITH p AS (
         WHEN decil_avaluo >= 8 OR total_propiedades >= 2 THEN '8. Alto patrimonio (sin LinkedIn)'
         WHEN total_vehiculos >= 1 OR total_propiedades >= 1 THEN '9. Con patrimonio (sin LinkedIn)'
         ELSE '10. Sin información adicional' END perfil
-    FROM full
+    FROM full_t
 )
 SELECT perfil, COUNT(*) n, ROUND(100.0*COUNT(*)/SUM(COUNT(*)) OVER(),1) pct,
        ROUND(AVG(monto_utm),1) utm_avg, ROUND(SUM(monto_utm)) utm_total
@@ -276,7 +276,7 @@ SELECT
     company,
     COUNT(*) n,
     ROUND(AVG(monto_utm),1) utm_avg
-FROM full
+FROM full_t
 WHERE en_linkedin AND seniority = 'academic'
   AND universidad_principal IS NOT NULL AND company IS NOT NULL
   AND (
@@ -302,7 +302,7 @@ WITH p AS (
             WHEN en_linkedin THEN '6. LinkedIn s/clasif'
             WHEN decil_avaluo >= 8 OR total_propiedades >= 2 THEN '7. Alto patrimonio s/LK'
             ELSE '8. Resto' END perfil
-    FROM full
+    FROM full_t
 )
 SELECT region, perfil, COUNT(*) n FROM p GROUP BY 1,2
 """)
@@ -313,7 +313,7 @@ SELECT CASE
     WHEN (total_propiedades IS NULL OR total_propiedades=0) THEN 'Arrendatario/Allegado'
     WHEN (total_vehiculos IS NULL OR total_vehiculos=0) THEN 'Solo propietario'
     ELSE 'Propietario con vehículos' END bucket, COUNT(*) n
-FROM full GROUP BY 1 ORDER BY 2 DESC
+FROM full_t GROUP BY 1 ORDER BY 2 DESC
 """)
 
 # ═══ ESCRIBIR ═══

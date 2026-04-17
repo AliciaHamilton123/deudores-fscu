@@ -15,12 +15,21 @@ Chart.defaults.plugins.legend.labels.usePointStyle = true;
 Chart.defaults.plugins.legend.labels.boxWidth = 8;
 
 const fmt = n => (n ?? 0).toLocaleString('es-CL');
+const fmtCLP = n => {
+    if (n == null) return '—';
+    if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + ' billones';
+    if (n >= 1e9) return '$' + (n/1e9).toFixed(1) + ' mil millones';
+    if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+    return '$' + fmt(n);
+};
 
 async function load() {
-    const r = await fetch('/static/aggregates.json');
+    const r = await fetch('/static/aggregates.json?v=2');
     const d = await r.json();
     renderHero(d);
     renderKPIs(d);
+    renderMontos(d);
+    renderUniversidad(d);
     renderPerfiles(d);
     renderGeografia(d);
     renderDemografia(d);
@@ -39,10 +48,11 @@ function renderKPIs(d) {
     const r = d.resumen;
     const kpis = [
         { label: 'Deudores totales', value: fmt(r.total), sub: 'Año tributario 2026' },
-        { label: 'Identificados en LinkedIn', value: fmt(r.en_linkedin), sub: `${r.pct_linkedin}% del total`, accent: true },
+        { label: 'Cartera vencida total', value: fmtCLP(r.total_clp), sub: `${fmt(Math.round(r.total_utm))} UTM`, accent: true },
+        { label: 'Deuda promedio', value: fmt(Math.round(r.avg_utm)) + ' UTM', sub: `~${fmtCLP(Math.round(r.avg_utm * r.utm_clp))} por deudor` },
+        { label: 'Deuda mediana', value: fmt(Math.round(r.median_utm)) + ' UTM', sub: `~${fmtCLP(Math.round(r.median_utm * r.utm_clp))} por deudor` },
+        { label: 'Identificados en LinkedIn', value: fmt(r.en_linkedin), sub: `${r.pct_linkedin}% del total` },
         { label: 'Patrimonio alto (decil 8-10)', value: fmt(r.patrimonio_alto), sub: `${(100*r.patrimonio_alto/r.total).toFixed(1)}%` },
-        { label: 'Con ≥1 vehículo', value: fmt(r.con_vehiculos), sub: `${(100*r.con_vehiculos/r.total).toFixed(1)}%` },
-        { label: 'Con ≥1 propiedad', value: fmt(r.con_propiedades), sub: `${(100*r.con_propiedades/r.total).toFixed(1)}%` },
     ];
     document.getElementById('kpis').innerHTML = kpis.map(k => `
         <div class="kpi">
@@ -51,6 +61,89 @@ function renderKPIs(d) {
             <div class="kpi-sub">${k.sub}</div>
         </div>
     `).join('');
+}
+
+function renderMontos(d) {
+    const r = d.resumen;
+    document.getElementById('montos-cov').textContent = fmt(r.con_monto) + ' / ' + fmt(r.total);
+    document.getElementById('montos-total-clp').textContent = fmtCLP(r.total_clp) + ' CLP (' + fmt(Math.round(r.total_utm)) + ' UTM)';
+
+    const kpis = [
+        { label: 'Deuda promedio', value: fmt(Math.round(r.avg_utm)) + ' UTM', sub: fmtCLP(Math.round(r.avg_utm * r.utm_clp)) },
+        { label: 'Deuda mediana', value: fmt(Math.round(r.median_utm)) + ' UTM', sub: fmtCLP(Math.round(r.median_utm * r.utm_clp)) },
+        { label: 'Total cartera vencida', value: fmtCLP(r.total_clp), sub: fmt(Math.round(r.total_utm)) + ' UTM', accent: true },
+    ];
+    document.getElementById('kpis-montos').innerHTML = kpis.map(k => `
+        <div class="kpi">
+            <div class="kpi-label">${k.label}</div>
+            <div class="kpi-value ${k.accent ? 'accent' : ''}">${k.value}</div>
+            <div class="kpi-sub">${k.sub}</div>
+        </div>
+    `).join('');
+
+    const visibleBuckets = d.por_monto_bucket.filter(b => b.bucket !== '(sin registro)');
+    new Chart(document.getElementById('ch-monto-bucket'), {
+        type: 'bar',
+        data: {
+            labels: visibleBuckets.map(b => b.bucket),
+            datasets: [{
+                label: 'Nº de deudores',
+                data: visibleBuckets.map(b => b.n),
+                backgroundColor: COLOR.blue,
+                yAxisID: 'y',
+            }, {
+                label: 'UTM promedio',
+                data: visibleBuckets.map(b => b.utm_avg),
+                type: 'line',
+                borderColor: COLOR.yellow,
+                backgroundColor: COLOR.yellow,
+                yAxisID: 'y1',
+                tension: 0.3,
+            }],
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { type: 'linear', position: 'left', title: { display: true, text: 'Deudores' } },
+                y1: { type: 'linear', position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'UTM promedio' } },
+            },
+        },
+    });
+}
+
+function renderUniversidad(d) {
+    const u = d.por_universidad.slice().sort((a,b) => b.n - a.n);
+    horizontalBar('ch-univ-n', u.map(x => x.universidad), u.map(x => x.n), 'Deudores');
+
+    const byUtm = d.por_universidad.slice().sort((a,b) => b.utm_total - a.utm_total);
+    new Chart(document.getElementById('ch-univ-utm'), {
+        type: 'bar',
+        data: {
+            labels: byUtm.map(x => x.universidad),
+            datasets: [{
+                label: 'Cartera vencida (UTM)',
+                data: byUtm.map(x => x.utm_total),
+                backgroundColor: COLOR.green,
+            }],
+        },
+        options: {
+            indexAxis: 'y', responsive: true,
+            plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { label: ctx => `${fmt(ctx.parsed.x)} UTM · ${fmtCLP(ctx.parsed.x * d.resumen.utm_clp)}` } },
+            },
+        },
+    });
+
+    const byAvg = d.por_universidad.slice().sort((a,b) => b.utm_avg - a.utm_avg);
+    new Chart(document.getElementById('ch-univ-avg'), {
+        type: 'bar',
+        data: {
+            labels: byAvg.map(x => x.universidad),
+            datasets: [{ label: 'UTM promedio', data: byAvg.map(x => x.utm_avg), backgroundColor: COLOR.purple }],
+        },
+        options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } } },
+    });
 }
 
 function renderPerfiles(d) {

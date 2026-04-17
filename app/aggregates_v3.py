@@ -455,6 +455,86 @@ interesante.append({
     "tipo": "chronic"
 })
 
+# 18. Patrimonio total deudores
+interesante.append({
+    "titulo": "Sus bienes valen más que su deuda",
+    "kpi": "$7,19 bln",
+    "sub": "Patrimonio total declarado de los deudores (propiedades + vehículos)",
+    "desc": "Sumando el avalúo fiscal de todas las propiedades y la tasación de todos los vehículos que el SII reconoce a los 335.152 deudores, el total llega a $7,19 billones CLP — casi el DOBLE de la cartera que deben al Fondo Solidario ($4,02 billones). Propiedades aportan $5,95 bln y vehículos $1,24 bln. En principio, el patrimonio agregado alcanzaría para saldar la deuda con amplio margen.",
+    "eli5": "Si juntaras todas las casas, departamentos y autos de los deudores, valen casi el DOBLE de lo que deben. Plata tienen — bienes tienen. No es que les falte con qué pagar; es que no pagan. Es como si tu primo te debiera $100 pero tuviera un auto nuevo de $200 y no le pasara nada.",
+    "tipo": "wealth"
+})
+
+# 19. Barrios ABC1 Santiago
+interesante.append({
+    "titulo": "1.546 ejecutivos en barrios ABC1 de Santiago",
+    "kpi": "1.546",
+    "sub": "C-Level, directores y gerentes en Las Condes, Vitacura, Providencia, Lo Barnechea y Ñuñoa",
+    "desc": "Las cinco comunas de mayor ingreso del Gran Santiago — Las Condes, Vitacura, Providencia, Lo Barnechea y Ñuñoa — concentran 1.546 deudores morosos con perfil de ejecutivo (C-Level, director o gerente) identificados en LinkedIn. Son los barrios con mayor precio por m² en Chile: el deudor típico vive ahí, maneja camioneta, y aparece en el registro público de morosidad del Fondo Solidario.",
+    "eli5": "En los barrios más pitucos de Santiago — Las Condes, Vitacura, Providencia — viven casi 1.600 ejecutivos y gerentes que deben al Estado. Son los vecinos con las mejores casas y autos, los que van a colegios caros y vacacionan en Cachagua. Y al mismo tiempo no pagan el crédito de su propia carrera.",
+    "tipo": "wealth"
+})
+
+# 20. Deuda crónicos duplicada
+interesante.append({
+    "titulo": "La deuda del crónico se duplicó en 4 años",
+    "kpi": "+87,3%",
+    "sub": "Mediana pasó de 81 UTM (2022) a 152 UTM (2026)",
+    "desc": "Para los 247.300 deudores que aparecieron en las 5 nóminas sin interrupción (los 'crónicos acumulando'), la deuda mediana en UTM casi se duplicó entre 2022 y 2026: 81,2 → 98,7 → 117,4 → 133,9 → 152,1. Un crecimiento del 87,3% en 4 años, cuando la inflación oficial acumulada fue ~12% en el mismo período. La diferencia son intereses legales que se capitalizan sin pausa: cuando no pagas, la deuda crece sola a tasas que cuadruplican la inflación.",
+    "eli5": "Si llevas 5 años sin pagar, tu deuda casi se dobló sola en ese tiempo. De $5,6 millones pasó a $10,6 millones — sin que hayas agregado NADA, sólo por intereses. Es como dejar la tarjeta de crédito impaga: al final no debes lo que compraste, debes 2 veces eso.",
+    "tipo": "interest"
+})
+
+# 21. Juicio ejecutivo es la cobranza estándar
+interesante.append({
+    "titulo": "El juicio ejecutivo es la cobranza estándar",
+    "kpi": "71.437",
+    "sub": "94% de los demandados por deuda tiene Juicio Ejecutivo Obligación de Dar",
+    "desc": "De los 72.014 deudores FSCU demandados por cobranza de deuda, 71.437 (94,2%) enfrentan específicamente un Juicio Ejecutivo Obligación de Dar — el procedimiento civil estándar en Chile para exigir el pago de una deuda documentada. Las otras categorías (Monitorio, Ley de Bancos, Gestión Preparatoria) son residuales. Es una señal clara: la cobranza judicial en Chile está estandarizada y los deudores FSCU enfrentan el mismo camino que cualquier otro moroso financiero.",
+    "eli5": "Cuando te demandan porque no pagaste una deuda en Chile, el juicio casi siempre se llama 'Ejecutivo Obligación de Dar'. Es el procedimiento oficial estándar. Entre los morosos del Fondo Solidario que fueron demandados, 9 de cada 10 enfrenta este tipo específico de juicio. Es el protocolo de cobranza por default.",
+    "tipo": "judicial"
+})
+
+# 22. Cohort 2022 casi no se mueve
+interesante.append({
+    "titulo": "El cohort 2022 virtualmente no se mueve",
+    "kpi": "91,9%",
+    "sub": "De los 288k deudores del 2022, 265k siguen en 2026",
+    "desc": "Los 288.290 deudores que aparecían en la nómina 2022 son un grupo extraordinariamente estable: 4 años después, 265.072 (91,9%) siguen exactamente en el mismo lugar — en la nómina 2026. Sólo 23.218 personas (8,1%) lograron salir durante los últimos 4 años, ya sea por pago total o condonación. Este es el análisis longitudinal clásico de retención: en productos digitales se considera 'excelente' un 40% de retención a 4 años. En deudores morosos FSCU es 92%. El sistema no se vacía.",
+    "eli5": "De todas las personas que debían plata al Fondo Solidario en 2022, prácticamente todos — 9 de cada 10 — siguen debiendo hoy. Sólo 1 de cada 12 logró salir en estos 4 años. En las apps y productos tecnológicos, si 9 de cada 10 usuarios siguen después de 4 años sería un éxito enorme. Acá es el fracaso: el problema casi no se mueve.",
+    "tipo": "chronic"
+})
+
+# 23. Construcción y minería
+interesante.append({
+    "titulo": "Construcción y minería, las otras industrias morosas",
+    "kpi": "7.402",
+    "sub": "Construcción (3.811) + Minería/Metales (3.591) deudores",
+    "desc": "Tras educación (9.710 deudores entre primaria/secundaria/superior), las siguientes dos industrias con más deudores FSCU identificados en LinkedIn son construcción (3.811) y minería/metales (3.591), sumando 7.402 personas. Son los sectores históricamente más fuertes en empleo formal masculino en Chile. El perfil coincide con el demográfico: hombres (54,9% del total), profesionales de ingenierías y especialidades técnicas, clase media-alta.",
+    "eli5": "Después de los profes, las profesiones donde más hay morosos son construcción (3.811) y minería (3.591). Tiene sentido: son las carreras típicas donde estudian con crédito — ingenierías, geología, construcción civil. Después trabajan en obras o mineras, ganan bien, pero la deuda estudiantil queda por ahí sin pagar.",
+    "tipo": "education"
+})
+
+# 24. Multi-propiedad + vehículos
+interesante.append({
+    "titulo": "64.044 deudores tienen auto Y casa",
+    "kpi": "64.044",
+    "sub": "19% de los morosos poseen al menos 1 propiedad y 1 vehículo",
+    "desc": "Uno de cada cinco deudores morosos del Fondo Solidario (64.044 personas, 19,1% del total) tiene simultáneamente al menos una propiedad Y al menos un vehículo registrado en Servel/SII. No son el típico 'profesional sin bienes' que el imaginario asocia con el crédito universitario impago: son personas con vida establecida — casa propia o departamento, al menos un auto. El patrón refuta el supuesto de que la morosidad refleja incapacidad económica.",
+    "eli5": "Casi 65 mil de los deudores tienen AL MISMO TIEMPO auto y casa propias. No es poco. Tienen dónde vivir, tienen cómo moverse. No son los típicos 'pobres sin plata' — son profesionales establecidos, con familia, con propiedades. Pero el Fondo Solidario lo dejaron pendiente.",
+    "tipo": "wealth"
+})
+
+# 25. Santiago comuna top
+interesante.append({
+    "titulo": "Santiago comuna concentra 11.124 deudores",
+    "kpi": "11.124",
+    "sub": "La comuna de Santiago lidera el ranking nacional",
+    "desc": "La comuna de Santiago (no confundir con la Región Metropolitana) concentra 11.124 deudores FSCU — el primer lugar del ranking comunal nacional. Es una comuna de tamaño mediano (menos de 400.000 habitantes) pero con alta concentración de población universitaria (egresados que arriendan en el centro), lo que explica el volumen. Le siguen comunas populosas como Maipú, Puente Alto, La Florida y Ñuñoa, donde vive gran parte de la clase media profesional chilena.",
+    "eli5": "La comuna de Santiago (el centro) es donde más deudores FSCU viven: 11.124 personas. Es una comuna no tan grande, pero llena de egresados universitarios que arriendan departamentos céntricos. Es el barrio típico del profesional joven chileno.",
+    "tipo": "demographics"
+})
+
 out["interesante"] = interesante
 print(f"\nGeneradas {len(interesante)} cuñas periodísticas")
 

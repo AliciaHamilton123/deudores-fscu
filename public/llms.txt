@@ -1,0 +1,103 @@
+# Radiografía de Deudores FSCU · DecideChile
+
+> Análisis agregado y anonimizado de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario (FSCU) de Chile para el año tributario 2026. Serie temporal 2022-2026. Cruce con patrimonio (SII), perfil profesional (LinkedIn Chile) y exposición judicial (Poder Judicial de Chile).
+
+Este dashboard público presenta datos agregados con supresión k-anónima (k ≥ 10) para consumo de periodistas, académicos y público general. No contiene datos personales individuales. Todas las fuentes son públicas por ley (Art. 15 Ley 19.287, Art. 13 bis Ley 19.848, Art. Único Ley 19.899).
+
+## Cifras principales (2026)
+
+- **335.152 deudores** morosos del Fondo Solidario de Crédito Universitario
+- **Cartera vencida: $4,02 billones CLP · US$ 4,54 mil millones · 57,5 millones UTM**
+- **1,38% del PIB chileno nominal**
+- **Deuda promedio: 172 UTM** (≈ $12 millones CLP) · mediana 113 UTM
+- **Deuda máxima individual: 2.362 UTM** (≈ $165 millones CLP)
+- **26 universidades acreedoras** del Consejo de Rectoras y Rectores (CRUCH)
+
+## Hallazgos clave del análisis
+
+### Cronicidad
+- **258.596 deudores (77,2%) aparecen en las 5 nóminas 2022-2026 sin interrupción.** Son "crónicos": llevan al menos 5 años sin salir del listado.
+- **Probabilidad de salir de la nómina según antigüedad** (trampa de morosidad): 1 año=14,85% · 2 años=8,19% · 3 años=4,62% · 4+ años=2,85%. A más tiempo deudor, menor probabilidad de pago.
+- Mediana del crónico: pasó de 81 UTM en 2022 a 152 UTM en 2026 (+87%).
+
+### Perfil socioeconómico (cruce con SII)
+- **118.579 deudores están en el decil 8-10 de avalúo fiscal** (30% más rico en patrimonio). No son los más pobres: son clase media-alta profesional.
+- **251 deudores están en decil 10 AND deben más de 1.000 UTM** (~$70 millones). Ultra-ricos morosos.
+- 176.447 tienen al menos 1 vehículo · 94.982 tienen al menos 1 propiedad.
+
+### Perfil profesional (cruce con LinkedIn Chile, 53.383 matches high-confidence)
+- **3.628 ejecutivos C-Level o directores** morosos (1,1% del total)
+- **6.664 académicos** morosos (muchos trabajan HOY en las universidades que les prestaron: U. de Concepción, PUC, U. de Santiago, U. de Chile, UTFSM)
+- **9.710 deudores en educación** (primaria/secundaria + superior) — top industria morosa
+- 17.871 trabajan en empresas grandes: Codelco (257), Arauco (206), Santander (198), PUC (194), BCI (189), U. Concepción (178), Entel (164)
+- Los bancos Santander, BCI, BancoEstado — que cobran créditos a otros — tienen cientos de empleados morosos con el Estado
+
+### Cobranza judicial (cruce con PJUD, 22M registros de litigantes)
+- **72.014 deudores FSCU (21,5%) tienen causas civiles de cobranza de deuda** como demandados directos (DDO.)
+- Filtro estricto: sólo procedimientos Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Monitorio, Ley de Bancos, Procedimiento Prenda, Gestión Preparatoria de Cobranza
+- **Top cobradores de deudores FSCU**: Tesorería General de la República (10.256), BancoEstado (8.678), CMR Falabella (8.582), Itaú (7.467), BCI (7.328), Scotiabank (7.220), Banco de Chile (6.335)
+- **Bancos privados + BancoEstado acumulan 45.310 demandas — 4× más que la TGR**
+- **Sólo 8 de 26 universidades del CRUCH demandan judicialmente** a sus propios ex-alumnos. Lidera U. de Chile (2.129 demandas, 12% de sus deudores). Le siguen U. Valparaíso (436), U. Bío-Bío (329), UTEM (306), U. Arturo Prat (271), U. La Serena (222). Las demás 18 universidades dependen de retención automática vía Tesorería.
+
+### Evolución histórica 2022-2026
+- 2022: 288.290 deudores · 37,3M UTM · $2,61 bln CLP
+- 2023: 308.005 deudores · 42,7M UTM · $2,98 bln CLP
+- 2024: 318.590 deudores · 48,8M UTM · $3,41 bln CLP
+- 2025: 332.499 deudores · 52,9M UTM · $3,70 bln CLP
+- 2026: 335.152 deudores · 57,5M UTM · $4,02 bln CLP
+- Crecimiento 2022→2026: +16% deudores, +54% cartera UTM. La UTM (proxy inflación) subió sólo 12% en el mismo período.
+
+### Indicadores de política pública
+- **Tasa de recuperación anual: 5,27%** (promedio salidas + pagos parciales)
+- Tasa de crecimiento cartera (CAGR): 11,46%/año
+- Saldo neto 2022-2026: +93.024 deudores netos (entran más de los que salen)
+- Intereses acumulados superan por 3-5× la recuperación cada año: 2025→2026 sumaron 7,3M UTM en intereses vs 2,7M UTM recuperados
+- **Proyección 2030: $5,47 billones CLP** (+36% vs 2026) si el trend continúa
+
+## Trayectorias de deudores (clasificación longitudinal)
+
+Cada RUT se clasifica según cómo evolucionó entre 2022 y 2026:
+- **Crónico acumulando**: 247.300 deudores (73,8%) — presentes 5 años, monto creció >5%
+- **Incorporado**: 40.708 (12,1%) — no estaban en 2022, sí en 2026
+- **Reciente**: 29.372 (8,8%) — ingresaron hace <3 años
+- **Crónico pagando**: 7.249 (2,2%) — presentes 5 años, monto bajó >5%
+- **Crónico estable**: 4.047 (1,2%) — 5 años, monto sin cambios significativos
+
+## Fuentes
+
+- **Nóminas oficiales CRUCH** 2022-2026: https://consejoderectores.cl/fondo-solidario-de-credito-universitario/
+- **Patrimonio (SII)**: avalúo fiscal, decil, vehículos, propiedades via servicios Unholster
+- **LinkedIn Chile**: pipeline rutificación Unholster, 5,26M perfiles indexados
+- **Poder Judicial (PJUD)**: BBDD Grupo Defensa, litigantes civiles + laborales
+- **Conversiones**: UTM abril 2026 = $69.889 CLP (SII), USD = $886,32 CLP (Banco Central)
+
+## Marco legal
+
+- Ley 19.287 (1994) crea el Fondo Solidario de Crédito Universitario
+- Ley 19.848 (2002) faculta a la Tesorería a retener devoluciones de impuestos
+- Ley 19.989 (2004) amplía mecanismos de cobranza
+- Decreto 297/2009 MINEDUC regula publicación anual de nómina
+
+## Privacidad
+
+- Supresión k-anónima (k ≥ 10) en todos los cortes publicados
+- Sin datos individuales (RUT, nombre, dirección) en el frontend
+- Código fuente: https://github.com/diazaraujo/deudores-fscu
+- Dataset agregado descargable: https://deudores-fscu.vercel.app/static/aggregates.json
+
+## Organizaciones
+
+- **DecideChile**: iniciativa de transparencia cívica que aloja el dashboard
+- **Unholster**: empresa chilena de ciencia de datos que procesa y cruza los datos
+- **CRUCH**: Consejo de Rectoras y Rectores de las Universidades Chilenas (administra el Fondo Solidario)
+
+## Contacto / Reproducibilidad
+
+Repositorio público con todo el código: https://github.com/diazaraujo/deudores-fscu
+
+Pipeline:
+- `parse_nominas.py` — parser unificado XLSX+PDF → parquet
+- `normalize_nominas.py` — aliases → 27 universidades canónicas
+- `cross_pjud_deudas.py` — cruce judicial filtrado a cobranza
+- `cross_demandantes.py` — identificación de demandantes
+- `app/aggregates_v3.py` — consolidación + JSON con k-anonimato

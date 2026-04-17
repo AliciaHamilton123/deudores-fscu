@@ -1,0 +1,95 @@
+/* Deudores FSCU · DecideChile — estilos específicos (hereda style.css) */
+
+.main { padding: 0; }
+.container { max-width: 1280px; margin: 0 auto; padding: 32px; }
+
+.brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.brand-logo { height: 16px !important; width: auto !important; max-height: 16px; display: block; }
+.brand-sep { color: var(--border-strong); font-weight: 300; font-size: 14px; }
+.brand-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-dim);
+    white-space: nowrap;
+}
+
+.nav-link {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
+.nav-link:hover { color: var(--blue); background: var(--blue-light); }
+.nav-link.active { color: var(--blue); background: var(--blue-light); }
+
+.hero { padding: 24px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+.hero h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 12px; max-width: 900px; }
+.hero .subtitle { font-size: 15px; color: var(--text-secondary); line-height: 1.6; max-width: 900px; margin-bottom: 8px; }
+.hero .subtitle-small { font-size: 12px; color: var(--text-dim); font-family: var(--font-mono); max-width: 900px; }
+.hero span { font-weight: 600; color: var(--blue); }
+
+.block { margin-bottom: 56px; scroll-margin-top: 72px; }
+.block h2 {
+    font-size: 22px; font-weight: 600; letter-spacing: -0.3px;
+    margin-bottom: 6px; color: var(--text);
+}
+.block-subtitle { font-size: 13px; color: var(--text-dim); margin-bottom: 20px; max-width: 900px; line-height: 1.5; }
+.block-subtitle span { font-weight: 600; color: var(--blue); }
+
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.kpi {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+}
+.kpi-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); margin-bottom: 10px; }
+.kpi-value { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; color: var(--text); }
+.kpi-sub { font-size: 11px; color: var(--text-dim); margin-top: 4px; font-family: var(--font-mono); }
+.kpi-value.accent { color: var(--blue); }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+@media (max-width: 900px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+
+.chart-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    min-height: 240px;
+}
+.chart-card h3 { font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 14px; }
+.chart-card canvas { max-height: 320px; }
+.chart-card .chart-note { font-size: 11px; color: var(--text-dim); margin-bottom: 10px; font-family: var(--font-mono); }
+
+/* Tabla de perfiles */
+.perfil-tbl { width: 100%; font-size: 13px; }
+.perfil-tbl tr { border-bottom: 1px solid var(--border); }
+.perfil-tbl td { padding: 10px 6px; }
+.perfil-tbl td:first-child { font-weight: 500; }
+.perfil-tbl td:nth-child(2), .perfil-tbl td:nth-child(3) { font-family: var(--font-mono); text-align: right; color: var(--text-secondary); }
+.perfil-bar {
+    display: inline-block;
+    height: 6px;
+    background: var(--blue);
+    border-radius: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+
+footer {
+    margin-top: 64px; padding: 24px 0; border-top: 1px solid var(--border);
+    font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); line-height: 1.7;
+}
+footer p { margin-bottom: 6px; }

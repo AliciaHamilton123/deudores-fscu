@@ -1,0 +1,26 @@
+# Datos sensibles — nunca commitear
+data/
+*.parquet
+*.duckdb
+*.xlsx
+*.pdf
+*.csv
+
+# Vercel
+.vercel/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+myenv/
+venv/
+
+# OS
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log

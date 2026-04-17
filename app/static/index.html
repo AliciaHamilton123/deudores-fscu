@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deudores FSCU — DecideChile</title>
+<link rel="stylesheet" href="/static/style.css?v=2">
+<link rel="stylesheet" href="/static/dashboard.css?v=3">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="brand">
+        <img src="/static/unholster-logo.png" alt="Unholster" class="brand-logo">
+        <span class="brand-sep">/</span>
+        <span class="brand-label">DecideChile · Deudores FSCU 2026</span>
+    </div>
+    <nav>
+        <a href="#resumen" class="nav-link active">Resumen</a>
+        <a href="#geografia" class="nav-link">Geografía</a>
+        <a href="#demografia" class="nav-link">Demografía</a>
+        <a href="#patrimonio" class="nav-link">Patrimonio</a>
+        <a href="#perfiles" class="nav-link">Perfiles</a>
+        <a href="#linkedin" class="nav-link">LinkedIn</a>
+    </nav>
+</div>
+
+<main class="main">
+    <div class="container">
+
+        <section class="hero">
+            <h1>Nómina de Deudores del Fondo Solidario de Crédito Universitario</h1>
+            <p class="subtitle">Análisis agregado y anonimizado de los <span id="hero-total">—</span> deudores morosos publicados por el Consejo de Rectoras y Rectores de las Universidades Chilenas para el año tributario 2026. Datos enriquecidos con perfiles profesionales públicos (LinkedIn) mediante rutificación de alta confianza.</p>
+            <p class="subtitle-small">Fuente: Decreto 297/2009 MINEDUC · Publicación obligatoria Art. 15 Ley 19.287 y Art. 13 bis Ley 19.848. Umbral k-anónimo: 10.</p>
+        </section>
+
+        <!-- ═══ RESUMEN ═══ -->
+        <section id="resumen" class="block">
+            <h2>Resumen</h2>
+            <div class="kpi-grid" id="kpis"></div>
+        </section>
+
+        <!-- ═══ PERFILES ═══ -->
+        <section id="perfiles" class="block">
+            <h2>Categorización de deudores</h2>
+            <p class="block-subtitle">Cada uno de los 370.292 deudores asignado a una categoría única, combinando su perfil profesional en LinkedIn y su patrimonio declarado (avalúo fiscal de propiedades, vehículos).</p>
+            <div class="two-col">
+                <div class="chart-card"><canvas id="ch-perfiles"></canvas></div>
+                <div class="chart-card"><div id="tbl-perfiles"></div></div>
+            </div>
+        </section>
+
+        <!-- ═══ GEOGRAFÍA ═══ -->
+        <section id="geografia" class="block">
+            <h2>Distribución geográfica</h2>
+            <div class="two-col">
+                <div class="chart-card">
+                    <h3>Por región</h3>
+                    <canvas id="ch-region"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Por macrozona</h3>
+                    <canvas id="ch-macrozona"></canvas>
+                </div>
+            </div>
+            <div class="chart-card" style="margin-top:16px">
+                <h3>Top 20 comunas</h3>
+                <canvas id="ch-comuna"></canvas>
+            </div>
+        </section>
+
+        <!-- ═══ DEMOGRAFÍA ═══ -->
+        <section id="demografia" class="block">
+            <h2>Demografía</h2>
+            <div class="three-col">
+                <div class="chart-card"><h3>Sexo</h3><canvas id="ch-sexo"></canvas></div>
+                <div class="chart-card"><h3>Rango de edad</h3><canvas id="ch-edad"></canvas></div>
+                <div class="chart-card"><h3>Decil de avalúo</h3><canvas id="ch-decil"></canvas></div>
+            </div>
+            <div class="chart-card" style="margin-top:16px">
+                <h3>Edad × Sexo</h3>
+                <canvas id="ch-edad-sexo"></canvas>
+            </div>
+            <div class="chart-card" style="margin-top:16px">
+                <h3>Nivel socioeconómico (NSE)</h3>
+                <canvas id="ch-nse"></canvas>
+            </div>
+        </section>
+
+        <!-- ═══ PATRIMONIO ═══ -->
+        <section id="patrimonio" class="block">
+            <h2>Patrimonio</h2>
+            <div class="three-col">
+                <div class="chart-card"><h3>Nº de vehículos</h3><canvas id="ch-vehiculos"></canvas></div>
+                <div class="chart-card"><h3>Nº de propiedades</h3><canvas id="ch-propiedades"></canvas></div>
+                <div class="chart-card"><h3>Condición</h3><canvas id="ch-condicion"></canvas></div>
+            </div>
+        </section>
+
+        <!-- ═══ LINKEDIN ═══ -->
+        <section id="linkedin" class="block">
+            <h2>Perfil profesional (subconjunto enriquecido)</h2>
+            <p class="block-subtitle"><span id="lk-count">—</span> deudores (<span id="lk-pct">—</span>%) fueron identificados con alta confianza en LinkedIn Chile mediante rutificación nominal. Las siguientes distribuciones corresponden sólo a ese subconjunto.</p>
+            <div class="two-col">
+                <div class="chart-card"><h3>Nivel jerárquico</h3><canvas id="ch-seniority"></canvas></div>
+                <div class="chart-card"><h3>Tamaño de empresa</h3><canvas id="ch-tier"></canvas></div>
+            </div>
+            <div class="chart-card" style="margin-top:16px">
+                <h3>Top 20 industrias</h3>
+                <canvas id="ch-industria"></canvas>
+            </div>
+            <div class="chart-card" style="margin-top:16px">
+                <h3>Top 30 empresas con más deudores</h3>
+                <p class="chart-note">Excluye categorías genéricas ("autónomo", "independiente"). Sólo empresas con k ≥ 10 deudores.</p>
+                <canvas id="ch-empresa"></canvas>
+            </div>
+        </section>
+
+        <footer>
+            <p>Datos públicos según Art. 15 inciso 2º Ley 19.287, Art. 13 bis Ley 19.848 y Art. Único Ley 19.899. Enriquecimiento profesional con datos LinkedIn Chile (rutificación propietaria Unholster, matching high-confidence únicamente).</p>
+            <p>Todas las cifras están agregadas con supresión k-anónima (k ≥ 10). Ningún dato individual (RUT, nombre, dirección, patente, empleador específico) es accesible desde esta página.</p>
+        </footer>
+
+    </div>
+</main>
+
+<script src="/static/dashboard.js?v=1"></script>
+</body>
+</html>

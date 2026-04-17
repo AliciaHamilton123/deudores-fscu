@@ -165,6 +165,14 @@
       <div class="card"><div class="card-label">¿En cuántos años aparece cada deudor?</div><div class="chart-wrap tall"><canvas id="chartCronicidad"></canvas></div><div class="card-note">Sobre el universo total de RUTs vistos en las 5 nóminas. "5" = estuvo moroso en los 5 años sin salir.</div></div>
       <div class="card"><div class="card-label">Deudores 2026 · ¿estaban también en año X?</div><div class="chart-wrap tall"><canvas id="chartRetencion"></canvas></div><div class="card-note">De los 335.152 deudores del 2026, qué porcentaje ya figuraba en cada año previo.</div></div>
     </div>
+
+    <div class="section-tag" style="margin-top:40px">Análisis longitudinal</div>
+    <div class="section-title">Trayectoria de cada deudor · ¿pagan, acumulan o van saliendo?</div>
+    <div class="section-desc">Clasificación de cada RUT según cómo evolucionó su deuda entre 2022 y 2026. Las categorías "Crónico acumulando/pagando/estable" corresponden a deudores presentes en los 5 años; las otras a quienes entraron, salieron o aparecen esporádicamente.</div>
+    <div class="grid-2">
+      <div class="card"><div class="card-label">Distribución por trayectoria (deudores 2026)</div><div class="chart-wrap tall"><canvas id="chartTrayectorias"></canvas></div><div class="card-note">Crónico acumulando = monto creció >5% · Crónico pagando = monto bajó >5% · Crónico estable = ±5%.</div></div>
+      <div class="card"><div class="card-label">Mediana de deuda de los crónicos (5 años)</div><div class="chart-wrap tall"><canvas id="chartMediaCronicos"></canvas></div><div class="card-note">Los 247.300 deudores presentes los 5 años vieron su mediana casi duplicarse: 81 → 152 UTM (+87%).</div></div>
+    </div>
   </div>
 
   <div class="tab-content" id="tab-xray">
@@ -204,6 +212,15 @@
     </div>
     <div class="full-row"><div class="card"><div class="card-label">% demandados civil por región</div><div class="chart-wrap xtall"><canvas id="chartJustRegion"></canvas></div></div></div>
     <div class="full-row"><div class="card"><div class="card-label">% demandados civil por universidad</div><div class="chart-wrap xtall"><canvas id="chartJustUniv"></canvas></div></div></div>
+
+    <div class="section-tag" style="margin-top:40px">¿Quién los demanda?</div>
+    <div class="section-title">Cobradores que persiguen a los deudores FSCU</div>
+    <div class="section-desc">Instituciones que aparecen como demandantes (DTE.) en las causas civiles de cobranza contra los morosos FSCU. Muestra que los deudores del Fondo Solidario suelen tener múltiples acreedores: bancos, tarjetas retail, el propio Estado y algunas universidades que optan por cobranza judicial.</div>
+    <div class="full-row"><div class="card"><div class="card-label">Top 20 cobradores por nº de deudores FSCU demandados</div><div class="chart-wrap xtall"><canvas id="chartDemandantes"></canvas></div></div></div>
+    <div class="grid-2">
+      <div class="card"><div class="card-label">Cobradores por categoría</div><div class="chart-wrap tall"><canvas id="chartDemandantesCat"></canvas></div></div>
+      <div class="card"><div class="card-label">Universidades que demandan a sus ex-alumnos morosos</div><div class="chart-wrap tall"><canvas id="chartUnivDemandantes"></canvas></div><div class="card-note">Del CRUCH, sólo algunas ejercen cobranza judicial. Las demás prefieren retención de impuestos vía TGR.</div></div>
+    </div>
   </div>
 
   <div class="tab-content" id="tab-montos">
@@ -461,6 +478,34 @@ function renderEvolucion() {
       scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' }, beginAtZero: true, max: 100 } }
     }
   });
+
+  // Trayectorias longitudinales
+  const tr = D.trayectorias || [];
+  const trColors = { 'Crónico acumulando': C.red, 'Crónico pagando': C.green, 'Crónico estable': C.gray500,
+    'Incorporado': C.amber, 'Reciente': C.cyan, 'Intermitente': C.violet, 'Ocasional': C.blueDark };
+  new Chart(document.getElementById('chartTrayectorias'), {
+    type: 'bar', data: { labels: tr.map(x => x.trayectoria),
+      datasets: [{ label: 'Deudores', data: tr.map(x => x.n),
+        backgroundColor: tr.map(x => trColors[x.trayectoria] || C.blue),
+        borderRadius: {topRight:4,bottomRight:4}, borderSkipped: false }]},
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => fmt(ctx.parsed.x) + ' · ' + tr[ctx.dataIndex].pct + '%' } } },
+      scales: { y: { grid: { display: false }, ticks: axisSans }, x: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=1000?(v/1000)+'k':v }, beginAtZero: true } }
+    }
+  });
+
+  const cev = D.trayectoria_cronicos_evol;
+  new Chart(document.getElementById('chartMediaCronicos'), {
+    type: 'line', data: { labels: ['2022','2023','2024','2025','2026'],
+      datasets: [
+        { label: 'Mediana UTM', data: cev.median, borderColor: C.red, backgroundColor: 'rgba(239,68,68,0.08)', borderWidth: 2, pointRadius: 4, pointBackgroundColor: C.red, fill: true, tension: 0.3 },
+        { label: 'Promedio UTM', data: cev.avg, borderColor: C.amber, backgroundColor: 'transparent', borderWidth: 2, borderDash: [4,4], pointRadius: 3, pointBackgroundColor: C.amber, fill: false, tension: 0.3 }
+      ]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'top', align: 'end', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 12, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.dataset.label + ': ' + fmt(Math.round(ctx.parsed.y)) + ' UTM · ' + fmtCLP(ctx.parsed.y * D.resumen.utm_clp) } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: axisMono, beginAtZero: false } }
+    }
+  });
 }
 
 function renderXrayInit() {
@@ -558,6 +603,25 @@ function renderJusticia() {
       scales: { y: { grid: { display: false }, ticks: { ...axisSans, font: { ...defaultFont, size: 11, weight: 300 } } }, x: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' } } }
     }
   });
+
+  // === Top demandantes ===
+  const dem = (D.top_demandantes || []).slice(0, 20);
+  makeHbar('chartDemandantes', dem.map(x => (x.dte_nombre||'').substring(0,45)), dem.map(x => x.n_deudores), C.red);
+
+  const dcat = D.demandantes_categorias || [];
+  new Chart(document.getElementById('chartDemandantesCat'), {
+    type: 'doughnut', data: { labels: dcat.map(x => x.cat),
+      datasets: [{ data: dcat.map(x => x.deudores_acumulados), backgroundColor: catColors, borderWidth: 0 }]},
+    options: { responsive: true, maintainAspectRatio: false, cutout: '60%',
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 10, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } },
+        tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.label + ': ' + fmt(ctx.parsed) + ' demandas acumuladas' } }
+      }
+    }
+  });
+
+  const ud = D.universidades_demandantes || [];
+  makeHbar('chartUnivDemandantes', ud.map(x => x.dte_nombre.substring(0,45)), ud.map(x => x.n_deudores), C.blueDark);
 }
 
 function makeHbar(id, labels, values, color) {
@@ -765,7 +829,7 @@ function donut(id, labels, values) {
   });
 }
 
-fetch('/static/aggregates.json?v=10').then(r => r.json()).then(d => {
+fetch('/static/aggregates.json?v=11').then(r => r.json()).then(d => {
   D = d;
   renderMain();
   initTab('general');

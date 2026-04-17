@@ -411,6 +411,33 @@ interesante.append({
     "tipo": "ultra"
 })
 
+# 15. La U de Chile es la que más demanda
+interesante.append({
+    "titulo": "La U de Chile es la que más demanda",
+    "kpi": "2.129",
+    "sub": "ex-alumnos demandados judicialmente por cobranza (12% de sus deudores)",
+    "desc": "De las 26 universidades del CRUCH que administran el Fondo Solidario, sólo unas pocas ejercen cobranza judicial directa. La Universidad de Chile lidera con 2.129 demandas contra sus propios ex-alumnos morosos — 12% de sus 17.327 deudores. Le siguen U. de Valparaíso (436), U. del Bío Bío (329), UTEM (306), U. Arturo Prat (271) y U. de La Serena (222). Las demás universidades del CRUCH prefieren el mecanismo indirecto: retención de la devolución de impuestos vía Tesorería General de la República, que demanda a 10.256 deudores FSCU por cuenta de todas.",
+    "tipo": "judicial-uni"
+})
+
+# 16. Bancos cobradores
+interesante.append({
+    "titulo": "Los bancos los persiguen más que el Estado",
+    "kpi": "45.310",
+    "sub": "deudores FSCU demandados por BancoEstado + privados",
+    "desc": "Entre los 72.014 deudores FSCU con demandas de cobranza, los cobradores privados los persiguen más que el propio Estado: BancoEstado (8.678), CMR Falabella (8.582), Itaú (7.467), BCI (7.328), Scotiabank (7.220) y Banco de Chile (6.335) acumulan 45.310 demandas — 4 veces más que la Tesorería General (10.256). El deudor FSCU típico no tiene sólo una deuda con el Estado; tiene múltiples obligaciones vencidas con el sistema financiero.",
+    "tipo": "employer"
+})
+
+# 17. Crónicos acumulando
+interesante.append({
+    "titulo": "Los crónicos que sólo acumulan intereses",
+    "kpi": "247.300",
+    "sub": "73,8% del 2026 lleva 5 años seguidos y su deuda sólo crece",
+    "desc": "247.300 deudores aparecen en las 5 nóminas consecutivas (2022 a 2026) y su saldo en UTM aumentó más de 5% entre ese rango. La mediana de deuda de este grupo pasó de 81 UTM en 2022 a 152 UTM en 2026: casi se duplicó en 4 años. Son el núcleo estructural del problema: egresados que no pagaron, la deuda siguió sumando intereses, y los mecanismos de recuperación del FSCU no alcanzan a frenarla. Representan el 73,8% de todos los deudores actuales.",
+    "tipo": "chronic"
+})
+
 out["interesante"] = interesante
 print(f"\nGeneradas {len(interesante)} cuñas periodísticas")
 
@@ -443,6 +470,55 @@ for y in [2022, 2023, 2024, 2025, 2026]:
         "top_universidades": top_univ, "por_monto_bucket": monto_buckets,
     }
 out["per_year"] = per_year
+
+# ═══ TRAYECTORIAS (análisis longitudinal) ═══
+con.execute(f"CREATE VIEW trayectorias AS SELECT * FROM read_parquet('{DATA}/trayectorias.parquet')")
+out["trayectorias"] = con.execute("""
+SELECT trayectoria, COUNT(*) n, ROUND(100.0*COUNT(*)/SUM(COUNT(*)) OVER(),1) pct
+FROM trayectorias WHERE m26 IS NOT NULL GROUP BY 1 ORDER BY 2 DESC
+""").fetchdf().to_dict(orient="records")
+out["trayectoria_cronicos_evol"] = con.execute("""
+SELECT ROUND(MEDIAN(m22),1) m22, ROUND(MEDIAN(m23),1) m23, ROUND(MEDIAN(m24),1) m24,
+       ROUND(MEDIAN(m25),1) m25, ROUND(MEDIAN(m26),1) m26,
+       ROUND(AVG(m22),1) avg22, ROUND(AVG(m23),1) avg23, ROUND(AVG(m24),1) avg24,
+       ROUND(AVG(m25),1) avg25, ROUND(AVG(m26),1) avg26
+FROM trayectorias WHERE n_years = 5
+""").fetchone()
+out["trayectoria_cronicos_evol"] = {"median": list(out["trayectoria_cronicos_evol"][:5]),
+                                     "avg": list(out["trayectoria_cronicos_evol"][5:])}
+
+# ═══ DEMANDANTES (quién cobra) ═══
+con.execute(f"CREATE VIEW dte AS SELECT * FROM read_parquet('{DATA}/demandantes.parquet')")
+con.execute(f"CREATE VIEW univ_deuda AS SELECT * FROM read_parquet('{DATA}/universidad_demanda_rut.parquet')")
+
+out["top_demandantes"] = con.execute("""
+SELECT dte_nombre, n_deudores, n_causas, n_ejecutivo, n_ley_bancos
+FROM dte ORDER BY n_deudores DESC LIMIT 30
+""").fetchdf().to_dict(orient="records")
+
+# Clasificar demandantes por categoría
+out["demandantes_categorias"] = con.execute("""
+SELECT CASE
+    WHEN UPPER(dte_nombre) LIKE '%TESORERÍA%' OR UPPER(dte_nombre) LIKE '%TGR%' THEN 'Estado · Tesorería'
+    WHEN UPPER(dte_nombre) LIKE '%UNIVERSIDAD%' OR UPPER(dte_nombre) LIKE 'U. %' THEN 'Universidades'
+    WHEN UPPER(dte_nombre) LIKE '%BANCO%' OR UPPER(dte_nombre) LIKE '%ITAU%' OR UPPER(dte_nombre) LIKE '%SCOTIABANK%' OR UPPER(dte_nombre) LIKE '%BCI%' THEN 'Bancos'
+    WHEN UPPER(dte_nombre) LIKE '%FALABELLA%' OR UPPER(dte_nombre) LIKE '%CMR%' OR UPPER(dte_nombre) LIKE '%RIPLEY%' OR UPPER(dte_nombre) LIKE '%PARIS%' OR UPPER(dte_nombre) LIKE '%CAT %' THEN 'Retail/Tarjetas'
+    WHEN UPPER(dte_nombre) LIKE '%CCAF%' OR UPPER(dte_nombre) LIKE '%CAJA%' THEN 'Cajas Compensación'
+    WHEN UPPER(dte_nombre) LIKE '%SERVICIOS FINANCIEROS%' OR UPPER(dte_nombre) LIKE '%GESTORA%' OR UPPER(dte_nombre) LIKE '%COBRANZA%' THEN 'Cobranza/Factoring'
+    ELSE 'Otros' END cat,
+    SUM(n_deudores) deudores_acumulados, SUM(n_causas) causas_acumuladas,
+    COUNT(*) n_entidades
+FROM dte GROUP BY 1 ORDER BY 2 DESC
+""").fetchdf().to_dict(orient="records")
+
+# Universidades demandantes — con vínculo canónico
+out["universidades_demandantes"] = con.execute("""
+SELECT dte_rut, dte_nombre,
+       COUNT(DISTINCT deudor_rut) n_deudores,
+       SUM(n_causas) n_causas
+FROM univ_deuda GROUP BY 1, 2
+ORDER BY 3 DESC LIMIT 20
+""").fetchdf().to_dict(orient="records")
 
 # ═══ JUSTICIA ═══
 out["justicia_resumen"] = {

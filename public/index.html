@@ -298,6 +298,7 @@
       <div class="dash-desc" style="margin-top: 8px; display: flex; align-items: center; gap: 10px;">
         <span style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#6B7280">Año tributario:</span>
         <select id="yearSelect" style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;padding:4px 10px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;cursor:pointer">
+          <option value="todos">Todos (2022-2026)</option>
           <option value="2022">2022</option>
           <option value="2023">2023</option>
           <option value="2024">2024</option>
@@ -941,8 +942,8 @@ window.addEventListener('hashchange', () => {
 function initTab(name) {
   const r = D.resumen;
   if (name === 'general') {
-    if (currentYear === 2026) { renderPerfiles(); renderMontoBucket('chartMontoBucket'); }
-    else renderMontoBucketYear('chartMontoBucket');  // año histórico: solo monto bucket
+    if (currentYear === 2026 || currentYear === 'todos') { renderPerfiles(); renderMontoBucket('chartMontoBucket'); }
+    else renderMontoBucketYear('chartMontoBucket');
   }
   if (name === 'global') renderGlobal();
   if (name === 'interesante') renderInsights();
@@ -953,7 +954,7 @@ function initTab(name) {
       kpiCard('Deuda promedio', fmt(Math.round(r.avg_utm)) + ' UTM', fmtCLP(r.avg_utm * r.utm_clp) + ' · ' + fmtUSD(r.avg_utm * r.utm_usd), 'chart') +
       kpiCard('Deuda mediana', fmt(Math.round(r.median_utm)) + ' UTM', fmtCLP(r.median_utm * r.utm_clp) + ' · ' + fmtUSD(r.median_utm * r.utm_usd), 'chart') +
       kpiCard('Factores de conversión', `UTM = $${fmt(r.utm_clp)}`, `USD = $${r.usd_clp} · al ${r.fecha_conversion}`, 'globe');
-    if (currentYear === 2026) renderMontoBucket('chartMontoBucket2');
+    if (currentYear === 2026 || currentYear === 'todos') renderMontoBucket('chartMontoBucket2');
     else renderMontoBucketYear('chartMontoBucket2');
     initConversor();
   }
@@ -1308,7 +1309,11 @@ let currentYear = 2026;
 function renderMain() {
   const r = D.resumen;
   const py = (D.per_year && D.per_year[currentYear]) || null;
-  if (currentYear !== 2026 && py) {
+  if (currentYear === 'todos' && py) {
+    document.getElementById('dashYearTag').textContent = 'DecideChile · Consolidado 2022-2026';
+    document.getElementById('dashDesc').textContent =
+      `Vista consolidada de los 5 años de nóminas 2022-2026. ${fmt(py.total)} personas han figurado al menos una vez como morosas del Fondo Solidario en este período. La cartera actual (2026) asciende a ${fmtCLP(D.resumen.total_clp)}.`;
+  } else if (currentYear !== 2026 && py) {
     document.getElementById('dashYearTag').textContent = 'DecideChile · Nómina ' + currentYear;
     document.getElementById('dashDesc').textContent =
       `Análisis agregado de los ${fmt(py.total)} deudores morosos de la nómina ${currentYear}. Los cortes de patrimonio, perfil LinkedIn y causas judiciales sólo están disponibles para 2026.`;
@@ -1613,13 +1618,12 @@ window.closeInsightModal = function() {
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeInsightModal(); });
 
 function onYearChange() {
-  const y = parseInt(document.getElementById('yearSelect').value);
+  const raw = document.getElementById('yearSelect').value;
+  const y = raw === 'todos' ? 'todos' : parseInt(raw);
   if (y === currentYear) return;
   currentYear = y;
   renderMain();
-  // Invalidate cache de tabs dependientes del año
   ['general','montos','universidad'].forEach(t => { initialized[t] = false; });
-  // Re-render la tab activa si depende del año
   const active = document.querySelector('.tab-btn.active').dataset.tab;
   document.querySelectorAll('#tab-' + active + ' canvas').forEach(c => { const ci = Chart.getChart(c); if (ci) ci.destroy(); });
   if (['general','montos','universidad'].includes(active)) {
@@ -1630,8 +1634,8 @@ function onYearChange() {
 
 // Adaptar renderMontoBucket y renderMontos para soportar year distinto
 function renderMontoBucketYear(canvasId) {
-  const py = currentYear !== 2026 ? D.per_year[currentYear] : null;
-  const d = py ? py.por_monto_bucket : D.por_monto_bucket.filter(x => x.bucket !== '(sin registro)');
+  const py = (currentYear !== 2026 && currentYear !== 'todos') ? D.per_year[currentYear] : null;
+  const d = py && py.por_monto_bucket ? py.por_monto_bucket : D.por_monto_bucket.filter(x => x.bucket !== '(sin registro)');
   new Chart(document.getElementById(canvasId), {
     type: 'bar',
     data: { labels: d.map(x=>x.bucket),
@@ -1643,8 +1647,8 @@ function renderMontoBucketYear(canvasId) {
   });
 }
 function renderUniversidadYear() {
-  const py = currentYear !== 2026 ? D.per_year[currentYear] : null;
-  if (py) {
+  const py = (currentYear !== 2026 && currentYear !== 'todos') ? D.per_year[currentYear] : null;
+  if (py && py.top_universidades) {
     const topU = py.top_universidades.slice(0, 26);
     hbar('chartUnivN', topU.map(x => x.universidad), topU.map(x => x.n), C.blue, ctx => fmt(ctx.parsed.x) + ' deudores en ' + currentYear);
     hbar('chartUnivUtm', topU.map(x => x.universidad), topU.map(x => x.utm_total), C.green, ctx => fmt(ctx.parsed.x) + ' UTM');
@@ -1809,7 +1813,7 @@ function donut(id, labels, values) {
   });
 }
 
-fetch('/static/aggregates.json?v=20').then(r => r.json()).then(d => {
+fetch('/static/aggregates.json?v=21').then(r => r.json()).then(d => {
   D = d;
   renderMain();
   // Check URL hash for deep link

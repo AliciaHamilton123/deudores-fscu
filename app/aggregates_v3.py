@@ -568,6 +568,26 @@ for y in [2022, 2023, 2024, 2025, 2026]:
     }
 out["per_year"] = per_year
 
+# "Todos" — vista consolidada 2022-2026
+r = con.execute("""
+SELECT COUNT(DISTINCT rut_dv) unicos,
+       ROUND(SUM(monto_utm)) utm_acumulado,
+       COUNT(*) filas_totales
+FROM nominas
+""").fetchone()
+out["per_year"]["todos"] = {
+    "year": "todos",
+    "total": r[0],
+    "utm_total": r[1],
+    "filas_totales": r[2],
+    "clp_total": int(r[1] * UTM_CLP),
+    "usd_total": int(r[1] * UTM_USD),
+    "avg_utm": round(r[1] / r[0], 1),
+    "median_utm": None,
+    "label": "2022-2026 · consolidado",
+    "rango_años": 5,
+}
+
 # ═══ TRAYECTORIAS (análisis longitudinal) ═══
 con.execute(f"CREATE VIEW trayectorias AS SELECT * FROM read_parquet('{DATA}/trayectorias.parquet')")
 out["trayectorias"] = con.execute("""

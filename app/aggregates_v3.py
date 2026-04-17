@@ -34,34 +34,49 @@ MACROZONAS = {
 con = duckdb.connect(":memory:")
 
 # ═══ Cargar datasets ═══
-# Enriquecido con patrimonio + LinkedIn (2026)
 con.execute(f"""CREATE VIEW enriched AS SELECT * FROM read_parquet('{DATA}/deudores_enriched.parquet')""")
-# Nómina consolidada histórica
 con.execute(f"""CREATE VIEW nominas AS SELECT * FROM read_parquet('{DATA}/nominas_consolidado.parquet')""")
-# 2026 con monto
-con.execute(f"""CREATE VIEW nom2026 AS SELECT rut_dv, monto_utm, universidad_canon FROM nominas WHERE year=2026""")
-# PJUD
 con.execute(f"""CREATE VIEW pjud AS SELECT * FROM read_parquet('{DATA}/deudores_pjud.parquet')""")
 
-# Join enriched + 2026 monto + PJUD
+# nom2026 agregado por RUT (un deudor con 2 universidades → 1 fila con monto sumado)
+con.execute("""
+CREATE VIEW nom2026_agg AS
+SELECT rut_dv,
+       SUM(monto_utm) AS monto_utm,
+       arg_max(universidad_canon, monto_utm) AS universidad_principal,
+       COUNT(*) AS n_universidades
+FROM nominas WHERE year=2026 GROUP BY rut_dv
+""")
+
+# Base canonical 2026: todos los deudores del PDF 2026 (incluye los que no están enriched)
 con.execute("""
 CREATE TABLE full_t AS
-SELECT
-    e.*,
-    n.monto_utm, n.universidad_canon AS universidad_principal,
-    COALESCE(p.n_civil, 0) AS n_civil,
-    COALESCE(p.n_civil_ddo, 0) AS n_civil_ddo,
-    COALESCE(p.n_civil_dte, 0) AS n_civil_dte,
-    COALESCE(p.n_laboral, 0) AS n_laboral,
-    COALESCE(p.n_laboral_ddo, 0) AS n_laboral_ddo,
-    COALESCE(p.en_pjud, FALSE) AS en_pjud,
-    p.ultimo_year_civil
-FROM enriched e
-LEFT JOIN nom2026 n ON e.rut_dv = n.rut_dv
-LEFT JOIN pjud p ON e.rut_dv = p.rut_dv
+SELECT n.rut_dv,
+       n.monto_utm, n.universidad_principal, n.n_universidades,
+       e.nombre, e.sexo, e.edad, e.comuna, e.cod_comuna, e.region, e.cod_region,
+       e.latitud, e.longitud, e.gse, e.nse, e.decil_avaluo,
+       e.total_vehiculos, e.total_propiedades, e.avaluo_total_propiedades, e.tasacion_total_vehiculos,
+       COALESCE(e.en_linkedin, FALSE) AS en_linkedin,
+       e.seniority, e.tier, e.industry, e.company, e.job_title,
+       COALESCE(p.n_civil, 0) AS n_civil,
+       COALESCE(p.n_civil_ddo, 0) AS n_civil_ddo,
+       COALESCE(p.n_civil_dte, 0) AS n_civil_dte,
+       COALESCE(p.n_laboral, 0) AS n_laboral,
+       COALESCE(p.n_laboral_ddo, 0) AS n_laboral_ddo,
+       COALESCE(p.en_pjud, FALSE) AS en_pjud,
+       p.ultimo_year_civil
+FROM nom2026_agg n
+LEFT JOIN enriched e ON n.rut_dv = e.rut_dv
+LEFT JOIN pjud p ON n.rut_dv = p.rut_dv
 """)
-m = con.execute("SELECT COUNT(*), SUM(CASE WHEN en_pjud THEN 1 ELSE 0 END), SUM(CASE WHEN monto_utm IS NOT NULL THEN 1 ELSE 0 END) FROM full_t").fetchone()
-print(f"full_t: {m[0]:,} · con PJUD: {m[1]:,} · con monto 2026: {m[2]:,}")
+m = con.execute("""
+SELECT COUNT(*) total,
+    SUM(CASE WHEN en_linkedin THEN 1 ELSE 0 END) lk,
+    SUM(CASE WHEN en_pjud THEN 1 ELSE 0 END) pj,
+    SUM(CASE WHEN nombre IS NOT NULL THEN 1 ELSE 0 END) enriched,
+    ROUND(SUM(monto_utm)) utm_total
+FROM full_t""").fetchone()
+print(f"full_t (base PDF 2026): {m[0]:,} deudores · {m[1]:,} LinkedIn · {m[2]:,} PJUD · {m[3]:,} con patrimonio · {m[4]:,.0f} UTM total")
 
 def table(sql, k_col="n"):
     rows = con.execute(sql).fetchdf().to_dict(orient="records")
@@ -92,8 +107,9 @@ out["resumen"] = {
     "total_clp": int((r[4] or 0) * UTM_CLP), "total_usd": int((r[4] or 0) * UTM_USD),
     "utm_clp": UTM_CLP, "usd_clp": USD_CLP, "utm_usd": round(UTM_USD, 2),
     "fecha_conversion": "2026-04-17",
-    "patrimonio_alto": r[7], "con_vehiculos": r[8], "con_propiedades": r[9],
-    "con_pjud": r[10], "con_civil_ddo": r[11],
+    "patrimonio_alto": r[7] or 0, "con_vehiculos": r[8] or 0, "con_propiedades": r[9] or 0,
+    "con_pjud": r[10] or 0, "con_civil_ddo": r[11] or 0,
+    "con_patrimonio_data": con.execute("SELECT SUM(CASE WHEN nombre IS NOT NULL THEN 1 ELSE 0 END) FROM full_t").fetchone()[0],
 }
 
 # ═══ Cortes globales (2026) ═══

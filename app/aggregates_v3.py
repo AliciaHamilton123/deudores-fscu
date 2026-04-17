@@ -36,7 +36,7 @@ con = duckdb.connect(":memory:")
 # ═══ Cargar datasets ═══
 con.execute(f"""CREATE VIEW enriched AS SELECT * FROM read_parquet('{DATA}/deudores_enriched.parquet')""")
 con.execute(f"""CREATE VIEW nominas AS SELECT * FROM read_parquet('{DATA}/nominas_consolidado.parquet')""")
-con.execute(f"""CREATE VIEW pjud AS SELECT * FROM read_parquet('{DATA}/deudores_pjud.parquet')""")
+con.execute(f"""CREATE VIEW pjud AS SELECT * FROM read_parquet('{DATA}/deudores_pjud_deudas.parquet')""")
 
 # nom2026 agregado por RUT (un deudor con 2 universidades → 1 fila con monto sumado)
 con.execute("""
@@ -58,13 +58,11 @@ SELECT n.rut_dv,
        e.total_vehiculos, e.total_propiedades, e.avaluo_total_propiedades, e.tasacion_total_vehiculos,
        COALESCE(e.en_linkedin, FALSE) AS en_linkedin,
        e.seniority, e.tier, e.industry, e.company, e.job_title,
-       COALESCE(p.n_civil, 0) AS n_civil,
-       COALESCE(p.n_civil_ddo, 0) AS n_civil_ddo,
-       COALESCE(p.n_civil_dte, 0) AS n_civil_dte,
-       COALESCE(p.n_laboral, 0) AS n_laboral,
-       COALESCE(p.n_laboral_ddo, 0) AS n_laboral_ddo,
-       COALESCE(p.en_pjud, FALSE) AS en_pjud,
-       p.ultimo_year_civil
+       COALESCE(p.n_causas_deuda, 0) AS n_causas_deuda,
+       COALESCE(p.n_ejecutivo, 0) AS n_ejecutivo,
+       COALESCE(p.n_ley_bancos, 0) AS n_ley_bancos,
+       COALESCE(p.demandado_por_deuda, FALSE) AS demandado_por_deuda,
+       p.ultimo_year_deuda
 FROM nom2026_agg n
 LEFT JOIN enriched e ON n.rut_dv = e.rut_dv
 LEFT JOIN pjud p ON n.rut_dv = p.rut_dv
@@ -72,7 +70,7 @@ LEFT JOIN pjud p ON n.rut_dv = p.rut_dv
 m = con.execute("""
 SELECT COUNT(*) total,
     SUM(CASE WHEN en_linkedin THEN 1 ELSE 0 END) lk,
-    SUM(CASE WHEN en_pjud THEN 1 ELSE 0 END) pj,
+    SUM(CASE WHEN demandado_por_deuda THEN 1 ELSE 0 END) pj,
     SUM(CASE WHEN nombre IS NOT NULL THEN 1 ELSE 0 END) enriched,
     ROUND(SUM(monto_utm)) utm_total
 FROM full_t""").fetchone()
@@ -97,8 +95,8 @@ SELECT
     SUM(CASE WHEN decil_avaluo >= 8 THEN 1 ELSE 0 END) patrimonio_alto,
     SUM(CASE WHEN total_vehiculos >= 1 THEN 1 ELSE 0 END) con_vehiculos,
     SUM(CASE WHEN total_propiedades >= 1 THEN 1 ELSE 0 END) con_propiedades,
-    SUM(CASE WHEN en_pjud THEN 1 ELSE 0 END) con_pjud,
-    SUM(CASE WHEN n_civil_ddo > 0 THEN 1 ELSE 0 END) con_civil_ddo
+    SUM(CASE WHEN demandado_por_deuda THEN 1 ELSE 0 END) con_demandado_deuda_raw,
+    SUM(CASE WHEN demandado_por_deuda = TRUE THEN 1 ELSE 0 END) con_demandado_deuda
 FROM full_t
 """).fetchone()
 out["resumen"] = {
@@ -108,7 +106,7 @@ out["resumen"] = {
     "utm_clp": UTM_CLP, "usd_clp": USD_CLP, "utm_usd": round(UTM_USD, 2),
     "fecha_conversion": "2026-04-17",
     "patrimonio_alto": r[7] or 0, "con_vehiculos": r[8] or 0, "con_propiedades": r[9] or 0,
-    "con_pjud": r[10] or 0, "con_civil_ddo": r[11] or 0,
+    "con_pjud": r[10] or 0, "con_demandado_deuda": r[11] or 0,
     "con_patrimonio_data": con.execute("SELECT SUM(CASE WHEN nombre IS NOT NULL THEN 1 ELSE 0 END) FROM full_t").fetchone()[0],
 }
 
@@ -335,13 +333,13 @@ interesante.append({
     "tipo": "flow"
 })
 
-# 8. Demandados civil
-n_ddo = out["resumen"]["con_civil_ddo"]
+# 8. Demandados por cobranza de deuda
+n_ddo = out["resumen"]["con_demandado_deuda"]
 interesante.append({
-    "titulo": "Uno de cada cuatro ya fue demandado",
+    "titulo": "Uno de cada cinco enfrenta cobranza judicial",
     "kpi": f"{n_ddo:,}".replace(",", "."),
-    "sub": f"{100*n_ddo/total:.1f}% figura como demandado civil en PJUD",
-    "desc": f"El cruce con la base PJUD (Poder Judicial chileno, 22M registros de litigantes civiles) encontró que {n_ddo:,} deudores FSCU ({100*n_ddo/total:.1f}%) figuran como demandados directos en causas civiles — la mayoría cobranza por créditos en mora. La cifra incluye sólo rol DDO (demandado directo), excluye demandantes, abogados y apoderados. Las regiones con mayor tasa de demandados suelen coincidir con zonas de mayor penetración bancaria y actividad de cobranza ejecutiva.".replace(",", "."),
+    "sub": f"{100*n_ddo/total:.1f}% del total fue demandado por cobranza de deuda",
+    "desc": f"El cruce con PJUD (22M registros de litigantes del Poder Judicial) encontró que {n_ddo:,} deudores FSCU ({100*n_ddo/total:.1f}%) figuran como demandados directos (DDO.) en causas civiles de cobranza de deuda. El filtro excluye divorcios, daños, arrendamiento y otras causas civiles no vinculadas a morosidad; incluye Juicio Ejecutivo Obligación de Dar (mayoritario), Ejecutivo Mínima Cuantía, Monitorio, Ley de Bancos y Gestión Preparatoria de Cobranza. Estas personas ya tuvieron al menos una acción judicial de cobro en su contra — señal de morosidad estructural más allá del FSCU.".replace(",", "."),
     "tipo": "judicial"
 })
 
@@ -377,8 +375,8 @@ interesante.append({
 # 12. Top universidad por % demandados
 # (ya lo tenemos en justicia_por_universidad — la peor)
 ju_worst = con.execute("""
-SELECT universidad_canon u, COUNT(*) n, SUM(CASE WHEN p.n_civil_ddo > 0 THEN 1 ELSE 0 END) ddo,
-    ROUND(100.0*SUM(CASE WHEN p.n_civil_ddo > 0 THEN 1 ELSE 0 END)/COUNT(*),1) pct
+SELECT universidad_canon u, COUNT(*) n, SUM(CASE WHEN p.demandado_por_deuda = TRUE THEN 1 ELSE 0 END) ddo,
+    ROUND(100.0*SUM(CASE WHEN p.demandado_por_deuda = TRUE THEN 1 ELSE 0 END)/COUNT(*),1) pct
 FROM (SELECT rut_dv, arg_max(universidad_canon, monto_utm) universidad_canon FROM nominas WHERE year=2026 GROUP BY rut_dv) n
 LEFT JOIN pjud p USING (rut_dv) GROUP BY 1 HAVING COUNT(*) >= 100 ORDER BY pct DESC LIMIT 1
 """).fetchone()
@@ -450,26 +448,26 @@ out["per_year"] = per_year
 out["justicia_resumen"] = {
     "total": out["resumen"]["total"],
     "con_pjud": out["resumen"]["con_pjud"],
-    "con_civil_ddo": out["resumen"]["con_civil_ddo"],
+    "con_demandado_deuda": out["resumen"]["con_demandado_deuda"],
     "pct_con_pjud": round(100 * out["resumen"]["con_pjud"] / out["resumen"]["total"], 1),
-    "pct_con_civil_ddo": round(100 * out["resumen"]["con_civil_ddo"] / out["resumen"]["total"], 1),
+    "pct_con_demandado_deuda": round(100 * out["resumen"]["con_demandado_deuda"] / out["resumen"]["total"], 1),
 }
 out["justicia_por_causa"] = table("""SELECT CASE
-    WHEN n_civil = 0 AND n_laboral = 0 THEN 'Sin causas'
-    WHEN n_civil = 1 AND n_laboral = 0 THEN '1 causa civil'
-    WHEN n_civil BETWEEN 2 AND 3 AND n_laboral = 0 THEN '2-3 civiles'
-    WHEN n_civil BETWEEN 4 AND 10 THEN '4-10 civiles'
-    WHEN n_civil > 10 THEN '10+ civiles'
-    WHEN n_laboral > 0 THEN 'Con laboral' ELSE 'Otro' END bucket, COUNT(*) n FROM full_t GROUP BY 1""")
+    WHEN n_causas_deuda = 0 THEN 'Sin causas por deuda'
+    WHEN n_causas_deuda = 1 THEN '1 causa'
+    WHEN n_causas_deuda BETWEEN 2 AND 3 THEN '2-3 causas'
+    WHEN n_causas_deuda BETWEEN 4 AND 10 THEN '4-10 causas'
+    WHEN n_causas_deuda > 10 THEN '10+ causas'
+    ELSE 'Otro' END bucket, COUNT(*) n FROM full_t GROUP BY 1""")
 out["justicia_por_region"] = table("""SELECT COALESCE(region,'(sin región)') region,
-    COUNT(*) n, SUM(CASE WHEN n_civil_ddo > 0 THEN 1 ELSE 0 END) demandados_civil,
-    ROUND(100.0*SUM(CASE WHEN n_civil_ddo > 0 THEN 1 ELSE 0 END)/COUNT(*),1) pct_demandados
+    COUNT(*) n, SUM(CASE WHEN demandado_por_deuda = TRUE THEN 1 ELSE 0 END) demandados_civil,
+    ROUND(100.0*SUM(CASE WHEN demandado_por_deuda = TRUE THEN 1 ELSE 0 END)/COUNT(*),1) pct_demandados
 FROM full_t GROUP BY 1 ORDER BY 2 DESC""")
 out["justicia_por_universidad"] = table("""SELECT universidad_principal universidad,
-    COUNT(*) n, SUM(CASE WHEN n_civil_ddo > 0 THEN 1 ELSE 0 END) demandados_civil,
-    ROUND(100.0*SUM(CASE WHEN n_civil_ddo > 0 THEN 1 ELSE 0 END)/COUNT(*),1) pct_demandados
+    COUNT(*) n, SUM(CASE WHEN demandado_por_deuda = TRUE THEN 1 ELSE 0 END) demandados_civil,
+    ROUND(100.0*SUM(CASE WHEN demandado_por_deuda = TRUE THEN 1 ELSE 0 END)/COUNT(*),1) pct_demandados
 FROM full_t WHERE universidad_principal IS NOT NULL GROUP BY 1 ORDER BY 2 DESC""")
-out["justicia_por_perfil"] = table("""WITH p AS (SELECT n_civil_ddo, CASE
+out["justicia_por_perfil"] = table("""WITH p AS (SELECT demandado_por_deuda, CASE
     WHEN en_linkedin AND seniority IN ('c-level','director') THEN 'Ejecutivo'
     WHEN en_linkedin AND seniority = 'manager' THEN 'Gerente'
     WHEN en_linkedin AND seniority = 'academic' THEN 'Académico'
@@ -479,8 +477,8 @@ out["justicia_por_perfil"] = table("""WITH p AS (SELECT n_civil_ddo, CASE
     WHEN en_linkedin THEN 'LK sin clasif'
     WHEN decil_avaluo >= 8 THEN 'Alto patrimonio'
     ELSE 'Sin info' END perfil FROM full_t)
-SELECT perfil, COUNT(*) n, SUM(CASE WHEN n_civil_ddo > 0 THEN 1 ELSE 0 END) demandados,
-    ROUND(100.0*SUM(CASE WHEN n_civil_ddo > 0 THEN 1 ELSE 0 END)/COUNT(*),1) pct
+SELECT perfil, COUNT(*) n, SUM(CASE WHEN demandado_por_deuda = TRUE THEN 1 ELSE 0 END) demandados,
+    ROUND(100.0*SUM(CASE WHEN demandado_por_deuda = TRUE THEN 1 ELSE 0 END)/COUNT(*),1) pct
 FROM p GROUP BY 1 ORDER BY 2 DESC""")
 
 # ═══ XRAY UNIVERSIDAD ═══
@@ -539,7 +537,7 @@ for u in univs:
     """, [u, K]).fetchdf().to_dict(orient="records")
     # Justicia (solo si subset cumple k)
     pj = con.execute("""
-    SELECT COUNT(*) n, SUM(CASE WHEN n_civil_ddo > 0 THEN 1 ELSE 0 END) demandados
+    SELECT COUNT(*) n, SUM(CASE WHEN demandado_por_deuda = TRUE THEN 1 ELSE 0 END) demandados
     FROM full_t WHERE universidad_principal = ?
     """, [u]).fetchone()
     if pj and pj[0] >= K:

@@ -195,8 +195,8 @@
 
   <div class="tab-content" id="tab-justicia">
     <div class="section-tag">Cruce con Poder Judicial</div>
-    <div class="section-title">Exposición judicial de los deudores</div>
-    <div class="section-desc">Cruce de los 335.152 RUTs contra la base PJUD_Unholster (litigantes civiles del Poder Judicial chileno, ~22M registros). Se considera sólo el rol <b>demandado directo (DDO.)</b> — se excluyen demandantes, abogados, apoderados y acreedores. Este corte refleja exposición a cobranza judicial ejecutiva.</div>
+    <div class="section-title">Demandados por cobranza de deuda</div>
+    <div class="section-desc">Cruce de los 335.152 RUTs contra PJUD_Unholster filtrando <b>sólo causas civiles de cobranza de deuda</b> donde el deudor aparece como demandado directo (DDO.). Se incluyen: Juicio Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Gestión Preparatoria (Confesión de Deuda / Notificación Cobro de Factura), Monitorio, Ley de Bancos, y Procedimiento Prenda. Se excluyen divorcios, daños, arrendamiento, voluntarios y demás causas civiles no vinculadas a deuda.</div>
     <div class="kpi-grid cols-4 mb-sm" id="kpiJusticia"></div>
     <div class="grid-2">
       <div class="card"><div class="card-label">Distribución por nº de causas</div><div class="chart-wrap tall"><canvas id="chartJustCausa"></canvas></div></div>
@@ -521,10 +521,10 @@ function renderXray(uname) {
 function renderJusticia() {
   const jr = D.justicia_resumen;
   document.getElementById('kpiJusticia').innerHTML =
-    kpiCard('Con alguna causa', fmt(jr.con_pjud), jr.pct_con_pjud + '% del total', 'globe', 'amber') +
-    kpiCard('Demandados civil', fmt(jr.con_civil_ddo), jr.pct_con_civil_ddo + '% del total', 'cash', 'red') +
-    kpiCard('Total deudores', fmt(jr.total), 'Base de cruce', 'users') +
-    kpiCard('Fuente', 'PJUD · Grupo Defensa', 'Litigantes civiles + laborales', 'link');
+    kpiCard('Demandados por deuda', fmt(jr.con_demandado_deuda), jr.pct_con_demandado_deuda + '% del total', 'cash', 'red') +
+    kpiCard('Total deudores', fmt(jr.total), 'Base de cruce 2026', 'users') +
+    kpiCard('Tipos de causa', '7 procedimientos', 'Ejecutivo + Monitorio + Ley Bancos', 'chart', 'amber') +
+    kpiCard('Fuente', 'PJUD · Grupo Defensa', 'info_causas_civil filtrado', 'link');
 
   const jc = D.justicia_por_causa.sort((a,b) => b.n - a.n);
   makeHbar('chartJustCausa', jc.map(x=>x.bucket), jc.map(x=>x.n), C.blue);
@@ -765,7 +765,7 @@ function donut(id, labels, values) {
   });
 }
 
-fetch('/static/aggregates.json?v=9').then(r => r.json()).then(d => {
+fetch('/static/aggregates.json?v=10').then(r => r.json()).then(d => {
   D = d;
   renderMain();
   initTab('general');

@@ -300,7 +300,7 @@ interesante.append({
 # 4. Patrimonio alto morosos
 n_alto = q1("SELECT COUNT(*) FROM full_t WHERE decil_avaluo >= 8")
 interesante.append({
-    "titulo": "Deudores con patrimonio alto",
+    "titulo": "Deudores con alto patrimonio",
     "kpi": f"{n_alto:,}".replace(",", "."),
     "sub": f"{100*n_alto/total:.1f}% de los deudores están en el decil 8-10 de avalúo fiscal",
     "desc": f"{n_alto:,} morosos del FSCU tienen avalúo fiscal correspondiente al decil 8, 9 o 10 según el SII — el 30% más rico en patrimonio declarado. Un 38% están en el decil superior 10 (máxima riqueza por avalúo). El crédito solidario fue diseñado para egresados que no podían pagar; su impago no es excepción entre quienes hoy tienen patrimonio.".replace(",", "."),

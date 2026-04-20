@@ -1,8 +1,6 @@
 {
   "resumen": {
     "total": 335152,
-    "en_linkedin": 53383,
-    "pct_linkedin": 15.9,
     "con_monto": 335152,
     "total_utm": 57549699.0,
     "avg_utm": 171.7,
@@ -2666,442 +2664,6 @@
       "utm_avg": 10.2
     }
   ],
-  "por_seniority": [
-    {
-      "seniority": "professional",
-      "n": 15834
-    },
-    {
-      "seniority": "unclassified",
-      "n": 10517
-    },
-    {
-      "seniority": "manager",
-      "n": 8514
-    },
-    {
-      "seniority": "academic",
-      "n": 6664
-    },
-    {
-      "seniority": "senior",
-      "n": 4173
-    },
-    {
-      "seniority": "operational",
-      "n": 4053
-    },
-    {
-      "seniority": "c-level",
-      "n": 2112
-    },
-    {
-      "seniority": "director",
-      "n": 1516
-    }
-  ],
-  "por_tier": [
-    {
-      "tier": "unknown",
-      "n": 23994
-    },
-    {
-      "tier": "large",
-      "n": 9059
-    },
-    {
-      "tier": "small",
-      "n": 6570
-    },
-    {
-      "tier": "mid-market",
-      "n": 5600
-    },
-    {
-      "tier": "enterprise",
-      "n": 5034
-    },
-    {
-      "tier": "micro",
-      "n": 3126
-    }
-  ],
-  "top_industrias": [
-    {
-      "industry": "primary/secondary education",
-      "n": 5589
-    },
-    {
-      "industry": "construction",
-      "n": 3122
-    },
-    {
-      "industry": "mining & metals",
-      "n": 2754
-    },
-    {
-      "industry": "higher education",
-      "n": 2443
-    },
-    {
-      "industry": "food production",
-      "n": 1578
-    },
-    {
-      "industry": "utilities",
-      "n": 1386
-    },
-    {
-      "industry": "mechanical or industrial engineering",
-      "n": 1336
-    },
-    {
-      "industry": "civil engineering",
-      "n": 1285
-    },
-    {
-      "industry": "government administration",
-      "n": 1260
-    },
-    {
-      "industry": "information technology and services",
-      "n": 1076
-    },
-    {
-      "industry": "hospital & health care",
-      "n": 1020
-    },
-    {
-      "industry": "farming",
-      "n": 952
-    },
-    {
-      "industry": "banking",
-      "n": 906
-    },
-    {
-      "industry": "telecommunications",
-      "n": 881
-    },
-    {
-      "industry": "accounting",
-      "n": 772
-    },
-    {
-      "industry": "retail",
-      "n": 730
-    },
-    {
-      "industry": "financial services",
-      "n": 713
-    },
-    {
-      "industry": "law practice",
-      "n": 697
-    },
-    {
-      "industry": "research",
-      "n": 684
-    },
-    {
-      "industry": "health, wellness and fitness",
-      "n": 681
-    },
-    {
-      "industry": "architecture & planning",
-      "n": 666
-    },
-    {
-      "industry": "medical devices",
-      "n": 664
-    },
-    {
-      "industry": "management consulting",
-      "n": 642
-    },
-    {
-      "industry": "human resources",
-      "n": 615
-    },
-    {
-      "industry": "education management",
-      "n": 600
-    },
-    {
-      "industry": "medical practice",
-      "n": 597
-    },
-    {
-      "industry": "environmental services",
-      "n": 563
-    },
-    {
-      "industry": "renewables & environment",
-      "n": 535
-    },
-    {
-      "industry": "logistics and supply chain",
-      "n": 505
-    },
-    {
-      "industry": "marketing and advertising",
-      "n": 481
-    }
-  ],
-  "top_empresas": [
-    {
-      "company": "codelco",
-      "n": 188
-    },
-    {
-      "company": "universidad de chile",
-      "n": 183
-    },
-    {
-      "company": "arauco",
-      "n": 166
-    },
-    {
-      "company": "banco santander chile",
-      "n": 153
-    },
-    {
-      "company": "pontificia universidad católica de chile",
-      "n": 152
-    },
-    {
-      "company": "universidad de concepción",
-      "n": 132
-    },
-    {
-      "company": "banco bci",
-      "n": 130
-    },
-    {
-      "company": "entel",
-      "n": 128
-    },
-    {
-      "company": "duoc uc",
-      "n": 128
-    },
-    {
-      "company": "inacap",
-      "n": 124
-    },
-    {
-      "company": "universidad de santiago de chile",
-      "n": 121
-    },
-    {
-      "company": "cencosud",
-      "n": 114
-    },
-    {
-      "company": "banco de chile",
-      "n": 106
-    },
-    {
-      "company": "particular",
-      "n": 100
-    },
-    {
-      "company": "sodimac",
-      "n": 98
-    },
-    {
-      "company": "latam airlines",
-      "n": 97
-    },
-    {
-      "company": "universidad técnica federico santa maría",
-      "n": 94
-    },
-    {
-      "company": "junji - junta nacional de jardines infantiles",
-      "n": 90
-    },
-    {
-      "company": "pontificia universidad católica de valparaíso",
-      "n": 90
-    },
-    {
-      "company": "falabella",
-      "n": 89
-    },
-    {
-      "company": "deloitte",
-      "n": 89
-    },
-    {
-      "company": "agrosuper",
-      "n": 87
-    },
-    {
-      "company": "cmpc",
-      "n": 86
-    },
-    {
-      "company": "telefónica",
-      "n": 84
-    },
-    {
-      "company": "bancoestado",
-      "n": 84
-    },
-    {
-      "company": "walmart chile",
-      "n": 83
-    },
-    {
-      "company": "smu",
-      "n": 83
-    },
-    {
-      "company": "universidad santo tomás (cl)",
-      "n": 78
-    },
-    {
-      "company": "bureau veritas",
-      "n": 76
-    },
-    {
-      "company": "universidad de talca",
-      "n": 75
-    },
-    {
-      "company": "ministerio de obras públicas",
-      "n": 75
-    },
-    {
-      "company": "universidad austral de chile",
-      "n": 75
-    },
-    {
-      "company": "ninguna",
-      "n": 75
-    },
-    {
-      "company": "achs",
-      "n": 74
-    },
-    {
-      "company": "universidad de valparaíso",
-      "n": 74
-    },
-    {
-      "company": "fundación integra, chile",
-      "n": 74
-    },
-    {
-      "company": "sqm",
-      "n": 74
-    },
-    {
-      "company": "claro chile",
-      "n": 72
-    },
-    {
-      "company": "escuela",
-      "n": 72
-    },
-    {
-      "company": "instituto profesional aiep",
-      "n": 71
-    },
-    {
-      "company": "ey",
-      "n": 71
-    },
-    {
-      "company": "ripley",
-      "n": 63
-    },
-    {
-      "company": "santo tomás",
-      "n": 62
-    },
-    {
-      "company": "corporación nacional forestal",
-      "n": 62
-    },
-    {
-      "company": "universidad andrés bello",
-      "n": 62
-    },
-    {
-      "company": "scotiabank",
-      "n": 61
-    },
-    {
-      "company": "farmacias cruz verde",
-      "n": 61
-    },
-    {
-      "company": "universidad san sebastián",
-      "n": 60
-    },
-    {
-      "company": "bhp",
-      "n": 58
-    },
-    {
-      "company": "salfacorp",
-      "n": 58
-    }
-  ],
-  "perfiles": [
-    {
-      "perfil": "1. Ejecutivo (C-Level/Director)",
-      "n": 3628,
-      "pct": 1.1
-    },
-    {
-      "perfil": "10. Sin información adicional",
-      "n": 107174,
-      "pct": 32.0
-    },
-    {
-      "perfil": "2. Gerente",
-      "n": 8514,
-      "pct": 2.5
-    },
-    {
-      "perfil": "3. Académico",
-      "n": 6664,
-      "pct": 2.0
-    },
-    {
-      "perfil": "4. Profesional senior",
-      "n": 4173,
-      "pct": 1.2
-    },
-    {
-      "perfil": "5. Profesional",
-      "n": 15834,
-      "pct": 4.7
-    },
-    {
-      "perfil": "6. Operativo",
-      "n": 4053,
-      "pct": 1.2
-    },
-    {
-      "perfil": "7. En LinkedIn (sin clasificar)",
-      "n": 10517,
-      "pct": 3.1
-    },
-    {
-      "perfil": "8. Alto patrimonio (sin LinkedIn)",
-      "n": 102423,
-      "pct": 30.6
-    },
-    {
-      "perfil": "9. Con patrimonio (sin LinkedIn)",
-      "n": 72172,
-      "pct": 21.5
-    }
-  ],
   "evolucion": [
     {
       "year": 2022,
@@ -4040,22 +3602,6 @@
   },
   "interesante": [
     {
-      "titulo": "Ejecutivos morosos",
-      "kpi": "3.628",
-      "sub": "1.787 están en decil 8-10 de avalúo (patrimonio alto)",
-      "desc": "C-level y directores identificados en LinkedIn Chile que aparecen en la nómina FSCU 2026. Representan el 1.1% del total de deudores y el 4,2% del subconjunto enriquecido con LinkedIn. Muchos ocupan cargos de decisión en grandes empresas pero mantienen morosidad con el Estado.",
-      "eli5": "3.628 ejecutivos identificados como C-level o directores en LinkedIn Chile figuran en la nómina FSCU 2026. De ellos, 1.787 (49,3%) están entre el 30% más rico por avalúo fiscal (decil 8-10 SII). La morosidad no se explica por capacidad de pago: son profesionales con alta jerarquía y patrimonio declarado que mantienen abierta su deuda universitaria con el Estado.",
-      "tipo": "executives"
-    },
-    {
-      "titulo": "Académicos que deben al Fondo",
-      "kpi": "6.664",
-      "sub": "962 trabajan en universidades — muchos adeudan a su propia institución",
-      "desc": "Profesores universitarios que son deudores morosos del FSCU. Varios de ellos ejercen actualmente en las mismas universidades a las que deben: 36 académicos adeudan a la U. de Concepción y trabajan en ella, 28 a la PUC, 27 a la USACH, 22 a la U. de Chile, 21 a la UTFSM. Educación primaria y secundaria concentra el mayor volumen (6.676 deudores) seguida de Educación superior (3.034).",
-      "eli5": "6.664 deudores FSCU trabajan en educación (colegios y universidades). Entre quienes se desempeñan en instituciones del CRUCH, se identifican casos donde el académico adeuda al mismo establecimiento donde enseña: 36 en U. de Concepción, 28 en PUC, 27 en USACH, 22 en U. de Chile, 21 en UTFSM. El sector educación concentra el mayor volumen de deudores identificados en LinkedIn.",
-      "tipo": "academic"
-    },
-    {
       "titulo": "La mayoría son crónicos",
       "kpi": "258.596",
       "sub": "77.2% del 2026 estuvo moroso los 5 años",
@@ -4070,14 +3616,6 @@
       "desc": "118.579 morosos del FSCU tienen avalúo fiscal correspondiente al decil 8. 9 o 10 según el SII — el 30% más rico en patrimonio declarado. Un 38% están en el decil superior 10 (máxima riqueza por avalúo). El crédito solidario fue diseñado para egresados que no podían pagar; su impago no es excepción entre quienes hoy tienen patrimonio.",
       "eli5": "118.579 deudores FSCU (35,4% del total) tienen avalúo fiscal en los deciles 8, 9 o 10 según el SII — el 30% de mayor patrimonio declarado en Chile. El 38% de ellos está en el decil superior. El impago no se concentra en los segmentos sin capacidad de pago: persiste entre contribuyentes con patrimonio establecido.",
       "tipo": "wealth"
-    },
-    {
-      "titulo": "Empleados de grandes empresas",
-      "kpi": "17.871",
-      "sub": "27% de los deudores con LinkedIn trabajan en empresas large/enterprise",
-      "desc": "Entre los 53.383 deudores identificados en LinkedIn, 17.871 trabajan en empresas grandes. Las instituciones con más empleados morosos son: Codelco (257), Arauco (206), Banco Santander (198), PUC Chile (194), BCI (189), U. de Concepción (178), Entel (164), INACAP (159), DuocUC (152), U. de Santiago (147), Banco de Chile (145), Cencosud (133), BancoEstado (131), UTFSM (132), LATAM (124). Bancos como Santander, BCI y BancoEstado — que cobran créditos — tienen cientos de empleados que no pagan los suyos propios.",
-      "eli5": "Entre los 53.383 deudores identificados en LinkedIn, 17.871 (27%) trabajan en empresas grandes o enterprise. Codelco (257), Arauco (206) y Banco Santander (198) encabezan el ranking de empleadores. Los bancos Santander, BCI y BancoEstado — actores que también ejercen cobranza crediticia — suman en conjunto más de 500 empleados morosos del FSCU.",
-      "tipo": "employer"
     },
     {
       "titulo": "Cartera crece 4,5× más que la UTM",
@@ -4096,14 +3634,6 @@
       "tipo": "flow"
     },
     {
-      "titulo": "Uno de cada cinco enfrenta cobranza judicial",
-      "kpi": "72.014",
-      "sub": "21.5% del total fue demandado por cobranza de deuda",
-      "desc": "El cruce con PJUD (22M registros de litigantes del Poder Judicial) encontró que 72.014 deudores FSCU (21.5%) figuran como demandados directos (DDO.) en causas civiles de cobranza de deuda. El filtro excluye divorcios. daños. arrendamiento y otras causas civiles no vinculadas a morosidad; incluye Juicio Ejecutivo Obligación de Dar (mayoritario). Ejecutivo Mínima Cuantía. Monitorio. Ley de Bancos y Gestión Preparatoria de Cobranza. Estas personas ya tuvieron al menos una acción judicial de cobro en su contra — señal de morosidad estructural más allá del FSCU.",
-      "eli5": "El cruce con los 22 millones de registros de litigantes del Poder Judicial identifica que 72.014 deudores FSCU (21,5%) figuran como demandados civiles por cobranza de deuda. La cifra excluye divorcios, arrendamiento y causas no patrimoniales. La exposición judicial del grupo trasciende al FSCU: bancos, retail financiero y el Estado aparecen como demandantes por obligaciones distintas.",
-      "tipo": "judicial"
-    },
-    {
       "titulo": "Perfil demográfico",
       "kpi": "54% / 46%",
       "sub": "Masculino / Femenino · mediana de edad 35-44",
@@ -4118,22 +3648,6 @@
       "desc": "La cartera vencida FSCU asciende a US$ 4.54 mil millones (≈ $4.02 billones CLP). Eso equivale al 1,38% del PIB nominal chileno 2024 (≈ US$ 330 mil millones). Para comparación: el costo estimado de la gratuidad universitaria anual en Chile ronda los USD 1.500M. La cartera morosa FSCU equivale a 3 años de gratuidad universitaria. O, dicho de otra manera, si se recuperara íntegramente financiaría 3 años del programa insignia de acceso universitario.",
       "eli5": "La cartera vencida FSCU asciende a US$ 4.540 millones (≈ $4,02 billones CLP), equivalente al 1,38% del PIB nominal chileno 2024. El monto corresponde a aproximadamente tres años del costo estimado de la gratuidad universitaria (≈US$ 1.500 millones anuales). Recuperar la cartera financiaría íntegramente el programa por ese período.",
       "tipo": "economy"
-    },
-    {
-      "titulo": "Educación lidera por industria",
-      "kpi": "9.710",
-      "sub": "Deudores en industria 'Educación' (primaria + secundaria + superior)",
-      "desc": "Educación primaria/secundaria (6.676 deudores) y Educación superior (3.034) suman 9.710 personas que trabajan en el sector educativo y a la vez son morosas del crédito universitario. La siguiente industria (construcción, 3.811) queda muy por debajo. El sector educación concentra el mayor volumen de deudores FSCU identificados en LinkedIn, por amplia ventaja sobre las demás industrias.",
-      "eli5": "El sector educación concentra 9.710 deudores identificados en LinkedIn: 6.676 en educación primaria y secundaria, 3.034 en educación superior. Es la industria con mayor volumen de morosidad FSCU por amplia ventaja — la siguiente (construcción, 3.811) queda muy por debajo. Quienes trabajan en el sistema educativo son el grupo ocupacional con mayor presencia en la nómina.",
-      "tipo": "education"
-    },
-    {
-      "titulo": "La universidad más demandada",
-      "kpi": "29.2%",
-      "sub": "de los deudores de U. de Chile han sido demandados civil",
-      "desc": "De las 26 universidades acreedoras. U. de Chile tiene la mayor proporción de deudores que han sido demandados civilmente (DDO.): 29.2% de sus 16.971 deudores (4.948 personas) han enfrentado al menos una causa civil en su contra. Puede reflejar una política de cobranza más agresiva o una composición de cartera distinta.",
-      "eli5": "De las 26 universidades administradoras del FSCU, la U. de Chile presenta la mayor proporción de deudores con demandas civiles de cobranza: 29,2% (4.948 de 16.971 deudores). La cifra duplica el promedio nacional (21,5%). Puede reflejar una política institucional de cobranza más activa o un perfil de cartera con mayor exposición judicial previa de sus deudores.",
-      "tipo": "judicial-uni"
     },
     {
       "titulo": "Deben a más de una universidad",
@@ -4152,22 +3666,6 @@
       "tipo": "ultra"
     },
     {
-      "titulo": "La U de Chile es la que más demanda",
-      "kpi": "2.129",
-      "sub": "ex-alumnos demandados judicialmente por cobranza (12% de sus deudores)",
-      "desc": "De las 26 universidades del CRUCH que administran el Fondo Solidario, sólo unas pocas ejercen cobranza judicial directa. La Universidad de Chile lidera con 2.129 demandas contra sus propios ex-alumnos morosos — 12% de sus 17.327 deudores. Le siguen U. de Valparaíso (436), U. del Bío Bío (329), UTEM (306), U. Arturo Prat (271) y U. de La Serena (222). Las demás universidades del CRUCH prefieren el mecanismo indirecto: retención de la devolución de impuestos vía Tesorería General de la República, que demanda a 10.256 deudores FSCU por cuenta de todas.",
-      "eli5": "Sólo una minoría de las 26 universidades del CRUCH ejerce cobranza judicial directa. La U. de Chile lidera con 2.129 demandas (12% de sus 17.327 deudores), seguida por U. de Valparaíso (436), U. del Bío Bío (329) y UTEM (306). Las restantes optan por el mecanismo indirecto: retención de la devolución de impuestos vía Tesorería General de la República, que figura como demandante en 10.256 causas.",
-      "tipo": "judicial-uni"
-    },
-    {
-      "titulo": "Los bancos los persiguen más que el Estado",
-      "kpi": "45.310",
-      "sub": "deudores FSCU demandados por BancoEstado + privados",
-      "desc": "Entre los 72.014 deudores FSCU con demandas de cobranza, los cobradores privados los persiguen más que el propio Estado: BancoEstado (8.678), CMR Falabella (8.582), Itaú (7.467), BCI (7.328), Scotiabank (7.220) y Banco de Chile (6.335) acumulan 45.310 demandas — 4 veces más que la Tesorería General (10.256). El deudor FSCU típico no tiene sólo una deuda con el Estado; tiene múltiples obligaciones vencidas con el sistema financiero.",
-      "eli5": "Entre los 72.014 deudores FSCU con demandas de cobranza, los actores privados concentran más causas que el Estado: BancoEstado (8.678), CMR Falabella (8.582), Itaú (7.467), BCI (7.328), Scotiabank (7.220) y Banco de Chile (6.335) acumulan 45.310 demandas — cuatro veces el volumen de la Tesorería General (10.256). El deudor FSCU típico mantiene múltiples obligaciones vencidas simultáneas en el sistema financiero.",
-      "tipo": "employer"
-    },
-    {
       "titulo": "Los crónicos que sólo acumulan intereses",
       "kpi": "247.300",
       "sub": "73,8% del 2026 lleva 5 años seguidos y su deuda sólo crece",
@@ -4184,14 +3682,6 @@
       "tipo": "wealth"
     },
     {
-      "titulo": "1.546 ejecutivos en barrios ABC1 de Santiago",
-      "kpi": "1.546",
-      "sub": "C-Level, directores y gerentes en Las Condes, Vitacura, Providencia, Lo Barnechea y Ñuñoa",
-      "desc": "Las cinco comunas de mayor ingreso del Gran Santiago — Las Condes, Vitacura, Providencia, Lo Barnechea y Ñuñoa — concentran 1.546 deudores morosos con perfil ejecutivo (C-level, director o gerente) identificados en LinkedIn. Son los sectores con el precio por metro cuadrado más alto del país; allí reside una porción relevante del segmento moroso de alta jerarquía profesional, con registro público de morosidad en el FSCU.",
-      "eli5": "Las Condes, Vitacura, Providencia, Lo Barnechea y Ñuñoa — las cinco comunas de mayor ingreso per cápita del Gran Santiago — concentran 1.546 deudores morosos con perfil ejecutivo (C-level, director o gerente) identificados en LinkedIn. Son los sectores con precio por metro cuadrado más alto del país; allí reside una porción relevante del segmento moroso de alta jerarquía profesional.",
-      "tipo": "wealth"
-    },
-    {
       "titulo": "La deuda del crónico se duplicó en 4 años",
       "kpi": "+87,3%",
       "sub": "Mediana pasó de 81 UTM (2022) a 152 UTM (2026)",
@@ -4200,28 +3690,12 @@
       "tipo": "interest"
     },
     {
-      "titulo": "El juicio ejecutivo es la cobranza estándar",
-      "kpi": "71.437",
-      "sub": "94% de los demandados por deuda tiene Juicio Ejecutivo Obligación de Dar",
-      "desc": "De los 72.014 deudores FSCU demandados por cobranza de deuda, 71.437 (94,2%) enfrentan específicamente un Juicio Ejecutivo Obligación de Dar — el procedimiento civil estándar en Chile para exigir el pago de una deuda documentada. Las otras categorías (Monitorio, Ley de Bancos, Gestión Preparatoria) son residuales. Es una señal clara: la cobranza judicial en Chile está estandarizada y los deudores FSCU enfrentan el mismo camino que cualquier otro moroso financiero.",
-      "eli5": "De los 72.014 deudores FSCU demandados por cobranza, 71.437 (94,2%) enfrentan un Juicio Ejecutivo Obligación de Dar — el procedimiento civil estándar en Chile para exigir el pago de una deuda documentada. Las otras categorías (Monitorio, Ley de Bancos, Gestión Preparatoria) son marginales. La cobranza judicial contra deudores FSCU sigue el mismo cauce que cualquier obligación financiera ordinaria.",
-      "tipo": "judicial"
-    },
-    {
       "titulo": "El cohort 2022 virtualmente no se mueve",
       "kpi": "91,9%",
       "sub": "De los 288k deudores del 2022, 265k siguen en 2026",
       "desc": "Los 288.290 deudores que aparecían en la nómina 2022 son un grupo extraordinariamente estable: 4 años después, 265.072 (91,9%) siguen exactamente en el mismo lugar — en la nómina 2026. Sólo 23.218 personas (8,1%) lograron salir durante los últimos 4 años, ya sea por pago total o condonación. Este es el análisis longitudinal clásico de retención: en productos digitales se considera 'excelente' un 40% de retención a 4 años. En deudores morosos FSCU es 92%. El sistema no se vacía.",
       "eli5": "De los 288.290 deudores registrados en la nómina 2022, 265.072 (91,9%) continúan en la nómina 2026. Sólo 23.218 personas (8,1%) salieron en cuatro años — por pago total, condonación u otras causas. La tasa de permanencia supera ampliamente los benchmarks de retención de las industrias que sí buscan retener clientes; acá, el indicador refleja la dificultad estructural para reducir el stock.",
       "tipo": "chronic"
-    },
-    {
-      "titulo": "Construcción y minería, las otras industrias morosas",
-      "kpi": "7.402",
-      "sub": "Construcción (3.811) + Minería/Metales (3.591) deudores",
-      "desc": "Después del sector educación (9.710 deudores entre primaria/secundaria/superior), las siguientes industrias con mayor número de deudores FSCU identificados en LinkedIn son construcción (3.811) y minería/metales (3.591), sumando 7.402 personas. Son sectores con alto empleo formal masculino en Chile, receptores de egresados de ingenierías y especialidades técnicas. El perfil demográfico resultante (54,9% hombres) es consistente con esta composición sectorial.",
-      "eli5": "Después del sector educación (9.710 deudores), las industrias con mayor número de morosos FSCU identificados en LinkedIn son construcción (3.811) y minería/metales (3.591), sumando 7.402 personas. Ambas concentran empleo formal masculino en Chile y reciben egresados de carreras de ingeniería y afines. El perfil demográfico (54,9% hombres) es consistente con esta composición sectorial.",
-      "tipo": "education"
     },
     {
       "titulo": "64.044 deudores tienen auto Y casa",
@@ -5162,384 +4636,6 @@
       206.5
     ]
   },
-  "top_demandantes": [
-    {
-      "dte_nombre": "TESRORERÍA GENERAL DE LA REPÚBLICA DE CHILE",
-      "n_deudores": 10256,
-      "n_causas": 11328,
-      "n_ejecutivo": 12583,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "BANCODEL ESTADO DE CHILE",
-      "n_deudores": 8678,
-      "n_causas": 11391,
-      "n_ejecutivo": 18713,
-      "n_ley_bancos": 296
-    },
-    {
-      "dte_nombre": "PROMOTORA CMR FALABELLA S.A.",
-      "n_deudores": 8582,
-      "n_causas": 8982,
-      "n_ejecutivo": 10257,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "ITAU-CORPBANCA S.A.",
-      "n_deudores": 7467,
-      "n_causas": 9341,
-      "n_ejecutivo": 12201,
-      "n_ley_bancos": 67
-    },
-    {
-      "dte_nombre": "BANCO DE CRÉDITO E INVERSIONES",
-      "n_deudores": 7328,
-      "n_causas": 10735,
-      "n_ejecutivo": 16492,
-      "n_ley_bancos": 52
-    },
-    {
-      "dte_nombre": "SCOTIABANK-CHILE S.A.",
-      "n_deudores": 7220,
-      "n_causas": 8424,
-      "n_ejecutivo": 10597,
-      "n_ley_bancos": 43
-    },
-    {
-      "dte_nombre": "BANCO DE CHILE .",
-      "n_deudores": 6335,
-      "n_causas": 9162,
-      "n_ejecutivo": 12887,
-      "n_ley_bancos": 8
-    },
-    {
-      "dte_nombre": "LOS ANDES CCAF",
-      "n_deudores": 4703,
-      "n_causas": 5807,
-      "n_ejecutivo": 6819,
-      "n_ley_bancos": 1
-    },
-    {
-      "dte_nombre": "GESTORA LA AVANZADA S.A.",
-      "n_deudores": 3223,
-      "n_causas": 3871,
-      "n_ejecutivo": 0,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "CAT. ADMINISTRADORA DE TARJETAS S.A.",
-      "n_deudores": 2784,
-      "n_causas": 3027,
-      "n_ejecutivo": 4899,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "BANCO SANTANDER-CHILE.",
-      "n_deudores": 2430,
-      "n_causas": 2827,
-      "n_ejecutivo": 5064,
-      "n_ley_bancos": 1
-    },
-    {
-      "dte_nombre": "UNIVERSIDAD DE CHILE,",
-      "n_deudores": 2353,
-      "n_causas": 2716,
-      "n_ejecutivo": 3441,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "FORUM SERVICIOS FINANCIEROS S.A.  .",
-      "n_deudores": 1985,
-      "n_causas": 2523,
-      "n_ejecutivo": 3711,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "INSTITUCIÓN FINANCIERA COOPERATTVA COOPEUCH",
-      "n_deudores": 1645,
-      "n_causas": 1936,
-      "n_ejecutivo": 2537,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "BANCO FALABELLA",
-      "n_deudores": 1545,
-      "n_causas": 1694,
-      "n_ejecutivo": 2159,
-      "n_ley_bancos": 25
-    },
-    {
-      "dte_nombre": "CAR S.A.",
-      "n_deudores": 1199,
-      "n_causas": 1258,
-      "n_ejecutivo": 1589,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "BANCO INTERNACIONAL",
-      "n_deudores": 1167,
-      "n_causas": 1213,
-      "n_ejecutivo": 1443,
-      "n_ley_bancos": 20
-    },
-    {
-      "dte_nombre": "TANNER SERVICIOS FINANCIEROS S.A.",
-      "n_deudores": 1148,
-      "n_causas": 1293,
-      "n_ejecutivo": 2307,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "SANTANDER CONSUMER FINANCE LTDA.",
-      "n_deudores": 848,
-      "n_causas": 987,
-      "n_ejecutivo": 1555,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "CLÍNICA SANTA MARÍA SPA",
-      "n_deudores": 575,
-      "n_causas": 690,
-      "n_ejecutivo": 719,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "UNIVERSIDAD DE VALPARAISO",
-      "n_deudores": 436,
-      "n_causas": 488,
-      "n_ejecutivo": 384,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "CAJA DE COMPENSACIÓN LOS HEROES",
-      "n_deudores": 397,
-      "n_causas": 424,
-      "n_ejecutivo": 520,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "CLÍNICA DÁVILA Y SERVICIOS MÉDICOS S.P.A.",
-      "n_deudores": 367,
-      "n_causas": 419,
-      "n_ejecutivo": 549,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "UNIVERSIDAD DEL BÍO BÍO",
-      "n_deudores": 332,
-      "n_causas": 396,
-      "n_ejecutivo": 396,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "UNIVERSIDAD TECNOLÓGICA METROPOLITANA",
-      "n_deudores": 311,
-      "n_causas": 324,
-      "n_ejecutivo": 307,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "GMAC COMERCIAL AUTOMOTRIZ CHIL E S A",
-      "n_deudores": 296,
-      "n_causas": 319,
-      "n_ejecutivo": 220,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "BANCO SECURITY",
-      "n_deudores": 274,
-      "n_causas": 327,
-      "n_ejecutivo": 675,
-      "n_ley_bancos": 3
-    },
-    {
-      "dte_nombre": "UNIVERSIDAD ARTURO PRAT",
-      "n_deudores": 271,
-      "n_causas": 287,
-      "n_ejecutivo": 257,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "BK SPA",
-      "n_deudores": 247,
-      "n_causas": 328,
-      "n_ejecutivo": 587,
-      "n_ley_bancos": 0
-    },
-    {
-      "dte_nombre": "AUTOFIN S.A.",
-      "n_deudores": 241,
-      "n_causas": 264,
-      "n_ejecutivo": 543,
-      "n_ley_bancos": 0
-    }
-  ],
-  "demandantes_categorias": [
-    {
-      "cat": "Bancos",
-      "deudores_acumulados": 42769.0,
-      "causas_acumuladas": 55469.0,
-      "n_entidades": 24
-    },
-    {
-      "cat": "Otros",
-      "deudores_acumulados": 27068.0,
-      "causas_acumuladas": 30442.0,
-      "n_entidades": 2069
-    },
-    {
-      "cat": "Retail/Tarjetas",
-      "deudores_acumulados": 8599.0,
-      "causas_acumuladas": 9004.0,
-      "n_entidades": 4
-    },
-    {
-      "cat": "Cobranza/Factoring",
-      "deudores_acumulados": 6812.0,
-      "causas_acumuladas": 8196.0,
-      "n_entidades": 29
-    },
-    {
-      "cat": "Cajas Compensación",
-      "deudores_acumulados": 5448.0,
-      "causas_acumuladas": 6635.0,
-      "n_entidades": 8
-    },
-    {
-      "cat": "Universidades",
-      "deudores_acumulados": 4384.0,
-      "causas_acumuladas": 4949.0,
-      "n_entidades": 26
-    },
-    {
-      "cat": "Estado · Tesorería",
-      "deudores_acumulados": 34.0,
-      "causas_acumuladas": 39.0,
-      "n_entidades": 7
-    }
-  ],
-  "universidades_demandantes": [
-    {
-      "dte_rut": "60910000-1",
-      "dte_nombre": "UNIVERSIDAD DE CHILE",
-      "n_deudores": 2129,
-      "n_causas": 2435.0
-    },
-    {
-      "dte_rut": "60921000-1",
-      "dte_nombre": "UNIVERSIDAD DE VALPARAISO",
-      "n_deudores": 436,
-      "n_causas": 488.0
-    },
-    {
-      "dte_rut": "60911006-6",
-      "dte_nombre": "UNIVERSIDAD DEL BÍO BÍO",
-      "n_deudores": 329,
-      "n_causas": 393.0
-    },
-    {
-      "dte_rut": "70729100-1",
-      "dte_nombre": "UNIVERSIDAD TECNOLÓGICA METROPOLITANA",
-      "n_deudores": 306,
-      "n_causas": 318.0
-    },
-    {
-      "dte_rut": "70777500-9",
-      "dte_nombre": "UNIVERSIDAD ARTURO PRAT",
-      "n_deudores": 271,
-      "n_causas": 287.0
-    },
-    {
-      "dte_rut": "70783100-6",
-      "dte_nombre": "UNIVERSIDAD DE LA SERENA",
-      "n_deudores": 222,
-      "n_causas": 259.0
-    },
-    {
-      "dte_rut": "71915800-5",
-      "dte_nombre": "UNIVERSIDAD CATÓLICA DE LA SANTÍSIMA CONCEPCIÓN",
-      "n_deudores": 62,
-      "n_causas": 62.0
-    },
-    {
-      "dte_rut": "71918700-5",
-      "dte_nombre": "UNIVERSIDAD CATOLICA DE TEMUCO",
-      "n_deudores": 59,
-      "n_causas": 61.0
-    },
-    {
-      "dte_rut": "60910000-1",
-      "dte_nombre": "UNIVERSIDAD DE CHILE,",
-      "n_deudores": 50,
-      "n_causas": 54.0
-    },
-    {
-      "dte_rut": "71618600-8",
-      "dte_nombre": "UNIVERSIDAD SEK",
-      "n_deudores": 46,
-      "n_causas": 50.0
-    },
-    {
-      "dte_rut": "60910000-1",
-      "dte_nombre": "UNIVERSIDAD DE CHILE-HOSPITAL CLINICO",
-      "n_deudores": 27,
-      "n_causas": 54.0
-    },
-    {
-      "dte_rut": "81698900-0",
-      "dte_nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE (HOSPITAL CLÍNICO UC Y CENTROS ANCORA)",
-      "n_deudores": 22,
-      "n_causas": 22.0
-    },
-    {
-      "dte_rut": "81698900-0",
-      "dte_nombre": "PONTIFICIA UNIVERSIDAD CATOLICA DE CHILE",
-      "n_deudores": 21,
-      "n_causas": 23.0
-    },
-    {
-      "dte_rut": "71236700-8",
-      "dte_nombre": "UNIVERSIDAD DE ATACAMA",
-      "n_deudores": 20,
-      "n_causas": 21.0
-    },
-    {
-      "dte_rut": "81698900-0",
-      "dte_nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE",
-      "n_deudores": 20,
-      "n_causas": 21.0
-    },
-    {
-      "dte_rut": "71614000-8",
-      "dte_nombre": "UNIVERSIDAD DE LOS ANDES",
-      "n_deudores": 17,
-      "n_causas": 17.0
-    },
-    {
-      "dte_rut": "81698900-0",
-      "dte_nombre": "PONTIFICIA U. CATOLICA DE CHILE",
-      "n_deudores": 16,
-      "n_causas": 16.0
-    },
-    {
-      "dte_rut": "71540100-2",
-      "dte_nombre": "UNIVERSIDAD NACIONAL ANDRÉS BELLO",
-      "n_deudores": 16,
-      "n_causas": 16.0
-    },
-    {
-      "dte_rut": "81494400-K",
-      "dte_nombre": "UNIVERSIDAD DE CONCEPCION",
-      "n_deudores": 15,
-      "n_causas": 16.0
-    },
-    {
-      "dte_rut": "71918300-K",
-      "dte_nombre": "UNIVERSIDAD CATOLICA DEL MAULE",
-      "n_deudores": 14,
-      "n_causas": 14.0
-    }
-  ],
   "global": {
     "transiciones": [
       {
@@ -5808,312 +4904,6 @@
       "2026": 13174
     }
   },
-  "comunas_ejecutivos": [
-    {
-      "comuna": "Santiago",
-      "region": "Metropolitana",
-      "n": 143
-    },
-    {
-      "comuna": "Ñuñoa",
-      "region": "Metropolitana",
-      "n": 134
-    },
-    {
-      "comuna": "Valparaiso",
-      "region": "Valparaíso",
-      "n": 116
-    },
-    {
-      "comuna": "Temuco",
-      "region": "La Araucanía",
-      "n": 116
-    },
-    {
-      "comuna": "Viña Del Mar",
-      "region": "Valparaíso",
-      "n": 109
-    },
-    {
-      "comuna": "Providencia",
-      "region": "Metropolitana",
-      "n": 104
-    },
-    {
-      "comuna": "Las Condes",
-      "region": "Metropolitana",
-      "n": 96
-    },
-    {
-      "comuna": "Concepcion",
-      "region": "Biobío",
-      "n": 90
-    },
-    {
-      "comuna": "Maipu",
-      "region": "Metropolitana",
-      "n": 77
-    },
-    {
-      "comuna": "La Serena",
-      "region": "Coquimbo",
-      "n": 76
-    },
-    {
-      "comuna": "Antofagasta",
-      "region": "Antofagasta",
-      "n": 74
-    },
-    {
-      "comuna": "Talca",
-      "region": "Maule",
-      "n": 66
-    },
-    {
-      "comuna": "La Florida",
-      "region": "Metropolitana",
-      "n": 66
-    },
-    {
-      "comuna": "Valdivia",
-      "region": "Los Ríos",
-      "n": 66
-    },
-    {
-      "comuna": "Arica",
-      "region": "Arica Y Parinacota",
-      "n": 63
-    },
-    {
-      "comuna": "Chillan",
-      "region": "Ñuble",
-      "n": 56
-    },
-    {
-      "comuna": "Iquique",
-      "region": "Tarapacá",
-      "n": 55
-    },
-    {
-      "comuna": "Coquimbo",
-      "region": "Coquimbo",
-      "n": 55
-    },
-    {
-      "comuna": "Quilpue",
-      "region": "Valparaíso",
-      "n": 53
-    },
-    {
-      "comuna": "Puerto Montt",
-      "region": "Los Lagos",
-      "n": 52
-    }
-  ],
-  "comunas_gerentes": [
-    {
-      "comuna": "Ñuñoa",
-      "region": "Metropolitana",
-      "n": 308
-    },
-    {
-      "comuna": "Santiago",
-      "region": "Metropolitana",
-      "n": 300
-    },
-    {
-      "comuna": "Antofagasta",
-      "region": "Antofagasta",
-      "n": 279
-    },
-    {
-      "comuna": "Viña Del Mar",
-      "region": "Valparaíso",
-      "n": 248
-    },
-    {
-      "comuna": "La Florida",
-      "region": "Metropolitana",
-      "n": 242
-    },
-    {
-      "comuna": "Maipu",
-      "region": "Metropolitana",
-      "n": 241
-    },
-    {
-      "comuna": "La Serena",
-      "region": "Coquimbo",
-      "n": 240
-    },
-    {
-      "comuna": "Concepcion",
-      "region": "Biobío",
-      "n": 212
-    },
-    {
-      "comuna": "Providencia",
-      "region": "Metropolitana",
-      "n": 207
-    },
-    {
-      "comuna": "Valparaiso",
-      "region": "Valparaíso",
-      "n": 206
-    },
-    {
-      "comuna": "Las Condes",
-      "region": "Metropolitana",
-      "n": 202
-    },
-    {
-      "comuna": "Temuco",
-      "region": "La Araucanía",
-      "n": 184
-    },
-    {
-      "comuna": "Puente Alto",
-      "region": "Metropolitana",
-      "n": 179
-    },
-    {
-      "comuna": "Copiapo",
-      "region": "Atacama",
-      "n": 163
-    },
-    {
-      "comuna": "Coquimbo",
-      "region": "Coquimbo",
-      "n": 147
-    },
-    {
-      "comuna": "Arica",
-      "region": "Arica Y Parinacota",
-      "n": 142
-    },
-    {
-      "comuna": "Puerto Montt",
-      "region": "Los Lagos",
-      "n": 129
-    },
-    {
-      "comuna": "Quilpue",
-      "region": "Valparaíso",
-      "n": 128
-    },
-    {
-      "comuna": "Iquique",
-      "region": "Tarapacá",
-      "n": 127
-    },
-    {
-      "comuna": "Talca",
-      "region": "Maule",
-      "n": 126
-    }
-  ],
-  "comunas_academicos": [
-    {
-      "comuna": "Valparaiso",
-      "region": "Valparaíso",
-      "n": 264
-    },
-    {
-      "comuna": "Temuco",
-      "region": "La Araucanía",
-      "n": 238
-    },
-    {
-      "comuna": "Santiago",
-      "region": "Metropolitana",
-      "n": 210
-    },
-    {
-      "comuna": "Viña Del Mar",
-      "region": "Valparaíso",
-      "n": 172
-    },
-    {
-      "comuna": "Arica",
-      "region": "Arica Y Parinacota",
-      "n": 167
-    },
-    {
-      "comuna": "La Serena",
-      "region": "Coquimbo",
-      "n": 166
-    },
-    {
-      "comuna": "Concepcion",
-      "region": "Biobío",
-      "n": 149
-    },
-    {
-      "comuna": "Antofagasta",
-      "region": "Antofagasta",
-      "n": 149
-    },
-    {
-      "comuna": "Ñuñoa",
-      "region": "Metropolitana",
-      "n": 144
-    },
-    {
-      "comuna": "Coquimbo",
-      "region": "Coquimbo",
-      "n": 144
-    },
-    {
-      "comuna": "Maipu",
-      "region": "Metropolitana",
-      "n": 124
-    },
-    {
-      "comuna": "La Florida",
-      "region": "Metropolitana",
-      "n": 123
-    },
-    {
-      "comuna": "Puente Alto",
-      "region": "Metropolitana",
-      "n": 118
-    },
-    {
-      "comuna": "Chillan",
-      "region": "Ñuble",
-      "n": 114
-    },
-    {
-      "comuna": "Villa Alemana",
-      "region": "Valparaíso",
-      "n": 112
-    },
-    {
-      "comuna": "Quilpue",
-      "region": "Valparaíso",
-      "n": 108
-    },
-    {
-      "comuna": "Talca",
-      "region": "Maule",
-      "n": 106
-    },
-    {
-      "comuna": "Copiapo",
-      "region": "Atacama",
-      "n": 101
-    },
-    {
-      "comuna": "Iquique",
-      "region": "Tarapacá",
-      "n": 98
-    },
-    {
-      "comuna": "Valdivia",
-      "region": "Los Ríos",
-      "n": 96
-    }
-  ],
   "ranking_recuperacion": [
     {
       "universidad": "U. Austral",
@@ -6376,353 +5166,6 @@
       "utm_delta": 417.0
     }
   ],
-  "justicia_resumen": {
-    "total": 335152,
-    "con_pjud": 72014,
-    "con_demandado_deuda": 72014,
-    "pct_con_pjud": 21.5,
-    "pct_con_demandado_deuda": 21.5
-  },
-  "justicia_por_causa": [
-    {
-      "bucket": "10+ causas",
-      "n": 476
-    },
-    {
-      "bucket": "1 causa",
-      "n": 43267
-    },
-    {
-      "bucket": "Sin causas por deuda",
-      "n": 263138
-    },
-    {
-      "bucket": "2-3 causas",
-      "n": 20329
-    },
-    {
-      "bucket": "4-10 causas",
-      "n": 7942
-    }
-  ],
-  "justicia_por_region": [
-    {
-      "region": "Metropolitana",
-      "n": 80081,
-      "demandados_civil": 18878.0,
-      "pct_demandados": 23.6
-    },
-    {
-      "region": "Valparaíso",
-      "n": 43578,
-      "demandados_civil": 8929.0,
-      "pct_demandados": 20.5
-    },
-    {
-      "region": "(sin región)",
-      "n": 37876,
-      "demandados_civil": 7565.0,
-      "pct_demandados": 20.0
-    },
-    {
-      "region": "Biobío",
-      "n": 34799,
-      "demandados_civil": 7493.0,
-      "pct_demandados": 21.5
-    },
-    {
-      "region": "La Araucanía",
-      "n": 20688,
-      "demandados_civil": 4171.0,
-      "pct_demandados": 20.2
-    },
-    {
-      "region": "Coquimbo",
-      "n": 18932,
-      "demandados_civil": 3908.0,
-      "pct_demandados": 20.6
-    },
-    {
-      "region": "Maule",
-      "n": 16113,
-      "demandados_civil": 3265.0,
-      "pct_demandados": 20.3
-    },
-    {
-      "region": "Los Lagos",
-      "n": 14294,
-      "demandados_civil": 3042.0,
-      "pct_demandados": 21.3
-    },
-    {
-      "region": "O’Higgins",
-      "n": 12306,
-      "demandados_civil": 2748.0,
-      "pct_demandados": 22.3
-    },
-    {
-      "region": "Antofagasta",
-      "n": 11276,
-      "demandados_civil": 2798.0,
-      "pct_demandados": 24.8
-    },
-    {
-      "region": "Ñuble",
-      "n": 9122,
-      "demandados_civil": 1676.0,
-      "pct_demandados": 18.4
-    },
-    {
-      "region": "Los Ríos",
-      "n": 8448,
-      "demandados_civil": 1842.0,
-      "pct_demandados": 21.8
-    },
-    {
-      "region": "Arica Y Parinacota",
-      "n": 8378,
-      "demandados_civil": 1655.0,
-      "pct_demandados": 19.8
-    },
-    {
-      "region": "Atacama",
-      "n": 7200,
-      "demandados_civil": 1532.0,
-      "pct_demandados": 21.3
-    },
-    {
-      "region": "Tarapacá",
-      "n": 6222,
-      "demandados_civil": 1365.0,
-      "pct_demandados": 21.9
-    },
-    {
-      "region": "Magallanes",
-      "n": 3990,
-      "demandados_civil": 778.0,
-      "pct_demandados": 19.5
-    },
-    {
-      "region": "Aysén",
-      "n": 1849,
-      "demandados_civil": 369.0,
-      "pct_demandados": 20.0
-    }
-  ],
-  "justicia_por_universidad": [
-    {
-      "universidad": "U. de Santiago",
-      "n": 24535,
-      "demandados_civil": 5209.0,
-      "pct_demandados": 21.2
-    },
-    {
-      "universidad": "U. de Concepción",
-      "n": 24251,
-      "demandados_civil": 5145.0,
-      "pct_demandados": 21.2
-    },
-    {
-      "universidad": "UTFSM",
-      "n": 19709,
-      "demandados_civil": 4020.0,
-      "pct_demandados": 20.4
-    },
-    {
-      "universidad": "PUC de Valparaíso",
-      "n": 19094,
-      "demandados_civil": 3682.0,
-      "pct_demandados": 19.3
-    },
-    {
-      "universidad": "U. del Bío-Bío",
-      "n": 18823,
-      "demandados_civil": 3461.0,
-      "pct_demandados": 18.4
-    },
-    {
-      "universidad": "U. de Valparaíso",
-      "n": 17937,
-      "demandados_civil": 4628.0,
-      "pct_demandados": 25.8
-    },
-    {
-      "universidad": "U. de La Serena",
-      "n": 17187,
-      "demandados_civil": 3442.0,
-      "pct_demandados": 20.0
-    },
-    {
-      "universidad": "U. de Chile",
-      "n": 16971,
-      "demandados_civil": 4948.0,
-      "pct_demandados": 29.2
-    },
-    {
-      "universidad": "U. de Playa Ancha",
-      "n": 16599,
-      "demandados_civil": 2910.0,
-      "pct_demandados": 17.5
-    },
-    {
-      "universidad": "UTEM",
-      "n": 16210,
-      "demandados_civil": 3790.0,
-      "pct_demandados": 23.4
-    },
-    {
-      "universidad": "U. de La Frontera",
-      "n": 15114,
-      "demandados_civil": 2944.0,
-      "pct_demandados": 19.5
-    },
-    {
-      "universidad": "U. Austral",
-      "n": 13993,
-      "demandados_civil": 3099.0,
-      "pct_demandados": 22.1
-    },
-    {
-      "universidad": "U. de Tarapacá",
-      "n": 13946,
-      "demandados_civil": 2870.0,
-      "pct_demandados": 20.6
-    },
-    {
-      "universidad": "U. Católica de Temuco",
-      "n": 13379,
-      "demandados_civil": 2620.0,
-      "pct_demandados": 19.6
-    },
-    {
-      "universidad": "U. Católica Santísima Concepción",
-      "n": 11361,
-      "demandados_civil": 2728.0,
-      "pct_demandados": 24.0
-    },
-    {
-      "universidad": "UMCE",
-      "n": 9854,
-      "demandados_civil": 1598.0,
-      "pct_demandados": 16.2
-    },
-    {
-      "universidad": "U. Católica del Norte",
-      "n": 9597,
-      "demandados_civil": 2159.0,
-      "pct_demandados": 22.5
-    },
-    {
-      "universidad": "U. de Talca",
-      "n": 9237,
-      "demandados_civil": 1926.0,
-      "pct_demandados": 20.9
-    },
-    {
-      "universidad": "U. de Los Lagos",
-      "n": 8485,
-      "demandados_civil": 1879.0,
-      "pct_demandados": 22.1
-    },
-    {
-      "universidad": "U. de Atacama",
-      "n": 7727,
-      "demandados_civil": 1645.0,
-      "pct_demandados": 21.3
-    },
-    {
-      "universidad": "U. de Antofagasta",
-      "n": 7496,
-      "demandados_civil": 1873.0,
-      "pct_demandados": 25.0
-    },
-    {
-      "universidad": "U. Católica del Maule",
-      "n": 7293,
-      "demandados_civil": 1563.0,
-      "pct_demandados": 21.4
-    },
-    {
-      "universidad": "U. Arturo Prat",
-      "n": 6310,
-      "demandados_civil": 1349.0,
-      "pct_demandados": 21.4
-    },
-    {
-      "universidad": "PUC de Chile",
-      "n": 5814,
-      "demandados_civil": 1683.0,
-      "pct_demandados": 28.9
-    },
-    {
-      "universidad": "U. de Magallanes",
-      "n": 4195,
-      "demandados_civil": 837.0,
-      "pct_demandados": 20.0
-    },
-    {
-      "universidad": "U. de O'Higgins",
-      "n": 35,
-      "demandados_civil": 6.0,
-      "pct_demandados": 17.1
-    }
-  ],
-  "justicia_por_perfil": [
-    {
-      "perfil": "Sin info",
-      "n": 186289,
-      "demandados": 38029.0,
-      "pct": 20.4
-    },
-    {
-      "perfil": "Alto patrimonio",
-      "n": 95480,
-      "demandados": 20511.0,
-      "pct": 21.5
-    },
-    {
-      "perfil": "Profesional",
-      "n": 15834,
-      "demandados": 3973.0,
-      "pct": 25.1
-    },
-    {
-      "perfil": "LK sin clasif",
-      "n": 10517,
-      "demandados": 2599.0,
-      "pct": 24.7
-    },
-    {
-      "perfil": "Gerente",
-      "n": 8514,
-      "demandados": 2363.0,
-      "pct": 27.8
-    },
-    {
-      "perfil": "Académico",
-      "n": 6664,
-      "demandados": 1358.0,
-      "pct": 20.4
-    },
-    {
-      "perfil": "Profesional sr",
-      "n": 4173,
-      "demandados": 1064.0,
-      "pct": 25.5
-    },
-    {
-      "perfil": "Operativo",
-      "n": 4053,
-      "demandados": 1013.0,
-      "pct": 25.0
-    },
-    {
-      "perfil": "Ejecutivo",
-      "n": 3628,
-      "demandados": 1104.0,
-      "pct": 30.4
-    }
-  ],
   "xray_universidades": {
     "PUC de Chile": {
       "resumen": {
@@ -6880,40 +5323,6 @@
           "n": 830
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 323
-        },
-        {
-          "seniority": "unclassified",
-          "n": 209
-        },
-        {
-          "seniority": "academic",
-          "n": 197
-        },
-        {
-          "seniority": "manager",
-          "n": 173
-        },
-        {
-          "seniority": "senior",
-          "n": 95
-        },
-        {
-          "seniority": "operational",
-          "n": 75
-        },
-        {
-          "seniority": "c-level",
-          "n": 66
-        },
-        {
-          "seniority": "director",
-          "n": 47
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -6939,12 +5348,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 45
         }
-      ],
-      "justicia": {
-        "total": 5814,
-        "demandados_civil": 1683,
-        "pct_demandados": 28.9
-      }
+      ]
     },
     "PUC de Valparaíso": {
       "resumen": {
@@ -7102,40 +5506,6 @@
           "n": 2463
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 906
-        },
-        {
-          "seniority": "unclassified",
-          "n": 623
-        },
-        {
-          "seniority": "manager",
-          "n": 535
-        },
-        {
-          "seniority": "academic",
-          "n": 478
-        },
-        {
-          "seniority": "senior",
-          "n": 270
-        },
-        {
-          "seniority": "operational",
-          "n": 211
-        },
-        {
-          "seniority": "c-level",
-          "n": 150
-        },
-        {
-          "seniority": "director",
-          "n": 85
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -7161,12 +5531,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 112
         }
-      ],
-      "justicia": {
-        "total": 19094,
-        "demandados_civil": 3682,
-        "pct_demandados": 19.3
-      }
+      ]
     },
     "U. Arturo Prat": {
       "resumen": {
@@ -7316,40 +5681,6 @@
           "n": 660
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 281
-        },
-        {
-          "seniority": "unclassified",
-          "n": 216
-        },
-        {
-          "seniority": "manager",
-          "n": 144
-        },
-        {
-          "seniority": "academic",
-          "n": 87
-        },
-        {
-          "seniority": "operational",
-          "n": 86
-        },
-        {
-          "seniority": "senior",
-          "n": 56
-        },
-        {
-          "seniority": "c-level",
-          "n": 35
-        },
-        {
-          "seniority": "director",
-          "n": 25
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -7371,12 +5702,7 @@
           "bucket": "500-1.000 UTM",
           "n": 366
         }
-      ],
-      "justicia": {
-        "total": 6310,
-        "demandados_civil": 1349,
-        "pct_demandados": 21.4
-      }
+      ]
     },
     "U. Austral": {
       "resumen": {
@@ -7534,40 +5860,6 @@
           "n": 1587
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 690
-        },
-        {
-          "seniority": "unclassified",
-          "n": 462
-        },
-        {
-          "seniority": "manager",
-          "n": 234
-        },
-        {
-          "seniority": "academic",
-          "n": 169
-        },
-        {
-          "seniority": "senior",
-          "n": 141
-        },
-        {
-          "seniority": "operational",
-          "n": 124
-        },
-        {
-          "seniority": "c-level",
-          "n": 104
-        },
-        {
-          "seniority": "director",
-          "n": 50
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -7593,12 +5885,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 50
         }
-      ],
-      "justicia": {
-        "total": 13993,
-        "demandados_civil": 3099,
-        "pct_demandados": 22.1
-      }
+      ]
     },
     "U. Católica Santísima Concepción": {
       "resumen": {
@@ -7752,40 +6039,6 @@
           "n": 1237
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 567
-        },
-        {
-          "seniority": "unclassified",
-          "n": 282
-        },
-        {
-          "seniority": "academic",
-          "n": 244
-        },
-        {
-          "seniority": "manager",
-          "n": 228
-        },
-        {
-          "seniority": "senior",
-          "n": 137
-        },
-        {
-          "seniority": "operational",
-          "n": 118
-        },
-        {
-          "seniority": "c-level",
-          "n": 53
-        },
-        {
-          "seniority": "director",
-          "n": 43
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -7811,12 +6064,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 38
         }
-      ],
-      "justicia": {
-        "total": 11361,
-        "demandados_civil": 2728,
-        "pct_demandados": 24.0
-      }
+      ]
     },
     "U. Católica de Temuco": {
       "resumen": {
@@ -7974,40 +6222,6 @@
           "n": 1373
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 403
-        },
-        {
-          "seniority": "academic",
-          "n": 344
-        },
-        {
-          "seniority": "unclassified",
-          "n": 341
-        },
-        {
-          "seniority": "manager",
-          "n": 162
-        },
-        {
-          "seniority": "operational",
-          "n": 158
-        },
-        {
-          "seniority": "senior",
-          "n": 125
-        },
-        {
-          "seniority": "c-level",
-          "n": 55
-        },
-        {
-          "seniority": "director",
-          "n": 46
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -8033,12 +6247,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 29
         }
-      ],
-      "justicia": {
-        "total": 13379,
-        "demandados_civil": 2620,
-        "pct_demandados": 19.6
-      }
+      ]
     },
     "U. Católica del Maule": {
       "resumen": {
@@ -8184,40 +6393,6 @@
           "n": 702
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 243
-        },
-        {
-          "seniority": "academic",
-          "n": 240
-        },
-        {
-          "seniority": "unclassified",
-          "n": 148
-        },
-        {
-          "seniority": "manager",
-          "n": 105
-        },
-        {
-          "seniority": "operational",
-          "n": 71
-        },
-        {
-          "seniority": "senior",
-          "n": 68
-        },
-        {
-          "seniority": "c-level",
-          "n": 26
-        },
-        {
-          "seniority": "director",
-          "n": 24
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -8239,12 +6414,7 @@
           "bucket": "500-1.000 UTM",
           "n": 179
         }
-      ],
-      "justicia": {
-        "total": 7293,
-        "demandados_civil": 1563,
-        "pct_demandados": 21.4
-      }
+      ]
     },
     "U. Católica del Norte": {
       "resumen": {
@@ -8402,40 +6572,6 @@
           "n": 1128
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 515
-        },
-        {
-          "seniority": "unclassified",
-          "n": 373
-        },
-        {
-          "seniority": "manager",
-          "n": 269
-        },
-        {
-          "seniority": "senior",
-          "n": 152
-        },
-        {
-          "seniority": "operational",
-          "n": 116
-        },
-        {
-          "seniority": "academic",
-          "n": 92
-        },
-        {
-          "seniority": "c-level",
-          "n": 60
-        },
-        {
-          "seniority": "director",
-          "n": 39
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -8461,12 +6597,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 27
         }
-      ],
-      "justicia": {
-        "total": 9597,
-        "demandados_civil": 2159,
-        "pct_demandados": 22.5
-      }
+      ]
     },
     "U. de Antofagasta": {
       "resumen": {
@@ -8624,40 +6755,6 @@
           "n": 832
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 343
-        },
-        {
-          "seniority": "unclassified",
-          "n": 247
-        },
-        {
-          "seniority": "manager",
-          "n": 165
-        },
-        {
-          "seniority": "academic",
-          "n": 136
-        },
-        {
-          "seniority": "operational",
-          "n": 115
-        },
-        {
-          "seniority": "senior",
-          "n": 74
-        },
-        {
-          "seniority": "director",
-          "n": 30
-        },
-        {
-          "seniority": "c-level",
-          "n": 29
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -8683,12 +6780,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 27
         }
-      ],
-      "justicia": {
-        "total": 7496,
-        "demandados_civil": 1873,
-        "pct_demandados": 25.0
-      }
+      ]
     },
     "U. de Atacama": {
       "resumen": {
@@ -8838,40 +6930,6 @@
           "n": 924
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 238
-        },
-        {
-          "seniority": "manager",
-          "n": 219
-        },
-        {
-          "seniority": "unclassified",
-          "n": 210
-        },
-        {
-          "seniority": "academic",
-          "n": 138
-        },
-        {
-          "seniority": "operational",
-          "n": 125
-        },
-        {
-          "seniority": "senior",
-          "n": 68
-        },
-        {
-          "seniority": "director",
-          "n": 26
-        },
-        {
-          "seniority": "c-level",
-          "n": 23
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -8893,12 +6951,7 @@
           "bucket": "500-1.000 UTM",
           "n": 766
         }
-      ],
-      "justicia": {
-        "total": 7727,
-        "demandados_civil": 1645,
-        "pct_demandados": 21.3
-      }
+      ]
     },
     "U. de Chile": {
       "resumen": {
@@ -9056,40 +7109,6 @@
           "n": 2335
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 958
-        },
-        {
-          "seniority": "unclassified",
-          "n": 614
-        },
-        {
-          "seniority": "manager",
-          "n": 412
-        },
-        {
-          "seniority": "academic",
-          "n": 279
-        },
-        {
-          "seniority": "senior",
-          "n": 276
-        },
-        {
-          "seniority": "c-level",
-          "n": 153
-        },
-        {
-          "seniority": "operational",
-          "n": 143
-        },
-        {
-          "seniority": "director",
-          "n": 143
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -9115,12 +7134,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 286
         }
-      ],
-      "justicia": {
-        "total": 16971,
-        "demandados_civil": 4948,
-        "pct_demandados": 29.2
-      }
+      ]
     },
     "U. de Concepción": {
       "resumen": {
@@ -9278,40 +7292,6 @@
           "n": 2830
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 1092
-        },
-        {
-          "seniority": "unclassified",
-          "n": 803
-        },
-        {
-          "seniority": "academic",
-          "n": 549
-        },
-        {
-          "seniority": "manager",
-          "n": 478
-        },
-        {
-          "seniority": "senior",
-          "n": 291
-        },
-        {
-          "seniority": "operational",
-          "n": 218
-        },
-        {
-          "seniority": "c-level",
-          "n": 132
-        },
-        {
-          "seniority": "director",
-          "n": 107
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -9337,12 +7317,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 146
         }
-      ],
-      "justicia": {
-        "total": 24251,
-        "demandados_civil": 5145,
-        "pct_demandados": 21.2
-      }
+      ]
     },
     "U. de La Frontera": {
       "resumen": {
@@ -9500,40 +7475,6 @@
           "n": 1736
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 793
-        },
-        {
-          "seniority": "unclassified",
-          "n": 444
-        },
-        {
-          "seniority": "manager",
-          "n": 345
-        },
-        {
-          "seniority": "academic",
-          "n": 286
-        },
-        {
-          "seniority": "senior",
-          "n": 207
-        },
-        {
-          "seniority": "operational",
-          "n": 150
-        },
-        {
-          "seniority": "c-level",
-          "n": 94
-        },
-        {
-          "seniority": "director",
-          "n": 78
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -9559,12 +7500,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 86
         }
-      ],
-      "justicia": {
-        "total": 15114,
-        "demandados_civil": 2944,
-        "pct_demandados": 19.5
-      }
+      ]
     },
     "U. de La Serena": {
       "resumen": {
@@ -9722,40 +7658,6 @@
           "n": 1857
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 675
-        },
-        {
-          "seniority": "unclassified",
-          "n": 456
-        },
-        {
-          "seniority": "manager",
-          "n": 447
-        },
-        {
-          "seniority": "academic",
-          "n": 395
-        },
-        {
-          "seniority": "senior",
-          "n": 182
-        },
-        {
-          "seniority": "operational",
-          "n": 158
-        },
-        {
-          "seniority": "c-level",
-          "n": 106
-        },
-        {
-          "seniority": "director",
-          "n": 60
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -9781,12 +7683,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 190
         }
-      ],
-      "justicia": {
-        "total": 17187,
-        "demandados_civil": 3442,
-        "pct_demandados": 20.0
-      }
+      ]
     },
     "U. de Los Lagos": {
       "resumen": {
@@ -9940,40 +7837,6 @@
           "n": 878
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 241
-        },
-        {
-          "seniority": "unclassified",
-          "n": 211
-        },
-        {
-          "seniority": "academic",
-          "n": 208
-        },
-        {
-          "seniority": "manager",
-          "n": 158
-        },
-        {
-          "seniority": "operational",
-          "n": 116
-        },
-        {
-          "seniority": "senior",
-          "n": 66
-        },
-        {
-          "seniority": "director",
-          "n": 40
-        },
-        {
-          "seniority": "c-level",
-          "n": 28
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -9995,12 +7858,7 @@
           "bucket": "500-1.000 UTM",
           "n": 215
         }
-      ],
-      "justicia": {
-        "total": 8485,
-        "demandados_civil": 1879,
-        "pct_demandados": 22.1
-      }
+      ]
     },
     "U. de Magallanes": {
       "resumen": {
@@ -10150,40 +8008,6 @@
           "n": 468
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 170
-        },
-        {
-          "seniority": "unclassified",
-          "n": 107
-        },
-        {
-          "seniority": "manager",
-          "n": 62
-        },
-        {
-          "seniority": "academic",
-          "n": 58
-        },
-        {
-          "seniority": "operational",
-          "n": 44
-        },
-        {
-          "seniority": "senior",
-          "n": 29
-        },
-        {
-          "seniority": "director",
-          "n": 17
-        },
-        {
-          "seniority": "c-level",
-          "n": 11
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -10209,12 +8033,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 23
         }
-      ],
-      "justicia": {
-        "total": 4195,
-        "demandados_civil": 837,
-        "pct_demandados": 20.0
-      }
+      ]
     },
     "U. de O'Higgins": {
       "resumen": {
@@ -10280,18 +8099,12 @@
           "n": 13
         }
       ],
-      "por_seniority": [],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
           "n": 38
         }
-      ],
-      "justicia": {
-        "total": 35,
-        "demandados_civil": 6,
-        "pct_demandados": 17.1
-      }
+      ]
     },
     "U. de Playa Ancha": {
       "resumen": {
@@ -10449,40 +8262,6 @@
           "n": 2025
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "academic",
-          "n": 641
-        },
-        {
-          "seniority": "unclassified",
-          "n": 458
-        },
-        {
-          "seniority": "professional",
-          "n": 418
-        },
-        {
-          "seniority": "manager",
-          "n": 204
-        },
-        {
-          "seniority": "operational",
-          "n": 184
-        },
-        {
-          "seniority": "senior",
-          "n": 167
-        },
-        {
-          "seniority": "director",
-          "n": 71
-        },
-        {
-          "seniority": "c-level",
-          "n": 58
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -10504,12 +8283,7 @@
           "bucket": "500-1.000 UTM",
           "n": 299
         }
-      ],
-      "justicia": {
-        "total": 16599,
-        "demandados_civil": 2910,
-        "pct_demandados": 17.5
-      }
+      ]
     },
     "U. de Santiago": {
       "resumen": {
@@ -10667,40 +8441,6 @@
           "n": 2873
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 1601
-        },
-        {
-          "seniority": "manager",
-          "n": 1163
-        },
-        {
-          "seniority": "unclassified",
-          "n": 822
-        },
-        {
-          "seniority": "senior",
-          "n": 462
-        },
-        {
-          "seniority": "academic",
-          "n": 345
-        },
-        {
-          "seniority": "operational",
-          "n": 315
-        },
-        {
-          "seniority": "c-level",
-          "n": 237
-        },
-        {
-          "seniority": "director",
-          "n": 124
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -10726,12 +8466,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 153
         }
-      ],
-      "justicia": {
-        "total": 24535,
-        "demandados_civil": 5209,
-        "pct_demandados": 21.2
-      }
+      ]
     },
     "U. de Talca": {
       "resumen": {
@@ -10889,40 +8624,6 @@
           "n": 956
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 579
-        },
-        {
-          "seniority": "unclassified",
-          "n": 311
-        },
-        {
-          "seniority": "manager",
-          "n": 296
-        },
-        {
-          "seniority": "senior",
-          "n": 143
-        },
-        {
-          "seniority": "operational",
-          "n": 110
-        },
-        {
-          "seniority": "academic",
-          "n": 91
-        },
-        {
-          "seniority": "c-level",
-          "n": 67
-        },
-        {
-          "seniority": "director",
-          "n": 49
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -10948,12 +8649,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 38
         }
-      ],
-      "justicia": {
-        "total": 9237,
-        "demandados_civil": 1926,
-        "pct_demandados": 20.9
-      }
+      ]
     },
     "U. de Tarapacá": {
       "resumen": {
@@ -11111,40 +8807,6 @@
           "n": 1506
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 562
-        },
-        {
-          "seniority": "unclassified",
-          "n": 398
-        },
-        {
-          "seniority": "academic",
-          "n": 288
-        },
-        {
-          "seniority": "manager",
-          "n": 252
-        },
-        {
-          "seniority": "operational",
-          "n": 174
-        },
-        {
-          "seniority": "senior",
-          "n": 121
-        },
-        {
-          "seniority": "c-level",
-          "n": 62
-        },
-        {
-          "seniority": "director",
-          "n": 42
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -11170,12 +8832,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 22
         }
-      ],
-      "justicia": {
-        "total": 13946,
-        "demandados_civil": 2870,
-        "pct_demandados": 20.6
-      }
+      ]
     },
     "U. de Valparaíso": {
       "resumen": {
@@ -11333,40 +8990,6 @@
           "n": 2153
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 1169
-        },
-        {
-          "seniority": "unclassified",
-          "n": 684
-        },
-        {
-          "seniority": "manager",
-          "n": 467
-        },
-        {
-          "seniority": "operational",
-          "n": 248
-        },
-        {
-          "seniority": "senior",
-          "n": 242
-        },
-        {
-          "seniority": "academic",
-          "n": 171
-        },
-        {
-          "seniority": "c-level",
-          "n": 125
-        },
-        {
-          "seniority": "director",
-          "n": 91
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -11392,12 +9015,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 50
         }
-      ],
-      "justicia": {
-        "total": 17937,
-        "demandados_civil": 4628,
-        "pct_demandados": 25.8
-      }
+      ]
     },
     "U. del Bío-Bío": {
       "resumen": {
@@ -11555,40 +9173,6 @@
           "n": 2109
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 993
-        },
-        {
-          "seniority": "manager",
-          "n": 525
-        },
-        {
-          "seniority": "unclassified",
-          "n": 494
-        },
-        {
-          "seniority": "academic",
-          "n": 325
-        },
-        {
-          "seniority": "operational",
-          "n": 246
-        },
-        {
-          "seniority": "senior",
-          "n": 184
-        },
-        {
-          "seniority": "c-level",
-          "n": 96
-        },
-        {
-          "seniority": "director",
-          "n": 81
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -11614,12 +9198,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 43
         }
-      ],
-      "justicia": {
-        "total": 18823,
-        "demandados_civil": 3461,
-        "pct_demandados": 18.4
-      }
+      ]
     },
     "UMCE": {
       "resumen": {
@@ -11773,40 +9352,6 @@
           "n": 1318
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "academic",
-          "n": 670
-        },
-        {
-          "seniority": "unclassified",
-          "n": 230
-        },
-        {
-          "seniority": "professional",
-          "n": 183
-        },
-        {
-          "seniority": "senior",
-          "n": 106
-        },
-        {
-          "seniority": "manager",
-          "n": 102
-        },
-        {
-          "seniority": "director",
-          "n": 83
-        },
-        {
-          "seniority": "operational",
-          "n": 58
-        },
-        {
-          "seniority": "c-level",
-          "n": 34
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -11828,12 +9373,7 @@
           "bucket": "500-1.000 UTM",
           "n": 317
         }
-      ],
-      "justicia": {
-        "total": 9854,
-        "demandados_civil": 1598,
-        "pct_demandados": 16.2
-      }
+      ]
     },
     "UTEM": {
       "resumen": {
@@ -11991,40 +9531,6 @@
           "n": 1865
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 1040
-        },
-        {
-          "seniority": "manager",
-          "n": 685
-        },
-        {
-          "seniority": "unclassified",
-          "n": 657
-        },
-        {
-          "seniority": "senior",
-          "n": 288
-        },
-        {
-          "seniority": "operational",
-          "n": 225
-        },
-        {
-          "seniority": "c-level",
-          "n": 142
-        },
-        {
-          "seniority": "academic",
-          "n": 99
-        },
-        {
-          "seniority": "director",
-          "n": 68
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -12050,12 +9556,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 19
         }
-      ],
-      "justicia": {
-        "total": 16210,
-        "demandados_civil": 3790,
-        "pct_demandados": 23.4
-      }
+      ]
     },
     "UTFSM": {
       "resumen": {
@@ -12213,40 +9714,6 @@
           "n": 2337
         }
       ],
-      "por_seniority": [
-        {
-          "seniority": "professional",
-          "n": 851
-        },
-        {
-          "seniority": "unclassified",
-          "n": 717
-        },
-        {
-          "seniority": "manager",
-          "n": 684
-        },
-        {
-          "seniority": "operational",
-          "n": 465
-        },
-        {
-          "seniority": "senior",
-          "n": 223
-        },
-        {
-          "seniority": "c-level",
-          "n": 166
-        },
-        {
-          "seniority": "academic",
-          "n": 133
-        },
-        {
-          "seniority": "director",
-          "n": 47
-        }
-      ],
       "por_monto_bucket": [
         {
           "bucket": "0-50 UTM",
@@ -12272,12 +9739,7 @@
           "bucket": "1.000-2.000 UTM",
           "n": 28
         }
-      ],
-      "justicia": {
-        "total": 19709,
-        "demandados_civil": 4020,
-        "pct_demandados": 20.4
-      }
+      ]
     }
   }
 }

@@ -1,6 +1,6 @@
 # Radiografía de Deudores FSCU · DecideChile
 
-> Análisis agregado y anonimizado de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario (FSCU) de Chile para el año tributario 2026. Serie temporal 2022-2026. Cruce con patrimonio (SII), perfil profesional (LinkedIn Chile) y exposición judicial (Poder Judicial de Chile).
+> Análisis agregado y anonimizado de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario (FSCU) de Chile para el año tributario 2026. Serie temporal 2022-2026. Cruce con patrimonio declarado ante el SII.
 
 Este dashboard público presenta datos agregados con supresión k-anónima (k ≥ 10) para consumo de periodistas, académicos y público general. No contiene datos personales individuales. Todas las fuentes son públicas por ley (Art. 15 Ley 19.287, Art. 13 bis Ley 19.848, Art. Único Ley 19.899).
 
@@ -22,22 +22,10 @@ Este dashboard público presenta datos agregados con supresión k-anónima (k �
 
 ### Perfil socioeconómico (cruce con SII)
 - **118.579 deudores están en el decil 8-10 de avalúo fiscal** (30% más rico en patrimonio). No son los más pobres: son clase media-alta profesional.
-- **251 deudores están en decil 10 AND deben más de 1.000 UTM** (~$70 millones). Ultra-ricos morosos.
+- **251 deudores están en decil 10 AND deben más de 1.000 UTM** (~$70 millones).
 - 176.447 tienen al menos 1 vehículo · 94.982 tienen al menos 1 propiedad.
-
-### Perfil profesional (cruce con LinkedIn Chile, 53.383 matches high-confidence)
-- **3.628 ejecutivos C-Level o directores** morosos (1,1% del total)
-- **6.664 académicos** morosos (muchos trabajan HOY en las universidades que les prestaron: U. de Concepción, PUC, U. de Santiago, U. de Chile, UTFSM)
-- **9.710 deudores en educación** (primaria/secundaria + superior) — top industria morosa
-- 17.871 trabajan en empresas grandes: Codelco (257), Arauco (206), Santander (198), PUC (194), BCI (189), U. Concepción (178), Entel (164)
-- Los bancos Santander, BCI, BancoEstado — que cobran créditos a otros — tienen cientos de empleados morosos con el Estado
-
-### Cobranza judicial (cruce con PJUD, 22M registros de litigantes)
-- **72.014 deudores FSCU (21,5%) tienen causas civiles de cobranza de deuda** como demandados directos (DDO.)
-- Filtro estricto: sólo procedimientos Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Monitorio, Ley de Bancos, Procedimiento Prenda, Gestión Preparatoria de Cobranza
-- **Top cobradores de deudores FSCU**: Tesorería General de la República (10.256), BancoEstado (8.678), CMR Falabella (8.582), Itaú (7.467), BCI (7.328), Scotiabank (7.220), Banco de Chile (6.335)
-- **Bancos privados + BancoEstado acumulan 45.310 demandas — 4× más que la TGR**
-- **Sólo 8 de 26 universidades del CRUCH demandan judicialmente** a sus propios ex-alumnos. Lidera U. de Chile (2.129 demandas, 12% de sus deudores). Le siguen U. Valparaíso (436), U. Bío-Bío (329), UTEM (306), U. Arturo Prat (271), U. La Serena (222). Las demás 18 universidades dependen de retención automática vía Tesorería.
+- **64.044 (19,1%) tienen simultáneamente al menos una propiedad y un vehículo** registrados.
+- **Patrimonio agregado del universo moroso: $7,19 billones CLP** — casi el doble de la cartera adeudada.
 
 ### Evolución histórica 2022-2026
 - 2022: 288.290 deudores · 37,3M UTM · $2,61 bln CLP
@@ -67,8 +55,6 @@ Cada RUT se clasifica según cómo evolucionó entre 2022 y 2026:
 
 - **Nóminas oficiales CRUCH** 2022-2026: https://consejoderectores.cl/fondo-solidario-de-credito-universitario/
 - **Patrimonio (SII)**: avalúo fiscal, decil, vehículos, propiedades via servicios Unholster
-- **LinkedIn Chile**: pipeline rutificación Unholster, 5,26M perfiles indexados
-- **Poder Judicial (PJUD)**: BBDD Grupo Defensa, litigantes civiles + laborales
 - **Conversiones**: UTM abril 2026 = $69.889 CLP (SII), USD = $886,32 CLP (Banco Central)
 
 ## Marco legal
@@ -98,6 +84,4 @@ Repositorio público con todo el código: https://github.com/diazaraujo/deudores
 Pipeline:
 - `parse_nominas.py` — parser unificado XLSX+PDF → parquet
 - `normalize_nominas.py` — aliases → 27 universidades canónicas
-- `cross_pjud_deudas.py` — cruce judicial filtrado a cobranza
-- `cross_demandantes.py` — identificación de demandantes
 - `app/aggregates_v3.py` — consolidación + JSON con k-anonimato

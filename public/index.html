@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radiografía de Deudores FSCU 2026 · 335.152 morosos · $4 billones CLP · DecideChile</title>
-<meta name="description" content="Análisis de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario 2026. Cartera $4,02 billones CLP. 5 años de nóminas CRUCH cruzadas con patrimonio SII, LinkedIn Chile (perfil profesional) y Poder Judicial (cobranza). Datos públicos, agregados y anonimizados.">
-<meta name="keywords" content="FSCU, Fondo Solidario Crédito Universitario, deudores universitarios Chile, morosos CRUCH, nómina deudores 2026, Ley 19287, U de Chile demandas, cobranza FSCU, deuda universitaria Chile, DecideChile, Unholster">
+<meta name="description" content="Análisis de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario 2026. Cartera $4,02 billones CLP. 5 años de nóminas CRUCH cruzadas con patrimonio (SII). Datos públicos, agregados y anonimizados.">
+<meta name="keywords" content="FSCU, Fondo Solidario Crédito Universitario, deudores universitarios Chile, morosos CRUCH, nómina deudores 2026, Ley 19287, cartera FSCU, deuda universitaria Chile, DecideChile, Unholster">
 <link rel="canonical" href="https://deudores-fscu.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DecideChile">
 <meta property="og:locale" content="es_CL">
 <meta property="og:title" content="Radiografía de Deudores FSCU 2026 · DecideChile">
-<meta property="og:description" content="335.152 deudores · $4,02 billones CLP · 77% crónicos · 72.014 demandados. 5 años de nóminas CRUCH cruzadas con patrimonio, LinkedIn y Poder Judicial.">
+<meta property="og:description" content="335.152 deudores · $4,02 billones CLP · 77% crónicos de 5 años. Nóminas CRUCH 2022-2026 cruzadas con patrimonio (SII).">
 <meta property="og:url" content="https://deudores-fscu.vercel.app/">
 <meta property="og:image" content="https://deudores-fscu.vercel.app/og-image.png">
 <meta property="article:published_time" content="2026-04-17">
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@unholster">
 <meta name="twitter:title" content="Radiografía de Deudores FSCU · DecideChile">
-<meta name="twitter:description" content="335.152 deudores · $4,02 billones CLP · 77% crónicos de 5 años · U. de Chile lidera demandas judiciales.">
+<meta name="twitter:description" content="335.152 deudores · $4,02 billones CLP · 77% crónicos de 5 años. Nóminas CRUCH 2022-2026 cruzadas con patrimonio (SII).">
 <meta name="twitter:image" content="https://deudores-fscu.vercel.app/og-image.png">
 <meta name="author" content="Unholster">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -36,7 +36,7 @@
   "@type": "Dataset",
   "name": "Deudores del Fondo Solidario de Crédito Universitario (FSCU) 2022-2026",
   "alternateName": "Radiografía de Deudores FSCU",
-  "description": "Análisis agregado y anonimizado de 335.152 deudores morosos del FSCU publicados por el CRUCH para el año tributario 2026, con serie histórica 2022-2026. Incluye cruces con patrimonio (SII), perfil profesional (LinkedIn Chile) y causas judiciales de cobranza (Poder Judicial).",
+  "description": "Análisis agregado y anonimizado de 335.152 deudores morosos del FSCU publicados por el CRUCH para el año tributario 2026, con serie histórica 2022-2026. Incluye cruce con patrimonio (SII).",
   "url": "https://deudores-fscu.vercel.app/",
   "keywords": ["FSCU", "Fondo Solidario Crédito Universitario", "deudores universitarios", "morosos", "CRUCH", "Chile", "educación superior"],
   "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -65,8 +65,7 @@
     {"@type": "PropertyValue", "name": "Total deudores morosos 2026", "value": 335152},
     {"@type": "PropertyValue", "name": "Cartera vencida 2026 (UTM)", "value": 57549699},
     {"@type": "PropertyValue", "name": "Cartera vencida 2026 (CLP)", "value": 4022090913411},
-    {"@type": "PropertyValue", "name": "Deudores crónicos 5 años (%)", "value": 77.2},
-    {"@type": "PropertyValue", "name": "Demandados civil por cobranza de deuda", "value": 72014}
+    {"@type": "PropertyValue", "name": "Deudores crónicos 5 años (%)", "value": 77.2}
   ]
 }
 </script>
@@ -336,10 +335,8 @@
       <button class="tab-btn" data-tab="montos" onclick="switchTab('montos')">Montos</button>
       <button class="tab-btn" data-tab="universidad" onclick="switchTab('universidad')">Universidades</button>
       <button class="tab-btn" data-tab="xray" onclick="switchTab('xray')">Perfil institucional</button>
-      <button class="tab-btn" data-tab="justicia" onclick="switchTab('justicia')">Justicia</button>
       <button class="tab-btn" data-tab="geografia" onclick="switchTab('geografia')">Geografía</button>
       <button class="tab-btn" data-tab="demografia" onclick="switchTab('demografia')">Demografía</button>
-      <button class="tab-btn" data-tab="linkedin" onclick="switchTab('linkedin')">LinkedIn</button>
       <button class="tab-btn" data-tab="metodologia" onclick="switchTab('metodologia')">Metodología</button>
     </nav>
   </div>
@@ -415,40 +412,21 @@
           </div>
         </div>
         <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.6;margin-bottom:20px">
-          El FSCU fue diseñado para egresados sin capacidad de pago. Los datos contradicen parcialmente ese supuesto: <b>118.579 deudores (35%) están en el decil 8-10 de avalúo fiscal SII</b> — el 30% más rico en patrimonio declarado. Entre quienes identificamos en LinkedIn, hay <b>3.628 ejecutivos C-Level y directores</b> morosos, <b>6.664 académicos</b> (muchos trabajando en las mismas universidades acreedoras), y <b>17.871 empleados de empresas grandes</b> (Codelco, Arauco, BCI, Santander, BancoEstado — incluyendo bancos que cobran créditos). El perfil socioeconómico predominante es <b>"Medio Alto"</b>, no las capas más pobres. La paridad de género es 54% hombres / 46% mujeres.
+          El FSCU fue diseñado para egresados sin capacidad de pago. Los datos del cruce con registros del SII contradicen parcialmente ese supuesto: <b>118.579 deudores (35%) están en el decil 8-10 de avalúo fiscal SII</b> — el 30% más rico en patrimonio declarado. Además, <b>64.044 deudores (19,1%) tienen simultáneamente al menos una propiedad y un vehículo registrados</b>, y el <b>patrimonio agregado del universo moroso alcanza $7,19 billones CLP</b> — casi el doble de la cartera adeudada. El perfil socioeconómico predominante es <b>"Medio Alto"</b>, no las capas más pobres. La paridad de género es 54% hombres / 46% mujeres.
         </div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
           <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Alto patrimonio</div><div style="font-size:22px;font-weight:800;color:#F59E0B">118.579</div><div class="kpi-sub">decil 8-10 SII</div></div>
-          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Ejecutivos C-Level</div><div style="font-size:22px;font-weight:800;color:#F59E0B">3.628</div><div class="kpi-sub">en LinkedIn</div></div>
-          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Académicos</div><div style="font-size:22px;font-weight:800;color:#F59E0B">6.664</div><div class="kpi-sub">muchos en sus propias U.</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Auto y casa</div><div style="font-size:22px;font-weight:800;color:#F59E0B">64.044</div><div class="kpi-sub">19,1% del total</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Patrimonio agregado</div><div style="font-size:22px;font-weight:800;color:#F59E0B">$7,19 bln</div><div class="kpi-sub">≈ 2× la cartera adeudada</div></div>
         </div>
       </div>
 
-      <!-- BLOQUE 4: COBRANZA -->
+      <!-- BLOQUE 4: PROYECCIÓN -->
       <div class="card" style="padding:32px">
         <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
-          <div style="width:36px;height:36px;border-radius:8px;background:#E7F0FF;color:#266FE0;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">04</div>
+          <div style="width:36px;height:36px;border-radius:8px;background:#FEE2E2;color:#EF4444;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">04</div>
           <div>
-            <div class="kpi-label">Bloque 4 · Cobranza</div>
-            <div style="font-size:22px;font-weight:700;color:#171B21">El sistema de cobranza es desigual</div>
-          </div>
-        </div>
-        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.6;margin-bottom:20px">
-          De las 26 universidades del CRUCH que administran el Fondo Solidario, sólo <b>8 ejercen cobranza judicial directa</b> — las demás se apoyan exclusivamente en la retención de impuestos vía Tesorería. La <b>U. de Chile lidera ampliamente con 2.129 demandas</b> contra sus propios ex-alumnos (12% de sus deudores), seguida a distancia por U. de Valparaíso (436), U. del Bío-Bío (329) y UTEM (306). Los deudores FSCU no sólo deben al Fondo: <b>72.014 (21,5%) tienen causas de cobranza en PJUD</b>, y los bancos privados (BancoEstado, Itaú, BCI, Scotiabank, Banco de Chile) suman <b>45.310 demandas — 4× más que la propia Tesorería (10.256)</b>. Son deudores multi-endeudados, no sólo incumplidores con el Estado.
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
-          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Demandados por deuda</div><div style="font-size:22px;font-weight:800;color:#266FE0">72.014</div><div class="kpi-sub">21,5% del total</div></div>
-          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">U. de Chile demanda</div><div style="font-size:22px;font-weight:800;color:#266FE0">2.129</div><div class="kpi-sub">12% de sus deudores</div></div>
-          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Bancos persiguen</div><div style="font-size:22px;font-weight:800;color:#266FE0">45.310</div><div class="kpi-sub">4× más que la TGR</div></div>
-        </div>
-      </div>
-
-      <!-- BLOQUE 5: PROYECCIÓN -->
-      <div class="card" style="padding:32px">
-        <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
-          <div style="width:36px;height:36px;border-radius:8px;background:#FEE2E2;color:#EF4444;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">05</div>
-          <div>
-            <div class="kpi-label">Bloque 5 · Proyección</div>
+            <div class="kpi-label">Bloque 4 · Proyección</div>
             <div style="font-size:22px;font-weight:700;color:#171B21">Si nada cambia, la cartera llega a $5,47 billones en 2030</div>
           </div>
         </div>
@@ -462,17 +440,17 @@
         </div>
       </div>
 
-      <!-- BLOQUE 6: REFLEXIÓN -->
+      <!-- BLOQUE 5: REFLEXIÓN -->
       <div class="card" style="padding:32px;background:linear-gradient(135deg, #266FE0 0%, #184D9B 100%);color:#fff">
         <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
-          <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.15);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">06</div>
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.15);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">05</div>
           <div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.7);margin-bottom:4px">Bloque 6 · Reflexión</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.7);margin-bottom:4px">Bloque 5 · Reflexión</div>
             <div style="font-size:22px;font-weight:700">Un círculo vicioso con responsabilidades distribuidas</div>
           </div>
         </div>
         <div style="font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,0.92)">
-          El Fondo Solidario se mantiene como política pública en un equilibrio ineficiente: <b>1,38% del PIB atrapado en una cartera que crece 2× la inflación</b>, el <b>77% de los deudores son crónicos de 5 años</b>, el <b>patrimonio y los cargos jerárquicos de muchos morosos sugieren que podrían pagar pero no lo hacen</b>, y <b>la cobranza judicial se concentra en pocas universidades</b>. Las 18 restantes dependen de la retención automática de TGR — un mecanismo pasivo. Los datos no acusan a los deudores individuales: revelan un diseño que premia la permanencia morosa por encima de la regularización. La proyección a 2030 muestra que sin intervención estructural, la cartera seguirá creciendo y la tasa de recuperación seguirá bajando. La pregunta de política pública ya no es cómo cobrar, sino <b>qué costo social tiene mantener este statu quo</b>.
+          El Fondo Solidario se mantiene como política pública en un equilibrio ineficiente: <b>1,38% del PIB atrapado en una cartera que crece 2× la inflación</b>, el <b>77% de los deudores son crónicos de 5 años</b>, y el <b>patrimonio declarado ante el SII de buena parte de los morosos supera con holgura el saldo adeudado, lo que sugiere que podrían pagar pero no lo hacen</b>. Los mecanismos actuales de recuperación — principalmente retención de impuestos vía Tesorería — no alcanzan a contener el crecimiento. Los datos no acusan a los deudores individuales: revelan un diseño que premia la permanencia morosa por encima de la regularización. La proyección a 2030 muestra que sin intervención estructural, la cartera seguirá creciendo y la tasa de recuperación seguirá bajando. La pregunta de política pública ya no es cómo cobrar, sino <b>qué costo social tiene mantener este statu quo</b>.
         </div>
       </div>
 
@@ -512,7 +490,7 @@
   <div class="tab-content" id="tab-interesante">
     <div class="section-tag">Hallazgos y cuñas</div>
     <div class="section-title">Datos interesantes</div>
-    <div class="section-desc">Ángulos periodísticos construidos sobre el cruce de la nómina FSCU con datos de patrimonio (SII), perfil profesional (LinkedIn Chile) y exposición judicial (PJUD · Grupo Defensa). Cada hallazgo incluye su cifra principal y una interpretación global.</div>
+    <div class="section-desc">Hallazgos construidos sobre el cruce de la nómina FSCU 2022-2026 con datos de patrimonio declarados ante el SII. Cada insight incluye su cifra principal y una interpretación global.</div>
     <div style="margin-bottom:16px;padding:12px 16px;background:#FEF3C7;border-radius:8px;font-size:12px;color:#7C5700">
       💡 <b>Tip</b>: haz click en cualquier tarjeta para ver la explicación simple ("como si fueras un niño o un golden retriever").
     </div>
@@ -582,7 +560,7 @@
   <div class="tab-content" id="tab-xray">
     <div class="section-tag">Análisis institucional</div>
     <div class="section-title">Perfil institucional · Detalle por universidad</div>
-    <div class="section-desc">Selecciona una universidad para ver sus deudores en detalle: evolución histórica, demografía, perfil profesional, montos y exposición judicial.</div>
+    <div class="section-desc">Selecciona una universidad para ver sus deudores en detalle: evolución histórica, demografía, origen geográfico y montos de deuda.</div>
     <div style="margin-bottom: 20px;">
       <select id="xraySelect" style="font-family:'Hanken Grotesk',sans-serif;font-size:14px;padding:10px 16px;border:1px solid #E5E7EB;border-radius:8px;background:#fff;min-width:300px;cursor:pointer"></select>
     </div>
@@ -598,32 +576,6 @@
     <div class="grid-2">
       <div class="card"><div class="card-label">Top regiones de origen</div><div class="chart-wrap tall"><canvas id="xrayRegion"></canvas></div></div>
       <div class="card"><div class="card-label">Rango de deuda (UTM)</div><div class="chart-wrap tall"><canvas id="xrayMonto"></canvas></div></div>
-    </div>
-    <div class="grid-2">
-      <div class="card"><div class="card-label">Nivel jerárquico (subconjunto LinkedIn)</div><div class="chart-wrap tall"><canvas id="xraySeniority"></canvas></div></div>
-      <div class="card"><div class="card-label">Exposición judicial</div><div class="chart-wrap tall" id="xrayJusticiaCard" style="display:flex;align-items:center;justify-content:center;font-size:14px;color:#6B7280">—</div></div>
-    </div>
-  </div>
-
-  <div class="tab-content" id="tab-justicia">
-    <div class="section-tag">Cruce con Poder Judicial</div>
-    <div class="section-title">Demandados por cobranza de deuda</div>
-    <div class="section-desc">Cruce de los 335.152 RUTs contra PJUD_Unholster filtrando <b>sólo causas civiles de cobranza de deuda</b> donde el deudor aparece como demandado directo (DDO.). Se incluyen: Juicio Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Gestión Preparatoria (Confesión de Deuda / Notificación Cobro de Factura), Monitorio, Ley de Bancos, y Procedimiento Prenda. Se excluyen divorcios, daños, arrendamiento, voluntarios y demás causas civiles no vinculadas a deuda.</div>
-    <div class="kpi-grid cols-4 mb-sm" id="kpiJusticia"></div>
-    <div class="grid-2">
-      <div class="card"><div class="card-label">Distribución por nº de causas</div><div class="chart-wrap tall"><canvas id="chartJustCausa"></canvas></div></div>
-      <div class="card"><div class="card-label">% demandados por perfil profesional</div><div class="chart-wrap tall"><canvas id="chartJustPerfil"></canvas></div></div>
-    </div>
-    <div class="full-row"><div class="card"><div class="card-label">% demandados civil por región</div><div class="chart-wrap xtall"><canvas id="chartJustRegion"></canvas></div></div></div>
-    <div class="full-row"><div class="card"><div class="card-label">% demandados civil por universidad</div><div class="chart-wrap xtall"><canvas id="chartJustUniv"></canvas></div></div></div>
-
-    <div class="section-tag" style="margin-top:40px">¿Quién los demanda?</div>
-    <div class="section-title">Cobradores que persiguen a los deudores FSCU</div>
-    <div class="section-desc">Instituciones que aparecen como demandantes (DTE.) en las causas civiles de cobranza contra los morosos FSCU. Muestra que los deudores del Fondo Solidario suelen tener múltiples acreedores: bancos, tarjetas retail, el propio Estado y algunas universidades que optan por cobranza judicial.</div>
-    <div class="full-row"><div class="card"><div class="card-label">Top 20 cobradores por nº de deudores FSCU demandados</div><div class="chart-wrap xtall"><canvas id="chartDemandantes"></canvas></div></div></div>
-    <div class="grid-2">
-      <div class="card"><div class="card-label">Cobradores por categoría</div><div class="chart-wrap tall"><canvas id="chartDemandantesCat"></canvas></div></div>
-      <div class="card"><div class="card-label">Universidades que demandan a sus ex-alumnos morosos</div><div class="chart-wrap tall"><canvas id="chartUnivDemandantes"></canvas></div><div class="card-note">Del CRUCH, sólo algunas ejercen cobranza judicial. Las demás prefieren retención de impuestos vía TGR.</div></div>
     </div>
   </div>
 
@@ -717,27 +669,6 @@
     </div>
   </div>
 
-  <div class="tab-content" id="tab-linkedin">
-    <div class="section-tag">Rutificación profesional</div>
-    <div class="section-title">Perfil LinkedIn (high-confidence)</div>
-    <div class="section-desc" id="lkDesc">—</div>
-    <div class="grid-2">
-      <div class="card"><div class="card-label">Nivel jerárquico</div><div class="chart-wrap tall"><canvas id="chartSeniority"></canvas></div></div>
-      <div class="card"><div class="card-label">Tamaño de empresa</div><div class="chart-wrap tall"><canvas id="chartTier"></canvas></div></div>
-    </div>
-    <div class="full-row"><div class="card"><div class="card-label">Top 20 industrias</div><div class="chart-wrap xtall"><canvas id="chartIndustria"></canvas></div></div></div>
-    <div class="full-row"><div class="card"><div class="card-label">Top 30 empresas con más deudores</div><div class="chart-wrap xtall"><canvas id="chartEmpresa"></canvas></div><div class="card-note">Excluye categorías genéricas ("autónomo", "independiente"). Solo empresas con k ≥ 10 deudores.</div></div></div>
-
-    <div class="section-tag" style="margin-top:40px">Geografía del perfil profesional</div>
-    <div class="section-title">¿Dónde viven los deudores según cargo?</div>
-    <div class="section-desc">Cruce del subconjunto enriquecido con LinkedIn contra la comuna de domicilio declarada en la rutificación civil. Muestra la concentración territorial de cada tipo de perfil. Sólo comunas con ≥ 10 deudores del perfil se muestran (supresión k-anónima).</div>
-    <div class="grid-2">
-      <div class="card"><div class="card-label">Top comunas · Ejecutivos (C-Level / Director)</div><div class="chart-wrap tall"><canvas id="chartComunaEjec"></canvas></div></div>
-      <div class="card"><div class="card-label">Top comunas · Gerentes</div><div class="chart-wrap tall"><canvas id="chartComunaGer"></canvas></div></div>
-    </div>
-    <div class="full-row"><div class="card"><div class="card-label">Top comunas · Académicos</div><div class="chart-wrap tall"><canvas id="chartComunaAcad"></canvas></div></div></div>
-  </div>
-
   <div class="tab-content" id="tab-metodologia">
     <div class="section-tag">Transparencia técnica</div>
     <div class="section-title">Metodología</div>
@@ -751,10 +682,6 @@
           <b>1. Nóminas oficiales del CRUCH</b> (Consejo de Rectoras y Rectores de las Universidades Chilenas) correspondientes a los años tributarios 2022, 2023, 2024, 2025 y 2026, publicadas conforme al Art. 15 inciso 2° de la Ley 19.287, Art. 13 bis de la Ley 19.848 y Art. Único de la Ley 19.899. Descargadas de <a href="https://consejoderectores.cl/fondo-solidario-de-credito-universitario/" target="_blank" style="color:#266FE0">consejoderectores.cl</a>. Formatos: XLSX (2022, 2023) y PDF (2024, 2025, 2026). Cada deudor aparece con RUT, dígito verificador, nombres, apellidos, monto en UTM y universidad administradora.
           <br><br>
           <b>2. Enriquecimiento de patrimonio</b>: cruce con bases de datos SII (avalúo fiscal, decil, vehículos, propiedades, GSE, NSE) vía servicios internos Unholster. Cobertura: 89% de los deudores 2026.
-          <br><br>
-          <b>3. Perfil profesional (LinkedIn Chile)</b>: pipeline propietario Unholster que rutifica 5,26 millones de perfiles LinkedIn usando el stack AutoResearch + OpenSearch Audiencias. Sólo se usan matches con confianza "high" (score ≥ 0,87). Cobertura: 15,9% de los deudores FSCU.
-          <br><br>
-          <b>4. Cruce judicial (PJUD)</b>: base PJUD_Unholster (Grupo Defensa) con litigantes civiles (22,3M registros). Se filtra por <i>participante = 'DDO.'</i> (demandado directo) y procedimiento en {Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Monitorio, Ley de Bancos, Procedimiento Prenda - Ley 20.190, Gestión Preparatoria Confesión de Deuda, Gestión Preparatoria Notificación Cobro de Factura}. Excluye divorcios, daños, arrendamiento y demás causas civiles no vinculadas a cobranza.
         </div>
       </div>
 
@@ -772,7 +699,7 @@
       <div class="card">
         <div class="card-label">Privacidad y k-anonimato</div>
         <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
-          Todas las cifras publicadas en el dashboard están <b>agregadas con supresión k-anónima (k ≥ 10)</b>: cualquier cruce que arroje menos de 10 personas en una celda se omite del JSON. El archivo <code>aggregates.json</code> que consume el frontend contiene exclusivamente agregados; <b>ningún dato individual (RUT, nombre, dirección, patente, empleador específico) es accesible desde esta página</b>. Los parquet intermedios con datos individuales están en <code>.gitignore</code> y nunca se suben al repositorio ni al deploy de Vercel.
+          Todas las cifras publicadas en el dashboard están <b>agregadas con supresión k-anónima (k ≥ 10)</b>: cualquier cruce que arroje menos de 10 personas en una celda se omite del JSON. El archivo <code>aggregates.json</code> que consume el frontend contiene exclusivamente agregados; <b>ningún dato individual (RUT, nombre, dirección, patente) es accesible desde esta página</b>. Los parquet intermedios con datos individuales están en <code>.gitignore</code> y nunca se suben al repositorio ni al deploy de Vercel.
         </div>
       </div>
 
@@ -795,9 +722,7 @@
         <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
           • Los <b>montos pagados individuales</b> no son públicos; se infieren comparando mismo RUT año a año (si en 2023 debe menos que en 2022, se asume que pagó la diferencia neta). Esto no distingue condonaciones de pagos efectivos.
           <br>• La <b>tasa de recuperación real</b> requeriría datos de TGR (monto retenido vía devolución de impuestos), que no son públicos. Hay una solicitud de Transparencia Ley 20.285 en curso.
-          <br>• La <b>rutificación LinkedIn cubre 15,9%</b>: no es un censo del perfil profesional. Ejecutivos / gerentes pueden estar subrepresentados si no tienen perfil público.
           <br>• Los <b>datos de patrimonio SII</b> reflejan únicamente avalúo fiscal — no ingresos ni capacidad de pago real. Alguien puede estar en decil 8-10 de avalúo (porque heredó una casa) pero tener ingresos bajos.
-          <br>• Los <b>procedimientos judiciales</b> en PJUD son causas iniciadas, no sentencias finales. Una causa no implica condena ni deuda confirmada.
           <br>• Las <b>proyecciones 2027-2030</b> son regresión lineal simple, no modelo econométrico. Suponen continuación del trend sin cambio de política, condonaciones masivas ni recesión.
         </div>
       </div>
@@ -819,8 +744,6 @@
           Todo el código fuente está publicado en <a href="https://github.com/diazaraujo/deudores-fscu" target="_blank" style="color:#266FE0">github.com/diazaraujo/deudores-fscu</a> bajo licencia pública. Pipeline principal:
           <br>• <code>parse_nominas.py</code> — parser unificado (XLSX + PDF → parquet).
           <br>• <code>normalize_nominas.py</code> — mapa de aliases → 27 universidades canónicas.
-          <br>• <code>cross_pjud_deudas.py</code> — cruce judicial filtrado a cobranza de deuda.
-          <br>• <code>cross_demandantes.py</code> — identificación de quién demanda (DTE.) a los morosos.
           <br>• <code>app/aggregates_v3.py</code> — consolidación + generación del JSON con k-anonimato.
         </div>
       </div>
@@ -836,19 +759,15 @@
     </p>
     <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">¿Quiénes son los deudores?</h3>
     <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
-      El 54,9% son hombres y 45,1% mujeres, con edad mediana entre 35 y 44 años (típico de egresados universitarios de hace 10 a 15 años). El nivel socioeconómico predominante es "Medio Alto". <strong>118.579 deudores (35%) están en el decil 8-10 de avalúo fiscal SII</strong> — el 30% más rico de Chile por patrimonio declarado. Entre quienes están en LinkedIn (53.383 matches, 15,9%), identificamos <strong>3.628 ejecutivos C-Level o directores, 6.664 académicos y 17.871 empleados de empresas grandes</strong> como Codelco (257), Arauco (206), Banco Santander (198), PUC Chile (194), BCI (189) y BancoEstado (131).
+      El 54,9% son hombres y 45,1% mujeres, con edad mediana entre 35 y 44 años (típico de egresados universitarios de hace 10 a 15 años). El nivel socioeconómico predominante es "Medio Alto". <strong>118.579 deudores (35%) están en el decil 8-10 de avalúo fiscal SII</strong> — el 30% más rico de Chile por patrimonio declarado. <strong>64.044 deudores (19,1%) tienen simultáneamente al menos una propiedad y un vehículo registrados ante el SII/Servel</strong>, y el patrimonio agregado de la cohorte alcanza $7,19 billones CLP — casi el doble de la cartera adeudada.
     </p>
     <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Morosidad crónica, no coyuntural</h3>
     <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
       <strong>258.596 deudores (77,2%) figuran en las 5 nóminas 2022-2026 sin interrupción.</strong> Sólo 13.174 personas (3,9%) son ingresos nuevos en 2026 sin antecedentes previos. La <strong>probabilidad de salir de la nómina cae con la antigüedad</strong>: 14,85% para quien lleva 1 año, 8,19% para 2, 4,62% para 3, apenas 2,85% para quienes llevan 4 o más. Es una trampa de morosidad: a más tiempo deudor, menor chance de pago. La mediana de deuda de los crónicos pasó de 81 UTM en 2022 a 152 UTM en 2026 — casi se duplicó en 4 años por intereses acumulados.
     </p>
-    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Universidades acreedoras y cobranza judicial</h3>
+    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Universidades acreedoras</h3>
     <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
-      26 universidades del CRUCH administran el Fondo Solidario. Las que más deudores concentran son U. de Santiago (25.293), U. de Concepción (24.634), U. Federico Santa María (20.324), PUC de Valparaíso (19.721), U. del Bío-Bío (19.305), U. de Valparaíso (18.208), U. de La Serena (17.452), U. de Chile (17.327). <strong>Sólo 8 de 26 universidades demandan judicialmente a sus propios ex-alumnos morosos</strong>. La Universidad de Chile lidera ampliamente con 2.129 demandas (12% de sus deudores), seguida de U. de Valparaíso (436), U. del Bío-Bío (329), UTEM (306), U. Arturo Prat (271) y U. de La Serena (222). Las restantes 18 universidades del CRUCH se apoyan exclusivamente en el mecanismo pasivo de retención de impuestos vía Tesorería General de la República.
-    </p>
-    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">¿Quién los demanda?</h3>
-    <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
-      <strong>72.014 deudores FSCU (21,5%) tienen causas civiles de cobranza de deuda en el Poder Judicial chileno</strong>, filtrando procedimientos de ejecución (Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Monitorio, Ley de Bancos, Procedimiento Prenda, Gestión Preparatoria de Cobranza). Los principales cobradores son la <strong>Tesorería General de la República (10.256 demandas)</strong>, BancoEstado (8.678), CMR Falabella (8.582), Banco Itaú (7.467), BCI (7.328), Scotiabank (7.220) y Banco de Chile (6.335). <strong>La banca privada más BancoEstado acumulan 45.310 demandas — 4 veces más que la TGR.</strong> Los deudores FSCU no tienen sólo una deuda con el Estado: típicamente tienen múltiples obligaciones vencidas con el sistema financiero.
+      26 universidades del CRUCH administran el Fondo Solidario. Las que más deudores concentran son U. de Santiago (25.293), U. de Concepción (24.634), U. Federico Santa María (20.324), PUC de Valparaíso (19.721), U. del Bío-Bío (19.305), U. de Valparaíso (18.208), U. de La Serena (17.452), U. de Chile (17.327). El mecanismo principal de recuperación es la retención de la devolución de impuestos vía Tesorería General de la República, aplicada de forma transversal a todas las universidades administradoras.
     </p>
     <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Evolución 2022-2026 y proyección 2030</h3>
     <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
@@ -856,7 +775,7 @@
     </p>
     <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Metodología</h3>
     <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
-      Los datos provienen de (1) las nóminas oficiales del CRUCH 2022-2026 publicadas en <a href="https://consejoderectores.cl/fondo-solidario-de-credito-universitario/" rel="nofollow">consejoderectores.cl</a>, (2) enriquecimiento de patrimonio con bases SII (avalúo fiscal, decil, vehículos, propiedades), (3) cruce con LinkedIn Chile mediante rutificación propietaria Unholster con 5,26M perfiles indexados, y (4) cruce con base PJUD del Poder Judicial (22M litigantes). Todas las cifras publicadas están agregadas con <strong>supresión k-anónima (k ≥ 10)</strong>. Ningún dato individual (RUT, nombre, dirección, patente) es accesible desde este dashboard. Conversiones de moneda al 17 de abril de 2026: 1 UTM = $69.889 CLP (fuente: SII), 1 USD = $886,32 CLP (fuente: Banco Central de Chile).
+      Los datos provienen de (1) las nóminas oficiales del CRUCH 2022-2026 publicadas en <a href="https://consejoderectores.cl/fondo-solidario-de-credito-universitario/" rel="nofollow">consejoderectores.cl</a> y (2) enriquecimiento de patrimonio con bases SII (avalúo fiscal, decil, vehículos, propiedades). Todas las cifras publicadas están agregadas con <strong>supresión k-anónima (k ≥ 10)</strong>. Ningún dato individual (RUT, nombre, dirección, patente) es accesible desde este dashboard. Conversiones de moneda al 17 de abril de 2026: 1 UTM = $69.889 CLP (fuente: SII), 1 USD = $886,32 CLP (fuente: Banco Central de Chile).
     </p>
     <p style="font-size:13px;color:#6B7280;margin-top:20px;line-height:1.6">
       <strong>Código fuente y dataset descargables:</strong> repositorio público en <a href="https://github.com/diazaraujo/deudores-fscu" rel="nofollow">github.com/diazaraujo/deudores-fscu</a>. JSON agregado en <a href="/static/aggregates.json">/static/aggregates.json</a>. Resumen machine-readable para LLMs en <a href="/llms.txt">/llms.txt</a>. Procesado por Unholster para DecideChile · Abril 2026.
@@ -865,7 +784,7 @@
 
   <div class="dash-footer">
     Datos públicos según Art. 15 inciso 2º Ley 19.287, Art. 13 bis Ley 19.848 y Art. Único Ley 19.899.<br>
-    Enriquecimiento profesional con datos LinkedIn Chile (rutificación propietaria Unholster, matching high-confidence).<br>
+    Enriquecimiento con datos de patrimonio declarado ante el SII.<br>
     Todas las cifras están agregadas con supresión k-anónima (k ≥ 10). Ningún dato individual es accesible desde esta página.<br>
     <br>DecideChile · Procesado por Unholster · Abril 2026
   </div>
@@ -960,14 +879,8 @@ function initTab(name) {
   }
   if (name === 'universidad') renderUniversidadYear();
   if (name === 'xray') renderXrayInit();
-  if (name === 'justicia') renderJusticia();
   if (name === 'geografia') renderGeografia();
   if (name === 'demografia') renderDemografia();
-  if (name === 'linkedin') {
-    document.getElementById('lkDesc').textContent =
-      `${fmt(r.en_linkedin)} deudores (${r.pct_linkedin}% del total) fueron identificados con alta confianza en LinkedIn Chile mediante rutificación nominal. Las distribuciones siguientes corresponden sólo a ese subconjunto.`;
-    renderLinkedIn();
-  }
 }
 
 function renderEvolucion() {
@@ -1204,80 +1117,6 @@ function renderXray(uname) {
   xrayCharts.sexo = makeDonut('xraySexo', (u.por_sexo||[]).map(x=>x.sexo), (u.por_sexo||[]).map(x=>x.n));
   xrayCharts.region = makeHbar('xrayRegion', (u.por_region||[]).slice(0,10).map(x=>x.region), (u.por_region||[]).slice(0,10).map(x=>x.n), C.blueDark);
   xrayCharts.monto = makeVbar('xrayMonto', (u.por_monto_bucket||[]).map(x=>x.bucket), (u.por_monto_bucket||[]).map(x=>x.n), C.amber);
-  xrayCharts.seniority = makeHbar('xraySeniority', (u.por_seniority||[]).map(x=>x.seniority), (u.por_seniority||[]).map(x=>x.n), C.violet);
-
-  const j = u.justicia;
-  const jc = document.getElementById('xrayJusticiaCard');
-  if (j && j.total >= 10) {
-    jc.innerHTML = `<div style="text-align:center">
-      <div class="kpi-value" style="font-size:36px;color:${C.red}">${j.pct_demandados}%</div>
-      <div class="kpi-sub">Demandados civil (DDO.) — ${fmt(j.demandados_civil)} de ${fmt(j.total)}</div>
-      <div class="kpi-sub" style="margin-top:8px">vs. promedio nacional ${D.justicia_resumen.pct_con_civil_ddo}%</div>
-    </div>`;
-  } else {
-    jc.innerHTML = '<span>Sin datos suficientes (k &lt; 10)</span>';
-  }
-}
-
-function renderJusticia() {
-  const jr = D.justicia_resumen;
-  document.getElementById('kpiJusticia').innerHTML =
-    kpiCard('Demandados por deuda', fmt(jr.con_demandado_deuda), jr.pct_con_demandado_deuda + '% del total', 'cash', 'red') +
-    kpiCard('Total deudores', fmt(jr.total), 'Base de cruce 2026', 'users') +
-    kpiCard('Tipos de causa', '7 procedimientos', 'Ejecutivo + Monitorio + Ley Bancos', 'chart', 'amber') +
-    kpiCard('Fuente', 'Poder Judicial', 'Datos procesados por Unholster', 'link');
-
-  const jc = D.justicia_por_causa.sort((a,b) => b.n - a.n);
-  makeHbar('chartJustCausa', jc.map(x=>x.bucket), jc.map(x=>x.n), C.blue);
-
-  const jp = D.justicia_por_perfil;
-  new Chart(document.getElementById('chartJustPerfil'), {
-    type: 'bar', data: { labels: jp.map(x=>x.perfil),
-      datasets: [{ label: '% demandados', data: jp.map(x=>x.pct), backgroundColor: jp.map(x => x.pct > 30 ? C.red : x.pct > 20 ? C.amber : C.blue), borderRadius: {topRight:4,bottomRight:4}, borderSkipped: false }] },
-    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.parsed.x + '% (' + fmt(jp[ctx.dataIndex].demandados) + ' de ' + fmt(jp[ctx.dataIndex].n) + ')' } } },
-      scales: { y: { grid: { display: false }, ticks: axisSans }, x: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' }, beginAtZero: true } }
-    }
-  });
-
-  const jreg = D.justicia_por_region.sort((a,b) => b.pct_demandados - a.pct_demandados);
-  new Chart(document.getElementById('chartJustRegion'), {
-    type: 'bar', data: { labels: jreg.map(x=>x.region),
-      datasets: [{ label: '% demandados', data: jreg.map(x=>x.pct_demandados), backgroundColor: jreg.map(x => x.pct_demandados > 25 ? C.red : x.pct_demandados > 20 ? C.amber : C.blue), borderRadius: {topRight:4,bottomRight:4}, borderSkipped: false }] },
-    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.parsed.x + '% (' + fmt(jreg[ctx.dataIndex].demandados_civil) + ' de ' + fmt(jreg[ctx.dataIndex].n) + ')' } } },
-      scales: { y: { grid: { display: false }, ticks: { ...axisSans, font: { ...defaultFont, size: 11, weight: 300 } } }, x: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' } } }
-    }
-  });
-
-  const ju = D.justicia_por_universidad.sort((a,b) => b.pct_demandados - a.pct_demandados);
-  new Chart(document.getElementById('chartJustUniv'), {
-    type: 'bar', data: { labels: ju.map(x=>x.universidad),
-      datasets: [{ label: '% demandados', data: ju.map(x=>x.pct_demandados), backgroundColor: ju.map(x => x.pct_demandados > 25 ? C.red : x.pct_demandados > 20 ? C.amber : C.blue), borderRadius: {topRight:4,bottomRight:4}, borderSkipped: false }] },
-    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.parsed.x + '% (' + fmt(ju[ctx.dataIndex].demandados_civil) + ' de ' + fmt(ju[ctx.dataIndex].n) + ')' } } },
-      scales: { y: { grid: { display: false }, ticks: { ...axisSans, font: { ...defaultFont, size: 11, weight: 300 } } }, x: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' } } }
-    }
-  });
-
-  // === Top demandantes ===
-  const dem = (D.top_demandantes || []).slice(0, 20);
-  makeHbar('chartDemandantes', dem.map(x => (x.dte_nombre||'').substring(0,45)), dem.map(x => x.n_deudores), C.red);
-
-  const dcat = D.demandantes_categorias || [];
-  new Chart(document.getElementById('chartDemandantesCat'), {
-    type: 'doughnut', data: { labels: dcat.map(x => x.cat),
-      datasets: [{ data: dcat.map(x => x.deudores_acumulados), backgroundColor: catColors, borderWidth: 0 }]},
-    options: { responsive: true, maintainAspectRatio: false, cutout: '60%',
-      plugins: {
-        legend: { position: 'bottom', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 10, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } },
-        tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.label + ': ' + fmt(ctx.parsed) + ' demandas acumuladas' } }
-      }
-    }
-  });
-
-  const ud = D.universidades_demandantes || [];
-  makeHbar('chartUnivDemandantes', ud.map(x => x.dte_nombre.substring(0,45)), ud.map(x => x.n_deudores), C.blueDark);
 }
 
 function makeHbar(id, labels, values, color) {
@@ -1316,7 +1155,7 @@ function renderMain() {
   } else if (currentYear !== 2026 && py) {
     document.getElementById('dashYearTag').textContent = 'DecideChile · Nómina ' + currentYear;
     document.getElementById('dashDesc').textContent =
-      `Análisis agregado de los ${fmt(py.total)} deudores morosos de la nómina ${currentYear}. Los cortes de patrimonio, perfil LinkedIn y causas judiciales sólo están disponibles para 2026.`;
+      `Análisis agregado de los ${fmt(py.total)} deudores morosos de la nómina ${currentYear}. Los cortes de patrimonio (SII) sólo están disponibles para 2026.`;
   } else {
     document.getElementById('dashYearTag').textContent = 'DecideChile · Nómina 2026';
     document.getElementById('dashDesc').textContent =
@@ -1769,21 +1608,6 @@ function renderDemografia() {
   vbar('chartProp', D.por_propiedades.map(x=>x.bucket), D.por_propiedades.map(x=>x.n), C.green);
 }
 
-function renderLinkedIn() {
-  hbar('chartSeniority', D.por_seniority.map(x=>x.seniority), D.por_seniority.map(x=>x.n), C.blue, ctx => fmt(ctx.parsed.x) + ' deudores');
-  donut('chartTier', D.por_tier.map(x=>x.tier), D.por_tier.map(x=>x.n));
-  hbar('chartIndustria', D.top_industrias.slice(0,20).map(x=>x.industry), D.top_industrias.slice(0,20).map(x=>x.n), C.blue, ctx => fmt(ctx.parsed.x) + ' deudores');
-  hbar('chartEmpresa', D.top_empresas.slice(0,30).map(x=>x.company), D.top_empresas.slice(0,30).map(x=>x.n), C.blueDark, ctx => fmt(ctx.parsed.x) + ' deudores');
-
-  // Comunas por perfil
-  const ejec = (D.comunas_ejecutivos || []);
-  const ger = (D.comunas_gerentes || []);
-  const acad = (D.comunas_academicos || []);
-  if (ejec.length) hbar('chartComunaEjec', ejec.map(x => x.comuna), ejec.map(x => x.n), C.red, ctx => fmt(ctx.parsed.x) + ' ejecutivos · ' + ejec[ctx.dataIndex].region);
-  if (ger.length) hbar('chartComunaGer', ger.map(x => x.comuna), ger.map(x => x.n), C.amber, ctx => fmt(ctx.parsed.x) + ' gerentes · ' + ger[ctx.dataIndex].region);
-  if (acad.length) hbar('chartComunaAcad', acad.map(x => x.comuna), acad.map(x => x.n), C.violet, ctx => fmt(ctx.parsed.x) + ' académicos · ' + acad[ctx.dataIndex].region);
-}
-
 function hbar(id, labels, values, color, tooltipLbl) {
   const bg = Array.isArray(color) ? labels.map((_,i)=>color[i%color.length]) : color;
   new Chart(document.getElementById(id), {
@@ -1818,7 +1642,7 @@ function donut(id, labels, values) {
   });
 }
 
-fetch('/static/aggregates.json?v=23').then(r => r.json()).then(d => {
+fetch('/static/aggregates.json?v=24').then(r => r.json()).then(d => {
   D = d;
   const initRaw = document.getElementById('yearSelect').value;
   currentYear = initRaw === 'todos' ? 'todos' : parseInt(initRaw);

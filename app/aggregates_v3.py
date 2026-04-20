@@ -262,31 +262,6 @@ def q1(sql):
 
 interesante = []
 
-# 1. Ejecutivos deudores
-n_ejec = q1("SELECT COUNT(*) FROM full_t WHERE en_linkedin AND seniority IN ('c-level','director')")
-n_ejec_alto = q1("SELECT COUNT(*) FROM full_t WHERE en_linkedin AND seniority IN ('c-level','director') AND decil_avaluo >= 8")
-interesante.append({
-    "titulo": "Ejecutivos morosos",
-    "kpi": f"{n_ejec:,}".replace(",", "."),
-    "sub": f"{n_ejec_alto:,} están en decil 8-10 de avalúo (patrimonio alto)".replace(",", "."),
-    "desc": f"C-level y directores identificados en LinkedIn Chile que aparecen en la nómina FSCU 2026. Representan el {100*n_ejec/total:.1f}% del total de deudores y el 4,2% del subconjunto enriquecido con LinkedIn. Muchos ocupan cargos de decisión en grandes empresas pero mantienen morosidad con el Estado.",
-    "eli5": "3.628 ejecutivos identificados como C-level o directores en LinkedIn Chile figuran en la nómina FSCU 2026. De ellos, 1.787 (49,3%) están entre el 30% más rico por avalúo fiscal (decil 8-10 SII). La morosidad no se explica por capacidad de pago: son profesionales con alta jerarquía y patrimonio declarado que mantienen abierta su deuda universitaria con el Estado.",
-    "tipo": "executives"
-})
-
-# 2. Académicos que deben a su propia universidad
-n_acad = q1("SELECT COUNT(*) FROM full_t WHERE en_linkedin AND seniority='academic'")
-n_acad_propia = q1("""SELECT COUNT(*) FROM full_t WHERE en_linkedin AND seniority='academic'
-    AND LOWER(company) LIKE '%universidad%'""")
-interesante.append({
-    "titulo": "Académicos que deben al Fondo",
-    "kpi": f"{n_acad:,}".replace(",", "."),
-    "sub": f"{n_acad_propia:,} trabajan en universidades — muchos adeudan a su propia institución".replace(",", "."),
-    "desc": f"Profesores universitarios que son deudores morosos del FSCU. Varios de ellos ejercen actualmente en las mismas universidades a las que deben: 36 académicos adeudan a la U. de Concepción y trabajan en ella, 28 a la PUC, 27 a la USACH, 22 a la U. de Chile, 21 a la UTFSM. Educación primaria y secundaria concentra el mayor volumen (6.676 deudores) seguida de Educación superior (3.034).",
-    "eli5": "6.664 deudores FSCU trabajan en educación (colegios y universidades). Entre quienes se desempeñan en instituciones del CRUCH, se identifican casos donde el académico adeuda al mismo establecimiento donde enseña: 36 en U. de Concepción, 28 en PUC, 27 en USACH, 22 en U. de Chile, 21 en UTFSM. El sector educación concentra el mayor volumen de deudores identificados en LinkedIn.",
-    "tipo": "academic"
-})
-
 # 3. Crónicos
 interesante.append({
     "titulo": "La mayoría son crónicos",
@@ -306,16 +281,6 @@ interesante.append({
     "desc": f"{n_alto:,} morosos del FSCU tienen avalúo fiscal correspondiente al decil 8, 9 o 10 según el SII — el 30% más rico en patrimonio declarado. Un 38% están en el decil superior 10 (máxima riqueza por avalúo). El crédito solidario fue diseñado para egresados que no podían pagar; su impago no es excepción entre quienes hoy tienen patrimonio.".replace(",", "."),
     "eli5": "118.579 deudores FSCU (35,4% del total) tienen avalúo fiscal en los deciles 8, 9 o 10 según el SII — el 30% de mayor patrimonio declarado en Chile. El 38% de ellos está en el decil superior. El impago no se concentra en los segmentos sin capacidad de pago: persiste entre contribuyentes con patrimonio establecido.",
     "tipo": "wealth"
-})
-
-# 5. Empleados grandes empresas
-interesante.append({
-    "titulo": "Empleados de grandes empresas",
-    "kpi": "17.871",
-    "sub": "27% de los deudores con LinkedIn trabajan en empresas large/enterprise",
-    "desc": "Entre los 53.383 deudores identificados en LinkedIn, 17.871 trabajan en empresas grandes. Las instituciones con más empleados morosos son: Codelco (257), Arauco (206), Banco Santander (198), PUC Chile (194), BCI (189), U. de Concepción (178), Entel (164), INACAP (159), DuocUC (152), U. de Santiago (147), Banco de Chile (145), Cencosud (133), BancoEstado (131), UTFSM (132), LATAM (124). Bancos como Santander, BCI y BancoEstado — que cobran créditos — tienen cientos de empleados que no pagan los suyos propios.",
-    "eli5": "Entre los 53.383 deudores identificados en LinkedIn, 17.871 (27%) trabajan en empresas grandes o enterprise. Codelco (257), Arauco (206) y Banco Santander (198) encabezan el ranking de empleadores. Los bancos Santander, BCI y BancoEstado — actores que también ejercen cobranza crediticia — suman en conjunto más de 500 empleados morosos del FSCU.",
-    "tipo": "employer"
 })
 
 # 6. Cartera crece más rápido que UTM
@@ -340,17 +305,6 @@ interesante.append({
     "tipo": "flow"
 })
 
-# 8. Demandados por cobranza de deuda
-n_ddo = out["resumen"]["con_demandado_deuda"]
-interesante.append({
-    "titulo": "Uno de cada cinco enfrenta cobranza judicial",
-    "kpi": f"{n_ddo:,}".replace(",", "."),
-    "sub": f"{100*n_ddo/total:.1f}% del total fue demandado por cobranza de deuda",
-    "desc": f"El cruce con PJUD (22M registros de litigantes del Poder Judicial) encontró que {n_ddo:,} deudores FSCU ({100*n_ddo/total:.1f}%) figuran como demandados directos (DDO.) en causas civiles de cobranza de deuda. El filtro excluye divorcios, daños, arrendamiento y otras causas civiles no vinculadas a morosidad; incluye Juicio Ejecutivo Obligación de Dar (mayoritario), Ejecutivo Mínima Cuantía, Monitorio, Ley de Bancos y Gestión Preparatoria de Cobranza. Estas personas ya tuvieron al menos una acción judicial de cobro en su contra — señal de morosidad estructural más allá del FSCU.".replace(",", "."),
-    "eli5": "El cruce con los 22 millones de registros de litigantes del Poder Judicial identifica que 72.014 deudores FSCU (21,5%) figuran como demandados civiles por cobranza de deuda. La cifra excluye divorcios, arrendamiento y causas no patrimoniales. La exposición judicial del grupo trasciende al FSCU: bancos, retail financiero y el Estado aparecen como demandantes por obligaciones distintas.",
-    "tipo": "judicial"
-})
-
 # 9. Sexo/edad
 interesante.append({
     "titulo": "Perfil demográfico",
@@ -372,34 +326,6 @@ interesante.append({
     "eli5": "La cartera vencida FSCU asciende a US$ 4.540 millones (≈ $4,02 billones CLP), equivalente al 1,38% del PIB nominal chileno 2024. El monto corresponde a aproximadamente tres años del costo estimado de la gratuidad universitaria (≈US$ 1.500 millones anuales). Recuperar la cartera financiaría íntegramente el programa por ese período.",
     "tipo": "economy"
 })
-
-# 11. Educación es la top industria deudora
-interesante.append({
-    "titulo": "Educación lidera por industria",
-    "kpi": "9.710",
-    "sub": "Deudores en industria 'Educación' (primaria + secundaria + superior)",
-    "desc": "Educación primaria/secundaria (6.676 deudores) y Educación superior (3.034) suman 9.710 personas que trabajan en el sector educativo y a la vez son morosas del crédito universitario. La siguiente industria (construcción, 3.811) queda muy por debajo. El sector educación concentra el mayor volumen de deudores FSCU identificados en LinkedIn, por amplia ventaja sobre las demás industrias.",
-    "eli5": "El sector educación concentra 9.710 deudores identificados en LinkedIn: 6.676 en educación primaria y secundaria, 3.034 en educación superior. Es la industria con mayor volumen de morosidad FSCU por amplia ventaja — la siguiente (construcción, 3.811) queda muy por debajo. Quienes trabajan en el sistema educativo son el grupo ocupacional con mayor presencia en la nómina.",
-    "tipo": "education"
-})
-
-# 12. Top universidad por % demandados
-# (ya lo tenemos en justicia_por_universidad — la peor)
-ju_worst = con.execute("""
-SELECT universidad_canon u, COUNT(*) n, SUM(CASE WHEN p.demandado_por_deuda = TRUE THEN 1 ELSE 0 END) ddo,
-    ROUND(100.0*SUM(CASE WHEN p.demandado_por_deuda = TRUE THEN 1 ELSE 0 END)/COUNT(*),1) pct
-FROM (SELECT rut_dv, arg_max(universidad_canon, monto_utm) universidad_canon FROM nominas WHERE year=2026 GROUP BY rut_dv) n
-LEFT JOIN pjud p USING (rut_dv) GROUP BY 1 HAVING COUNT(*) >= 100 ORDER BY pct DESC LIMIT 1
-""").fetchone()
-if ju_worst:
-    interesante.append({
-        "titulo": "La universidad más demandada",
-        "kpi": f"{ju_worst[3]}%",
-        "sub": f"de los deudores de {ju_worst[0]} han sido demandados civil",
-        "desc": f"De las 26 universidades acreedoras, {ju_worst[0]} tiene la mayor proporción de deudores que han sido demandados civilmente (DDO.): {ju_worst[3]}% de sus {ju_worst[1]:,} deudores ({ju_worst[2]:,} personas) han enfrentado al menos una causa civil en su contra. Puede reflejar una política de cobranza más agresiva o una composición de cartera distinta.".replace(",", "."),
-        "eli5": f"De las 26 universidades administradoras del FSCU, {ju_worst[0]} presenta la mayor proporción de deudores con demandas civiles de cobranza: {ju_worst[3]}% ({ju_worst[2]:,} de {ju_worst[1]:,} deudores). La cifra duplica el promedio nacional (21,5%). Puede reflejar una política institucional de cobranza más activa o un perfil de cartera con mayor exposición judicial previa de sus deudores.".replace(",", "."),
-        "tipo": "judicial-uni"
-    })
 
 # 13. Multi-universidad
 n_multi = q1("""
@@ -425,26 +351,6 @@ interesante.append({
     "tipo": "ultra"
 })
 
-# 15. La U de Chile es la que más demanda
-interesante.append({
-    "titulo": "La U de Chile es la que más demanda",
-    "kpi": "2.129",
-    "sub": "ex-alumnos demandados judicialmente por cobranza (12% de sus deudores)",
-    "desc": "De las 26 universidades del CRUCH que administran el Fondo Solidario, sólo unas pocas ejercen cobranza judicial directa. La Universidad de Chile lidera con 2.129 demandas contra sus propios ex-alumnos morosos — 12% de sus 17.327 deudores. Le siguen U. de Valparaíso (436), U. del Bío Bío (329), UTEM (306), U. Arturo Prat (271) y U. de La Serena (222). Las demás universidades del CRUCH prefieren el mecanismo indirecto: retención de la devolución de impuestos vía Tesorería General de la República, que demanda a 10.256 deudores FSCU por cuenta de todas.",
-    "eli5": "Sólo una minoría de las 26 universidades del CRUCH ejerce cobranza judicial directa. La U. de Chile lidera con 2.129 demandas (12% de sus 17.327 deudores), seguida por U. de Valparaíso (436), U. del Bío Bío (329) y UTEM (306). Las restantes optan por el mecanismo indirecto: retención de la devolución de impuestos vía Tesorería General de la República, que figura como demandante en 10.256 causas.",
-    "tipo": "judicial-uni"
-})
-
-# 16. Bancos cobradores
-interesante.append({
-    "titulo": "Los bancos los persiguen más que el Estado",
-    "kpi": "45.310",
-    "sub": "deudores FSCU demandados por BancoEstado + privados",
-    "desc": "Entre los 72.014 deudores FSCU con demandas de cobranza, los cobradores privados los persiguen más que el propio Estado: BancoEstado (8.678), CMR Falabella (8.582), Itaú (7.467), BCI (7.328), Scotiabank (7.220) y Banco de Chile (6.335) acumulan 45.310 demandas — 4 veces más que la Tesorería General (10.256). El deudor FSCU típico no tiene sólo una deuda con el Estado; tiene múltiples obligaciones vencidas con el sistema financiero.",
-    "eli5": "Entre los 72.014 deudores FSCU con demandas de cobranza, los actores privados concentran más causas que el Estado: BancoEstado (8.678), CMR Falabella (8.582), Itaú (7.467), BCI (7.328), Scotiabank (7.220) y Banco de Chile (6.335) acumulan 45.310 demandas — cuatro veces el volumen de la Tesorería General (10.256). El deudor FSCU típico mantiene múltiples obligaciones vencidas simultáneas en el sistema financiero.",
-    "tipo": "employer"
-})
-
 # 17. Crónicos acumulando
 interesante.append({
     "titulo": "Los crónicos que sólo acumulan intereses",
@@ -465,16 +371,6 @@ interesante.append({
     "tipo": "wealth"
 })
 
-# 19. Barrios ABC1 Santiago
-interesante.append({
-    "titulo": "1.546 ejecutivos en barrios ABC1 de Santiago",
-    "kpi": "1.546",
-    "sub": "C-Level, directores y gerentes en Las Condes, Vitacura, Providencia, Lo Barnechea y Ñuñoa",
-    "desc": "Las cinco comunas de mayor ingreso del Gran Santiago — Las Condes, Vitacura, Providencia, Lo Barnechea y Ñuñoa — concentran 1.546 deudores morosos con perfil ejecutivo (C-level, director o gerente) identificados en LinkedIn. Son los sectores con el precio por metro cuadrado más alto del país; allí reside una porción relevante del segmento moroso de alta jerarquía profesional, con registro público de morosidad en el FSCU.",
-    "eli5": "Las Condes, Vitacura, Providencia, Lo Barnechea y Ñuñoa — las cinco comunas de mayor ingreso per cápita del Gran Santiago — concentran 1.546 deudores morosos con perfil ejecutivo (C-level, director o gerente) identificados en LinkedIn. Son los sectores con precio por metro cuadrado más alto del país; allí reside una porción relevante del segmento moroso de alta jerarquía profesional.",
-    "tipo": "wealth"
-})
-
 # 20. Deuda crónicos duplicada
 interesante.append({
     "titulo": "La deuda del crónico se duplicó en 4 años",
@@ -485,16 +381,6 @@ interesante.append({
     "tipo": "interest"
 })
 
-# 21. Juicio ejecutivo es la cobranza estándar
-interesante.append({
-    "titulo": "El juicio ejecutivo es la cobranza estándar",
-    "kpi": "71.437",
-    "sub": "94% de los demandados por deuda tiene Juicio Ejecutivo Obligación de Dar",
-    "desc": "De los 72.014 deudores FSCU demandados por cobranza de deuda, 71.437 (94,2%) enfrentan específicamente un Juicio Ejecutivo Obligación de Dar — el procedimiento civil estándar en Chile para exigir el pago de una deuda documentada. Las otras categorías (Monitorio, Ley de Bancos, Gestión Preparatoria) son residuales. Es una señal clara: la cobranza judicial en Chile está estandarizada y los deudores FSCU enfrentan el mismo camino que cualquier otro moroso financiero.",
-    "eli5": "De los 72.014 deudores FSCU demandados por cobranza, 71.437 (94,2%) enfrentan un Juicio Ejecutivo Obligación de Dar — el procedimiento civil estándar en Chile para exigir el pago de una deuda documentada. Las otras categorías (Monitorio, Ley de Bancos, Gestión Preparatoria) son marginales. La cobranza judicial contra deudores FSCU sigue el mismo cauce que cualquier obligación financiera ordinaria.",
-    "tipo": "judicial"
-})
-
 # 22. Cohort 2022 casi no se mueve
 interesante.append({
     "titulo": "El cohort 2022 virtualmente no se mueve",
@@ -503,16 +389,6 @@ interesante.append({
     "desc": "Los 288.290 deudores que aparecían en la nómina 2022 son un grupo extraordinariamente estable: 4 años después, 265.072 (91,9%) siguen exactamente en el mismo lugar — en la nómina 2026. Sólo 23.218 personas (8,1%) lograron salir durante los últimos 4 años, ya sea por pago total o condonación. Este es el análisis longitudinal clásico de retención: en productos digitales se considera 'excelente' un 40% de retención a 4 años. En deudores morosos FSCU es 92%. El sistema no se vacía.",
     "eli5": "De los 288.290 deudores registrados en la nómina 2022, 265.072 (91,9%) continúan en la nómina 2026. Sólo 23.218 personas (8,1%) salieron en cuatro años — por pago total, condonación u otras causas. La tasa de permanencia supera ampliamente los benchmarks de retención de las industrias que sí buscan retener clientes; acá, el indicador refleja la dificultad estructural para reducir el stock.",
     "tipo": "chronic"
-})
-
-# 23. Construcción y minería
-interesante.append({
-    "titulo": "Construcción y minería, las otras industrias morosas",
-    "kpi": "7.402",
-    "sub": "Construcción (3.811) + Minería/Metales (3.591) deudores",
-    "desc": "Después del sector educación (9.710 deudores entre primaria/secundaria/superior), las siguientes industrias con mayor número de deudores FSCU identificados en LinkedIn son construcción (3.811) y minería/metales (3.591), sumando 7.402 personas. Son sectores con alto empleo formal masculino en Chile, receptores de egresados de ingenierías y especialidades técnicas. El perfil demográfico resultante (54,9% hombres) es consistente con esta composición sectorial.",
-    "eli5": "Después del sector educación (9.710 deudores), las industrias con mayor número de morosos FSCU identificados en LinkedIn son construcción (3.811) y minería/metales (3.591), sumando 7.402 personas. Ambas concentran empleo formal masculino en Chile y reciben egresados de carreras de ingeniería y afines. El perfil demográfico (54,9% hombres) es consistente con esta composición sectorial.",
-    "tipo": "education"
 })
 
 # 24. Multi-propiedad + vehículos

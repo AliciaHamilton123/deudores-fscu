@@ -1820,6 +1820,8 @@ function donut(id, labels, values) {
 
 fetch('/static/aggregates.json?v=21').then(r => r.json()).then(d => {
   D = d;
+  const initRaw = document.getElementById('yearSelect').value;
+  currentYear = initRaw === 'todos' ? 'todos' : parseInt(initRaw);
   renderMain();
   // Check URL hash for deep link
   const h = (location.hash || '').replace('#','');

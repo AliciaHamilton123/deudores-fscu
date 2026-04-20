@@ -1225,7 +1225,7 @@ function renderJusticia() {
     kpiCard('Demandados por deuda', fmt(jr.con_demandado_deuda), jr.pct_con_demandado_deuda + '% del total', 'cash', 'red') +
     kpiCard('Total deudores', fmt(jr.total), 'Base de cruce 2026', 'users') +
     kpiCard('Tipos de causa', '7 procedimientos', 'Ejecutivo + Monitorio + Ley Bancos', 'chart', 'amber') +
-    kpiCard('Fuente', 'PJUD · Grupo Defensa', 'info_causas_civil filtrado', 'link');
+    kpiCard('Fuente de datos de justicia', 'Poder Judicial', 'info_causas_civil filtrado', 'link');
 
   const jc = D.justicia_por_causa.sort((a,b) => b.n - a.n);
   makeHbar('chartJustCausa', jc.map(x=>x.bucket), jc.map(x=>x.n), C.blue);

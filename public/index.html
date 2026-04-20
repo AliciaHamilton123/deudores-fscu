@@ -346,15 +346,14 @@
 
   <div class="tab-content active" id="tab-general">
     <div class="section-tag">Panorama general</div>
-    <div class="section-title">Categorización de deudores</div>
-    <div class="section-desc">Cada uno de los 335.152 deudores asignado a una categoría única combinando perfil profesional (LinkedIn) y patrimonio declarado.</div>
-    <div class="grid-3-1">
-      <div class="card"><div class="card-label">Perfiles (donut)</div><div class="chart-wrap tall"><canvas id="chartPerfiles"></canvas></div></div>
-      <div class="card"><div class="card-label">Resumen del cruce</div>
-        <div class="chart-wrap tall" style="display:flex;align-items:center;overflow-y:auto"><div id="perfilTable" style="width:100%"></div></div>
-      </div>
-    </div>
+    <div class="section-title">Radiografía del período</div>
+    <div class="section-desc">Cifras clave de la nómina FSCU para el año seleccionado: volumen de deudores, cartera vencida, distribución de la deuda, universidades acreedoras y concentración territorial.</div>
+    <div class="kpi-grid cols-4" id="kpiGeneral"></div>
     <div class="full-row"><div class="card"><div class="card-label">Distribución por rango de deuda (UTM)</div><div class="chart-wrap tall"><canvas id="chartMontoBucket"></canvas></div><div class="card-note">UTM = Unidad Tributaria Mensual, unidad legal de la deuda. Conversión vigente al 2026-04-17: 1 UTM = $69.889 CLP ≈ US$ 78,85.</div></div></div>
+    <div class="grid-2">
+      <div class="card"><div class="card-label">Top 10 universidades acreedoras</div><div class="chart-wrap xtall"><canvas id="chartGenUniv"></canvas></div></div>
+      <div class="card"><div class="card-label">Top 10 comunas con más deudores</div><div class="chart-wrap xtall"><canvas id="chartGenComuna"></canvas></div><div class="card-note" id="genComunaNote"></div></div>
+    </div>
   </div>
 
   <div class="tab-content" id="tab-conclusiones">
@@ -942,7 +941,8 @@ window.addEventListener('hashchange', () => {
 function initTab(name) {
   const r = D.resumen;
   if (name === 'general') {
-    if (currentYear === 2026 || currentYear === 'todos') { renderPerfiles(); renderMontoBucket('chartMontoBucket'); }
+    renderGeneral();
+    if (currentYear === 2026 || currentYear === 'todos') renderMontoBucket('chartMontoBucket');
     else renderMontoBucketYear('chartMontoBucket');
   }
   if (name === 'global') renderGlobal();
@@ -1660,29 +1660,34 @@ function renderUniversidadYear() {
   }
 }
 
-function renderPerfiles() {
-  const d = D.perfiles;
-  const labels = d.map(x => x.perfil.replace(/^\d+\.\s*/, ''));
-  const values = d.map(x => x.n);
-  new Chart(document.getElementById('chartPerfiles'), {
-    type: 'doughnut',
-    data: { labels, datasets: [{ data: values, backgroundColor: catColors, borderWidth: 0 }] },
-    options: { responsive: true, maintainAspectRatio: false, cutout: '60%',
-      plugins: {
-        legend: { position: 'right', labels: { font: { ...defaultFont, size: 10, weight: 300 }, color: C.gray500, padding: 8, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } },
-        tooltip: { ...tooltipDefaults, callbacks: { label: ctx => `${ctx.label}: ${fmt(ctx.parsed)} (${(100*ctx.parsed/D.resumen.total).toFixed(1)}%)` } }
-      }
-    }
-  });
-  document.getElementById('perfilTable').innerHTML = `
-    <table style="width:100%;font-size:11px;border-collapse:collapse">
-      ${d.map((p,i) => `
-        <tr style="border-bottom:1px solid ${C.gray200}">
-          <td style="padding:6px 4px"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${catColors[i%catColors.length]};margin-right:6px;vertical-align:middle"></span>${p.perfil.replace(/^\d+\.\s*/, '')}</td>
-          <td style="font-family:'JetBrains Mono',monospace;text-align:right;color:${C.gray500};padding:6px 4px">${fmt(p.n)}</td>
-          <td style="font-family:'JetBrains Mono',monospace;text-align:right;color:${C.gray500};padding:6px 4px">${p.pct}%</td>
-        </tr>`).join('')}
-    </table>`;
+function renderGeneral() {
+  const r = D.resumen;
+  const py = (currentYear !== 2026 && currentYear !== 'todos') ? D.per_year[currentYear] : null;
+  const total = py ? py.total : r.total;
+  const utmTotal = py ? py.utm_total : r.total_utm;
+  const clpTotal = py ? py.clp_total : r.total_clp;
+  const usdTotal = py ? (clpTotal / r.usd_clp) : r.total_usd;
+  const avgUtm = py ? py.avg_utm : r.avg_utm;
+  const medianUtm = py ? py.median_utm : r.median_utm;
+  const yearLbl = currentYear === 'todos' ? '2022-2026' : String(currentYear);
+  const totalSub = currentYear === 'todos' ? 'Conteo único del período' : `Nómina ${yearLbl}`;
+
+  document.getElementById('kpiGeneral').innerHTML =
+    kpiCard('Deudores', fmt(total), totalSub, 'users') +
+    kpiCard('Cartera vencida', fmtCLP(clpTotal), fmtUSD(usdTotal) + ' · ' + fmt(Math.round(utmTotal)) + ' UTM', 'cash') +
+    kpiCard('Deuda promedio', fmt(Math.round(avgUtm)) + ' UTM', fmtCLP(avgUtm * r.utm_clp), 'chart') +
+    kpiCard('Deuda mediana', fmt(Math.round(medianUtm)) + ' UTM', fmtCLP(medianUtm * r.utm_clp), 'chart');
+
+  const univSrc = py && py.top_universidades ? py.top_universidades : D.por_universidad;
+  const univ = [...univSrc].sort((a,b) => b.n - a.n).slice(0, 10);
+  hbar('chartGenUniv', univ.map(x => x.universidad), univ.map(x => x.n), C.blue, ctx => fmt(ctx.parsed.x) + ' deudores');
+
+  const com = (D.por_comuna || []).filter(x => x.comuna && x.comuna !== '(sin comuna)').slice(0, 10);
+  hbar('chartGenComuna', com.map(x => x.comuna), com.map(x => x.n), C.violet, ctx => fmt(ctx.parsed.x) + ' deudores');
+  document.getElementById('genComunaNote').textContent =
+    (currentYear === 2026 || currentYear === 'todos')
+      ? 'Domicilio declarado en la rutificación civil.'
+      : 'Comunas disponibles solo para la nómina 2026.';
 }
 
 function renderMontoBucket(canvasId) {

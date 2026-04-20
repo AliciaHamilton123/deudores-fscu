@@ -1,9 +1,95 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deudores FSCU 2026 — DecideChile · Unholster</title>
+<title>Radiografía de Deudores FSCU 2026 · 335.152 morosos · $4 billones CLP · DecideChile</title>
+<meta name="description" content="Análisis de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario 2026. Cartera $4,02 billones CLP. 5 años de nóminas CRUCH cruzadas con patrimonio SII, LinkedIn Chile (perfil profesional) y Poder Judicial (cobranza). Datos públicos, agregados y anonimizados.">
+<meta name="keywords" content="FSCU, Fondo Solidario Crédito Universitario, deudores universitarios Chile, morosos CRUCH, nómina deudores 2026, Ley 19287, U de Chile demandas, cobranza FSCU, deuda universitaria Chile, DecideChile, Unholster">
+<link rel="canonical" href="https://deudores-fscu.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DecideChile">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="Radiografía de Deudores FSCU 2026 · DecideChile">
+<meta property="og:description" content="335.152 deudores · $4,02 billones CLP · 77% crónicos · 72.014 demandados. 5 años de nóminas CRUCH cruzadas con patrimonio, LinkedIn y Poder Judicial.">
+<meta property="og:url" content="https://deudores-fscu.vercel.app/">
+<meta property="og:image" content="https://deudores-fscu.vercel.app/og-image.png">
+<meta property="article:published_time" content="2026-04-17">
+<meta property="article:author" content="Unholster">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@unholster">
+<meta name="twitter:title" content="Radiografía de Deudores FSCU · DecideChile">
+<meta name="twitter:description" content="335.152 deudores · $4,02 billones CLP · 77% crónicos de 5 años · U. de Chile lidera demandas judiciales.">
+<meta name="twitter:image" content="https://deudores-fscu.vercel.app/og-image.png">
+<meta name="author" content="Unholster">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<meta name="geo.region" content="CL">
+<meta name="geo.placename" content="Chile">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="30 days">
+
+<!-- JSON-LD Structured Data · Dataset -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Deudores del Fondo Solidario de Crédito Universitario (FSCU) 2022-2026",
+  "alternateName": "Radiografía de Deudores FSCU",
+  "description": "Análisis agregado y anonimizado de 335.152 deudores morosos del FSCU publicados por el CRUCH para el año tributario 2026, con serie histórica 2022-2026. Incluye cruces con patrimonio (SII), perfil profesional (LinkedIn Chile) y causas judiciales de cobranza (Poder Judicial).",
+  "url": "https://deudores-fscu.vercel.app/",
+  "keywords": ["FSCU", "Fondo Solidario Crédito Universitario", "deudores universitarios", "morosos", "CRUCH", "Chile", "educación superior"],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "inLanguage": "es-CL",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Organization",
+    "name": "Unholster",
+    "url": "https://unholster.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DecideChile"
+  },
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Chile"
+  },
+  "temporalCoverage": "2022/2026",
+  "distribution": [{
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "contentUrl": "https://deudores-fscu.vercel.app/static/aggregates.json"
+  }],
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "Total deudores morosos 2026", "value": 335152},
+    {"@type": "PropertyValue", "name": "Cartera vencida 2026 (UTM)", "value": 57549699},
+    {"@type": "PropertyValue", "name": "Cartera vencida 2026 (CLP)", "value": 4022090913411},
+    {"@type": "PropertyValue", "name": "Deudores crónicos 5 años (%)", "value": 77.2},
+    {"@type": "PropertyValue", "name": "Demandados civil por cobranza de deuda", "value": 72014}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Radiografía de Deudores FSCU",
+  "url": "https://deudores-fscu.vercel.app/",
+  "publisher": {"@type": "Organization", "name": "DecideChile"},
+  "inLanguage": "es-CL"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "DecideChile", "item": "https://deudores-fscu.vercel.app/"},
+    {"@type": "ListItem", "position": 2, "name": "Radiografía de Deudores FSCU"}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -61,8 +147,122 @@
   .card-note { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #6B7280; margin-top: 12px; line-height: 1.5; }
   .dash-footer { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #6B7280; margin-top: 32px; text-align: center; line-height: 1.6; }
 
+  /* Modal ELI5 */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(23,27,33,0.6); z-index: 999;
+    display: none; align-items: flex-start; justify-content: center; padding: 48px 20px;
+    overflow-y: auto; backdrop-filter: blur(3px);
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-box {
+    background: #fff; border-radius: 14px; max-width: 640px; width: 100%;
+    padding: 36px 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    animation: modalIn 0.22s ease-out;
+  }
+  @keyframes modalIn { from { opacity: 0; transform: translateY(-20px) scale(0.96); } to { opacity: 1; transform: none; } }
+  .modal-close {
+    position: absolute; top: 12px; right: 14px; background: transparent; border: none;
+    font-size: 24px; cursor: pointer; color: #6B7280; line-height: 1;
+    width: 32px; height: 32px; border-radius: 6px;
+  }
+  .modal-close:hover { background: #F5F5F5; color: #171B21; }
+  .modal-box { position: relative; }
+  .modal-box .modal-tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase;
+    letter-spacing: .14em; margin-bottom: 10px;
+  }
+  .modal-box .modal-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+  .modal-box .modal-kpi { font-size: 36px; font-weight: 800; line-height: 1; margin: 14px 0; }
+  .modal-box .modal-sub { font-size: 13px; color: #6B7280; font-weight: 400; margin-bottom: 20px; }
+  .modal-box .modal-section-title {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase;
+    letter-spacing: .1em; color: #6B7280; margin: 22px 0 8px;
+  }
+  .modal-box .modal-eli5 {
+    font-size: 15px; line-height: 1.65; color: #171B21; font-weight: 300;
+    padding: 16px; background: #F5F5F5; border-radius: 8px; border-left: 3px solid #F59E0B;
+  }
+  .modal-box .modal-technical {
+    font-size: 13px; line-height: 1.6; color: #3A3A3A; font-weight: 300;
+  }
+  .insight-card {
+    cursor: pointer; transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .insight-card:hover {
+    transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .insight-cta {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase;
+    letter-spacing: .1em; color: #266FE0; margin-top: 12px; font-weight: 600;
+  }
+
+  /* Carousel */
+  .carousel-wrap { position: relative; margin-bottom: 28px; }
+  .carousel-viewport {
+    overflow: hidden; border-radius: 12px; background: #fff; border: 1px solid #E5E7EB;
+    min-height: 220px;
+  }
+  .carousel-track {
+    display: flex; transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .carousel-slide {
+    flex: 0 0 100%; padding: 32px 40px; display: grid;
+    grid-template-columns: 60px 1fr 1fr; gap: 24px; align-items: center; cursor: pointer;
+  }
+  .carousel-slide .c-badge {
+    width: 60px; height: 60px; border-radius: 12px; display: flex;
+    align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 16px;
+  }
+  .carousel-slide .c-left { }
+  .carousel-slide .c-tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase;
+    letter-spacing: .1em; color: #6B7280; margin-bottom: 6px;
+  }
+  .carousel-slide .c-title { font-size: 18px; font-weight: 700; color: #171B21; line-height: 1.25; margin-bottom: 10px; }
+  .carousel-slide .c-kpi { font-size: 44px; font-weight: 800; line-height: 1; }
+  .carousel-slide .c-sub { font-size: 12px; color: #6B7280; margin-top: 6px; font-weight: 400; }
+  .carousel-slide .c-eli5 {
+    font-size: 13px; line-height: 1.55; color: #3A3A3A; font-weight: 300;
+    padding: 14px 16px; background: #F5F5F5; border-radius: 8px; border-left: 3px solid #F59E0B;
+    max-height: 140px; overflow: hidden; position: relative;
+  }
+  .carousel-slide .c-eli5::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 28px;
+    background: linear-gradient(to bottom, transparent, #F5F5F5);
+  }
+  .carousel-slide .c-cta {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase;
+    letter-spacing: .1em; color: #266FE0; margin-top: 10px; font-weight: 600;
+  }
+  .carousel-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: #fff; border: 1px solid #E5E7EB; border-radius: 50%;
+    width: 40px; height: 40px; cursor: pointer; font-size: 18px; color: #266FE0;
+    display: flex; align-items: center; justify-content: center; z-index: 5;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: all 0.15s;
+  }
+  .carousel-arrow:hover { background: #266FE0; color: #fff; transform: translateY(-50%) scale(1.08); }
+  .carousel-prev { left: -18px; } .carousel-next { right: -18px; }
+  .carousel-dots {
+    display: flex; justify-content: center; gap: 6px; margin-top: 16px;
+  }
+  .carousel-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: #E5E7EB;
+    cursor: pointer; transition: all 0.2s; border: none; padding: 0;
+  }
+  .carousel-dot.active { background: #266FE0; width: 24px; border-radius: 4px; }
+  @media (max-width: 768px) {
+    .carousel-slide { grid-template-columns: 1fr; padding: 24px 20px; gap: 16px; }
+    .carousel-slide .c-badge { width: 40px; height: 40px; font-size: 12px; }
+    .carousel-slide .c-kpi { font-size: 32px; }
+    .carousel-prev { left: -4px; } .carousel-next { right: -4px; }
+    .carousel-arrow { width: 32px; height: 32px; font-size: 14px; }
+  }
+
   @media (max-width: 520px) {
     main { padding: 24px 12px 60px; }
+    .modal-box { padding: 28px 22px; }
     .dash-header { flex-direction: column; gap: 12px; }
     .dash-logo { margin-left: 0; height: 28px; }
     .dash-title { font-size: 20px; }
@@ -80,21 +280,58 @@
 <body>
 <main>
 
+  <!-- Contenido semántico para indexación (visible también, SEO + LLM friendly) -->
+  <noscript>
+    <div style="padding:20px;background:#FEF3C7;border-radius:8px;margin-bottom:20px;font-size:14px">
+      ⚠️ Este dashboard requiere JavaScript para mostrar gráficos interactivos.
+      Los datos resumidos aparecen abajo como texto para su consulta sin JavaScript.
+      También puede descargar el dataset completo en formato JSON desde
+      <a href="/static/aggregates.json">/static/aggregates.json</a>.
+    </div>
+  </noscript>
+
   <div class="dash-header">
     <div>
-      <div class="dash-tag">DecideChile · Nómina 2022 - 2026</div>
-      <div class="dash-title">Radiografía de Deudores FSCU</div>
-      <div class="dash-desc">Análisis agregado y anonimizado de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario, a partir de la nómina publicada por el Consejo de Rectoras y Rectores de las Universidades Chilenas para el año tributario 2026.</div>
-      <div class="dash-desc" style="margin-top: 4px;">Fuentes: CRUCH · Datos procesados por Unholster</div>
+      <div class="dash-tag" role="doc-subtitle"><span id="dashYearTag">DecideChile · Nómina 2026</span></div>
+      <h1 class="dash-title">Radiografía de Deudores FSCU</h1>
+      <div class="dash-desc" id="dashDesc">Análisis agregado y anonimizado de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario, a partir de la nómina publicada por el Consejo de Rectoras y Rectores de las Universidades Chilenas para el año tributario 2026.</div>
+      <div class="dash-desc" style="margin-top: 8px; display: flex; align-items: center; gap: 10px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#6B7280">Año tributario:</span>
+        <select id="yearSelect" style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;padding:4px 10px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;cursor:pointer">
+          <option value="todos">Todos (2022-2026)</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+          <option value="2026" selected>2026</option>
+        </select>
+      </div>
+      <div class="dash-desc" style="margin-top: 8px;">Fuentes: CRUCH · Datos procesados por Unholster</div>
+      <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
+        <button onclick="downloadJSON()" style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;padding:6px 12px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;cursor:pointer;color:#266FE0;font-weight:600">⬇ Descargar JSON</button>
+        <a href="https://github.com/diazaraujo/deudores-fscu" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;padding:6px 12px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;color:#266FE0;font-weight:600;text-decoration:none">⎘ GitHub</a>
+      </div>
     </div>
     <svg class="dash-logo" viewBox="0 0 300.88 92.69" xmlns="http://www.w3.org/2000/svg"><g fill="#2150e8"><path d="m0,0v53.78h135.43v38.92h165.45V0H0Zm4.34,4.34h292.2v45.1H4.34V4.34Zm292.2,84.01h-156.77v-34.58h156.77v34.58Z"/><path d="m203.61,67.43c.91.91,1.37,2.13,1.37,3.64v7.98h-2.78v-7.07c0-.98-.28-1.76-.85-2.35-.57-.58-1.35-.88-2.31-.88-1.01,0-1.82.3-2.43.91-.62.61-.92,1.4-.92,2.37v7.02h-2.79v-12.68h2.79v1.76c1.01-1.37,2.44-2.07,4.27-2.07,1.51,0,2.72.45,3.64,1.36"/><path d="m218.78,67.43c.91.91,1.37,2.13,1.37,3.64v7.98h-2.78v-7.07c0-.98-.28-1.76-.85-2.35-.57-.58-1.35-.88-2.31-.88-1.01,0-1.82.3-2.43.91-.62.61-.92,1.4-.92,2.37v7.02h-2.79v-17.91h2.79v7.07c1.01-1.42,2.44-2.14,4.27-2.14,1.51,0,2.72.45,3.64,1.36"/><path d="m224.42,77.45c-1.3-1.27-1.94-2.85-1.94-4.75s.64-3.46,1.94-4.74c1.29-1.26,2.9-1.89,4.85-1.89s3.55.63,4.85,1.89c1.3,1.28,1.94,2.85,1.94,4.74s-.64,3.47-1.94,4.75c-1.3,1.28-2.91,1.91-4.85,1.91s-3.56-.63-4.85-1.91m4.85-.79c1.11,0,2.04-.38,2.78-1.13.74-.75,1.12-1.7,1.12-2.83s-.38-2.07-1.12-2.82c-.74-.75-1.68-1.13-2.78-1.13s-2.04.38-2.79,1.13c-.76.75-1.14,1.69-1.14,2.82s.38,2.08,1.14,2.83c.75.75,1.69,1.13,2.79,1.13"/><polygon points="241.34 76.49 243.58 76.49 243.58 79.06 238.55 79.06 238.55 61.14 241.34 61.14 241.34 76.49"/><path d="m246.17,78.18c-.85-.78-1.27-1.72-1.27-2.85h2.83c0,.45.17.83.5,1.14.33.32.74.47,1.21.47.45,0,.83-.13,1.15-.39.32-.26.47-.58.47-.96,0-.79-.75-1.38-2.25-1.79-2.5-.63-3.75-1.93-3.75-3.91,0-1.18.41-2.1,1.25-2.79.83-.69,1.84-1.03,3.05-1.03s2.28.38,3.12,1.12c.83.74,1.24,1.65,1.24,2.73h-2.84c0-.79-.63-1.43-1.54-1.43-.79,0-1.45.55-1.45,1.24,0,.79.77,1.38,2.3,1.76,2.47.63,3.7,1.92,3.7,3.86,0,1.23-.43,2.21-1.28,2.93-.86.71-1.93,1.08-3.21,1.08s-2.39-.39-3.24-1.18"/><polygon points="263.67 68.9 260.35 68.9 260.35 76.49 263.67 76.49 263.67 79.06 257.57 79.06 257.57 68.9 255.2 68.9 255.2 66.38 257.57 66.38 257.57 62.64 260.35 62.64 260.35 66.38 263.67 66.38 263.67 68.9"/><path d="m278.26,73.78h-10.51c.21.94.64,1.68,1.34,2.22.69.56,1.52.84,2.48.84,1.59,0,2.92-.72,3.49-1.82h3.02c-.46,1.3-1.28,2.34-2.45,3.13-1.18.8-2.54,1.2-4.08,1.2-1.93,0-3.53-.63-4.82-1.91-1.3-1.28-1.94-2.85-1.94-4.75s.64-3.46,1.94-4.74c1.29-1.26,2.89-1.89,4.82-1.89s3.56.63,4.86,1.89c1.29,1.27,1.93,2.87,1.93,4.77,0,.4-.02.74-.07,1.04m-6.72-5.2c-.91,0-1.71.27-2.39.79-.68.53-1.14,1.24-1.37,2.11h7.54c-.23-.89-.69-1.59-1.38-2.11-.69-.52-1.48-.79-2.39-.79"/><path d="m283.56,68.44c1.01-1.51,2.31-2.26,3.9-2.27v2.87c-1.23,0-2.19.35-2.87,1.04-.69.69-1.03,1.63-1.03,2.81v6.17h-2.79v-12.68h2.79v2.07Z"/><path d="m186.78,61.9v10.48c0,1.25-.39,2.24-1.15,2.99-.78.76-1.81,1.14-3.07,1.14-1.2,0-2.16-.38-2.88-1.11-.73-.73-1.09-1.72-1.09-2.94v-10.56h-2.94v10.82c0,2.13.81,3.73,2.04,4.85,1.28,1.16,3.19,1.8,4.65,1.8,2.01,0,3.61-.96,4.48-2.07v1.76h2.92v-17.16h-2.96Z"/><path d="m156.26,79.24c-.45,0-.88-.09-1.3-.26-.42-.18-.78-.47-1.1-.89-.32-.42-.55-.98-.71-1.68l.55.25v2.4h-2.26v-12.68h2.26v6.13l-.47.15c.11-.62.31-1.13.61-1.54.3-.41.66-.71,1.08-.91.42-.2.87-.3,1.35-.3.7,0,1.35.18,1.93.56.58.37,1.04.9,1.38,1.59.34.69.51,1.53.51,2.51,0,.89-.15,1.68-.46,2.39-.3.71-.74,1.27-1.32,1.67-.57.41-1.26.61-2.04.61m-.62-2.07c.45,0,.83-.11,1.15-.32.32-.21.57-.51.76-.9.18-.39.27-.85.27-1.38s-.09-.99-.27-1.37c-.18-.38-.43-.68-.76-.89-.32-.21-.71-.32-1.15-.32s-.82.11-1.14.32c-.32.21-.57.51-.75.9-.18.39-.26.84-.26,1.36s.09.98.26,1.37c.18.39.42.69.75.91.32.22.7.33,1.14.33"/><polygon points="162.32 82.77 164.13 78.36 160.75 70.09 163.22 70.09 165.33 76.11 167.48 70.09 169.92 70.09 164.77 82.77 162.32 82.77"/><path d="m15.61,39.26V14.69h7.98c1.71,0,3.19.32,4.46.98,1.27.65,2.25,1.57,2.96,2.74.71,1.18,1.06,2.56,1.06,4.16v8.79c0,1.57-.35,2.95-1.06,4.14-.71,1.19-1.69,2.12-2.96,2.78-1.27.66-2.75.99-4.46.99h-7.98Zm5.05-4.71h2.93c1.03,0,1.86-.29,2.49-.88.63-.58.94-1.36.94-2.32v-8.79c0-.94-.31-1.71-.94-2.29-.63-.58-1.46-.88-2.49-.88h-2.93v15.15Z"/><polygon points="41.59 39.26 41.59 14.69 56.74 14.69 56.74 19 46.54 19 46.54 24.52 55.56 24.52 55.56 28.83 46.54 28.83 46.54 34.96 56.74 34.96 56.74 39.26 41.59 39.26"/><path d="m74.57,39.6c-1.66,0-3.11-.31-4.34-.93-1.24-.62-2.19-1.48-2.88-2.59-.68-1.11-1.03-2.41-1.03-3.89v-10.43c0-1.5.34-2.81,1.03-3.9.68-1.1,1.64-1.96,2.88-2.57,1.23-.62,2.68-.93,4.34-.93s3.07.31,4.29.93c1.22.62,2.18,1.48,2.86,2.57s1.03,2.4,1.03,3.9h-5.05c0-.99-.28-1.74-.82-2.26-.55-.52-1.33-.77-2.34-.77s-1.79.26-2.34.77c-.55.52-.82,1.27-.82,2.26v10.43c0,.97.27,1.71.82,2.24.55.53,1.33.79,2.34.79s1.79-.26,2.34-.79c.55-.53.82-1.27.82-2.24h5.05c0,1.48-.34,2.78-1.03,3.89-.68,1.11-1.64,1.97-2.86,2.59-1.22.62-2.65.93-4.29.93"/><polygon points="92.41 39.26 92.41 34.89 97.29 34.89 97.29 19.07 92.41 19.07 92.41 14.69 107.22 14.69 107.22 19.07 102.34 19.07 102.34 34.89 107.22 34.89 107.22 39.26 92.41 39.26"/><path d="m117.25,39.26V14.69h7.98c1.71,0,3.19.32,4.46.98,1.27.65,2.25,1.57,2.96,2.74.71,1.18,1.06,2.56,1.06,4.16v8.79c0,1.57-.35,2.95-1.06,4.14-.71,1.19-1.7,2.12-2.96,2.78-1.27.66-2.76.99-4.46.99h-7.98Zm5.05-4.71h2.93c1.03,0,1.86-.29,2.49-.88.63-.58.94-1.36.94-2.32v-8.79c0-.94-.31-1.71-.94-2.29-.63-.58-1.46-.88-2.49-.88h-2.93v15.15Z"/><polygon points="143.23 39.26 143.23 14.69 158.38 14.69 158.38 19 148.18 19 148.18 24.52 157.2 24.52 157.2 28.83 148.18 28.83 148.18 34.96 158.38 34.96 158.38 39.26 143.23 39.26"/><path d="m176.21,39.6c-1.66,0-3.11-.31-4.34-.93-1.23-.62-2.19-1.48-2.88-2.59-.69-1.11-1.03-2.41-1.03-3.89v-10.43c0-1.5.34-2.81,1.03-3.9.68-1.1,1.64-1.96,2.88-2.57,1.23-.62,2.68-.93,4.34-.93s3.07.31,4.29.93c1.22.62,2.18,1.48,2.86,2.57s1.03,2.4,1.03,3.9h-5.05c0-.99-.28-1.74-.83-2.26-.55-.52-1.33-.77-2.34-.77s-1.79.26-2.34.77c-.55.52-.82,1.27-.82,2.26v10.43c0,.97.27,1.71.82,2.24.55.53,1.33.79,2.34.79s1.79-.26,2.34-.79c.55-.53.83-1.27.83-2.24h5.05c0,1.48-.34,2.78-1.03,3.89-.68,1.11-1.64,1.97-2.86,2.59-1.22.62-2.65.93-4.29.93"/><polygon points="193.58 39.26 193.58 14.69 198.63 14.69 198.63 24.12 204.28 24.12 204.28 14.69 209.33 14.69 209.33 39.26 204.28 39.26 204.28 28.83 198.63 28.83 198.63 39.26 193.58 39.26"/><polygon points="219.46 39.26 219.46 34.89 224.34 34.89 224.34 19.07 219.46 19.07 219.46 14.69 234.27 14.69 234.27 19.07 229.39 19.07 229.39 34.89 234.27 34.89 234.27 39.26 219.46 39.26"/><polygon points="245.38 39.26 245.38 14.69 250.42 14.69 250.42 34.55 260.35 34.55 260.35 39.26 245.38 39.26"/><polygon points="270.28 39.26 270.28 14.69 285.43 14.69 285.43 19 275.23 19 275.23 24.52 284.25 24.52 284.25 28.83 275.23 28.83 275.23 34.96 285.43 34.96 285.43 39.26 270.28 39.26"/></g></svg>
   </div>
 
-  <div class="kpi-grid cols-4" id="kpiMain"></div>
+  <div class="carousel-wrap">
+    <button class="carousel-arrow carousel-prev" onclick="carouselPrev()" aria-label="Anterior">←</button>
+    <div class="carousel-viewport"><div class="carousel-track" id="carouselTrack"></div></div>
+    <button class="carousel-arrow carousel-next" onclick="carouselNext()" aria-label="Siguiente">→</button>
+    <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-top:16px">
+      <button id="carouselPlayBtn" onclick="carouselTogglePlay()" aria-label="Pausar"
+        title="Pausar" style="background:#fff;border:1px solid #E5E7EB;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:11px;color:#266FE0;display:flex;align-items:center;justify-content:center;transition:all .15s">⏸</button>
+      <div class="carousel-dots" id="carouselDots" style="margin-top:0"></div>
+    </div>
+  </div>
 
   <div class="tabs-container">
     <nav class="tabs-nav">
       <button class="tab-btn active" data-tab="general" onclick="switchTab('general')">General</button>
+      <button class="tab-btn" data-tab="conclusiones" onclick="switchTab('conclusiones')">Conclusiones</button>
+      <button class="tab-btn" data-tab="global" onclick="switchTab('global')">Política Pública</button>
+      <button class="tab-btn" data-tab="interesante" onclick="switchTab('interesante')">Insights</button>
       <button class="tab-btn" data-tab="evolucion" onclick="switchTab('evolucion')">Evolución</button>
       <button class="tab-btn" data-tab="montos" onclick="switchTab('montos')">Montos</button>
       <button class="tab-btn" data-tab="universidad" onclick="switchTab('universidad')">Universidades</button>
@@ -103,6 +340,7 @@
       <button class="tab-btn" data-tab="geografia" onclick="switchTab('geografia')">Geografía</button>
       <button class="tab-btn" data-tab="demografia" onclick="switchTab('demografia')">Demografía</button>
       <button class="tab-btn" data-tab="linkedin" onclick="switchTab('linkedin')">LinkedIn</button>
+      <button class="tab-btn" data-tab="metodologia" onclick="switchTab('metodologia')">Metodología</button>
     </nav>
   </div>
 
@@ -117,6 +355,184 @@
       </div>
     </div>
     <div class="full-row"><div class="card"><div class="card-label">Distribución por rango de deuda (UTM)</div><div class="chart-wrap tall"><canvas id="chartMontoBucket"></canvas></div><div class="card-note">UTM = Unidad Tributaria Mensual, unidad legal de la deuda. Conversión vigente al 2026-04-17: 1 UTM = $69.889 CLP ≈ US$ 78,85.</div></div></div>
+  </div>
+
+  <div class="tab-content" id="tab-conclusiones">
+    <div class="section-tag">Síntesis</div>
+    <div class="section-title">Conclusiones del análisis</div>
+    <div class="section-desc">Los hallazgos organizados por dimensión, con su cifra principal y explicación contextual. Cada bloque agrupa las cuñas relevantes del Insights e interpreta qué revelan sobre el FSCU como política pública.</div>
+
+    <div style="display:flex;flex-direction:column;gap:28px;margin-top:8px">
+
+      <!-- BLOQUE 1: DIAGNÓSTICO -->
+      <div class="card" style="padding:32px">
+        <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#FEE2E2;color:#EF4444;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">01</div>
+          <div>
+            <div class="kpi-label">Bloque 1 · Diagnóstico</div>
+            <div style="font-size:22px;font-weight:700;color:#171B21">Un problema de $4 billones de pesos</div>
+          </div>
+        </div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.6;margin-bottom:20px">
+          La cartera vencida del Fondo Solidario asciende a <b>57,5 millones de UTM · $4,02 billones CLP · US$ 4,54 mil millones</b>, equivalente al <b>1,38% del PIB chileno</b>. Acumula 30 años de créditos sin pagar y sigue creciendo: en 4 años aumentó <b>+54,4%</b> en UTM (muy por encima de la inflación, que subió 12% en el mismo período). Cada año ingresan más deudores de los que salen: el saldo neto 2022-2026 es <b>+93.024 personas</b>.
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Cartera vencida</div><div style="font-size:22px;font-weight:800;color:#EF4444">$4,02 bln CLP</div><div class="kpi-sub">1,38% del PIB</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Crecimiento 2022-2026</div><div style="font-size:22px;font-weight:800;color:#EF4444">+54,4%</div><div class="kpi-sub">UTM · 4,5× la inflación</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Saldo neto anual</div><div style="font-size:22px;font-weight:800;color:#F59E0B">+93.024</div><div class="kpi-sub">deudores netos en 4 años</div></div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 2: TRAMPA DE CRONICIDAD -->
+      <div class="card" style="padding:32px">
+        <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#FEE2E2;color:#EF4444;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">02</div>
+          <div>
+            <div class="kpi-label">Bloque 2 · Cronicidad</div>
+            <div style="font-size:22px;font-weight:700;color:#171B21">No es morosidad coyuntural, es estructural</div>
+          </div>
+        </div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.6;margin-bottom:20px">
+          <b>258.596 deudores (77,2% del total 2026) estuvieron presentes en las 5 nóminas desde 2022</b> sin interrupción. De ellos, la mayoría (<b>247.300</b>) tiene cada año una deuda mayor que la anterior: acumulan intereses pero no pagan. Sólo <b>13.174 personas (3,9%) ingresaron en 2026 sin historial previo</b>. El patrón contradice la hipótesis de morosidad temporal. La deuda mediana de los crónicos pasó de 81 UTM en 2022 a 152 UTM en 2026 (<b>+87%</b>).
+        </div>
+        <div style="padding:18px;background:#FEE2E2;border-radius:8px;margin-bottom:16px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#EF4444;margin-bottom:6px">⚠️ Trampa de morosidad</div>
+          <div style="font-size:14px;color:#3A3A3A;line-height:1.6">La probabilidad de salir de la nómina cae con la antigüedad: <b>14,85%</b> para quien lleva 1 año, <b>8,19%</b> para 2 años, <b>4,62%</b> para 3, y apenas <b>2,85%</b> para los que llevan 4 o más. El sistema no rescata a los crónicos — los consolida.</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Crónicos 5 años</div><div style="font-size:22px;font-weight:800;color:#EF4444">258.596</div><div class="kpi-sub">77,2% del 2026</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Deuda crónicos (mediana)</div><div style="font-size:22px;font-weight:800;color:#EF4444">81 → 152 UTM</div><div class="kpi-sub">+87% en 4 años</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Tasa recuperación</div><div style="font-size:22px;font-weight:800;color:#EF4444">5,27%/año</div><div class="kpi-sub">salidas + pagos parciales</div></div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 3: PERFIL DE DEUDORES -->
+      <div class="card" style="padding:32px">
+        <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#FEF3C7;color:#F59E0B;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">03</div>
+          <div>
+            <div class="kpi-label">Bloque 3 · Perfil</div>
+            <div style="font-size:22px;font-weight:700;color:#171B21">No son los más pobres</div>
+          </div>
+        </div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.6;margin-bottom:20px">
+          El FSCU fue diseñado para egresados sin capacidad de pago. Los datos contradicen parcialmente ese supuesto: <b>118.579 deudores (35%) están en el decil 8-10 de avalúo fiscal SII</b> — el 30% más rico en patrimonio declarado. Entre quienes identificamos en LinkedIn, hay <b>3.628 ejecutivos C-Level y directores</b> morosos, <b>6.664 académicos</b> (muchos trabajando en las mismas universidades acreedoras), y <b>17.871 empleados de empresas grandes</b> (Codelco, Arauco, BCI, Santander, BancoEstado — incluyendo bancos que cobran créditos). El perfil socioeconómico predominante es <b>"Medio Alto"</b>, no las capas más pobres. La paridad de género es 54% hombres / 46% mujeres.
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Alto patrimonio</div><div style="font-size:22px;font-weight:800;color:#F59E0B">118.579</div><div class="kpi-sub">decil 8-10 SII</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Ejecutivos C-Level</div><div style="font-size:22px;font-weight:800;color:#F59E0B">3.628</div><div class="kpi-sub">en LinkedIn</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Académicos</div><div style="font-size:22px;font-weight:800;color:#F59E0B">6.664</div><div class="kpi-sub">muchos en sus propias U.</div></div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 4: COBRANZA -->
+      <div class="card" style="padding:32px">
+        <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#E7F0FF;color:#266FE0;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">04</div>
+          <div>
+            <div class="kpi-label">Bloque 4 · Cobranza</div>
+            <div style="font-size:22px;font-weight:700;color:#171B21">El sistema de cobranza es desigual</div>
+          </div>
+        </div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.6;margin-bottom:20px">
+          De las 26 universidades del CRUCH que administran el Fondo Solidario, sólo <b>8 ejercen cobranza judicial directa</b> — las demás se apoyan exclusivamente en la retención de impuestos vía Tesorería. La <b>U. de Chile lidera ampliamente con 2.129 demandas</b> contra sus propios ex-alumnos (12% de sus deudores), seguida a distancia por U. de Valparaíso (436), U. del Bío-Bío (329) y UTEM (306). Los deudores FSCU no sólo deben al Fondo: <b>72.014 (21,5%) tienen causas de cobranza en PJUD</b>, y los bancos privados (BancoEstado, Itaú, BCI, Scotiabank, Banco de Chile) suman <b>45.310 demandas — 4× más que la propia Tesorería (10.256)</b>. Son deudores multi-endeudados, no sólo incumplidores con el Estado.
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Demandados por deuda</div><div style="font-size:22px;font-weight:800;color:#266FE0">72.014</div><div class="kpi-sub">21,5% del total</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">U. de Chile demanda</div><div style="font-size:22px;font-weight:800;color:#266FE0">2.129</div><div class="kpi-sub">12% de sus deudores</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Bancos persiguen</div><div style="font-size:22px;font-weight:800;color:#266FE0">45.310</div><div class="kpi-sub">4× más que la TGR</div></div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 5: PROYECCIÓN -->
+      <div class="card" style="padding:32px">
+        <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
+          <div style="width:36px;height:36px;border-radius:8px;background:#FEE2E2;color:#EF4444;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">05</div>
+          <div>
+            <div class="kpi-label">Bloque 5 · Proyección</div>
+            <div style="font-size:22px;font-weight:700;color:#171B21">Si nada cambia, la cartera llega a $5,47 billones en 2030</div>
+          </div>
+        </div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.6;margin-bottom:20px">
+          Proyección lineal simple basada en los 5 años observados: la cartera vencida crecería <b>+36%</b> en los próximos 4 años, alcanzando <b>78,3 millones UTM · $5,47 billones CLP · US$ 6,17 mil millones</b> para el 2030. La razón es aritmética: los intereses que se suman cada año (7,3M UTM en 2025→2026) superan varias veces lo recuperado (2,7M UTM). Mientras ese diferencial se mantenga, <b>la deuda crece más rápido de lo que se cobra</b>. Para revertir la tendencia se requeriría: (a) reducir ingresos nuevos — prevención en egreso, (b) acelerar salidas — mecanismos activos de regularización o condonación focalizada, (c) quebrar la trampa de los crónicos — segmento de 247k personas donde la probabilidad de pago es 3%.
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Cartera 2030 (proyectada)</div><div style="font-size:22px;font-weight:800;color:#EF4444">$5,47 bln CLP</div><div class="kpi-sub">+36% vs 2026</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Intereses 2025→2026</div><div style="font-size:22px;font-weight:800;color:#EF4444">7,3M UTM</div><div class="kpi-sub">vs 2,7M recuperados</div></div>
+          <div style="padding:14px;background:#F5F5F5;border-radius:8px"><div class="kpi-label">Crónicos sin rescate</div><div style="font-size:22px;font-weight:800;color:#EF4444">247.300</div><div class="kpi-sub">prob. pago 2,85%/año</div></div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 6: REFLEXIÓN -->
+      <div class="card" style="padding:32px;background:linear-gradient(135deg, #266FE0 0%, #184D9B 100%);color:#fff">
+        <div style="display:flex;gap:14px;align-items:center;margin-bottom:16px">
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.15);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px">06</div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.7);margin-bottom:4px">Bloque 6 · Reflexión</div>
+            <div style="font-size:22px;font-weight:700">Un círculo vicioso con responsabilidades distribuidas</div>
+          </div>
+        </div>
+        <div style="font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,0.92)">
+          El Fondo Solidario se mantiene como política pública en un equilibrio ineficiente: <b>1,38% del PIB atrapado en una cartera que crece 2× la inflación</b>, el <b>77% de los deudores son crónicos de 5 años</b>, el <b>patrimonio y los cargos jerárquicos de muchos morosos sugieren que podrían pagar pero no lo hacen</b>, y <b>la cobranza judicial se concentra en pocas universidades</b>. Las 18 restantes dependen de la retención automática de TGR — un mecanismo pasivo. Los datos no acusan a los deudores individuales: revelan un diseño que premia la permanencia morosa por encima de la regularización. La proyección a 2030 muestra que sin intervención estructural, la cartera seguirá creciendo y la tasa de recuperación seguirá bajando. La pregunta de política pública ya no es cómo cobrar, sino <b>qué costo social tiene mantener este statu quo</b>.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="tab-content" id="tab-global">
+    <div class="section-tag">Análisis de política pública</div>
+    <div class="section-title">Estado del FSCU y probabilidad de cobrar</div>
+    <div class="section-desc">Indicadores consolidados 2022-2026 sobre la salud del Fondo Solidario de Crédito Universitario como política pública: tasa de recuperación, crecimiento de cartera, probabilidad de pago según antigüedad de la morosidad y proyecciones futuras.</div>
+    <div class="kpi-grid cols-4 mb-sm" id="kpiGlobal"></div>
+
+    <div class="full-row" style="margin-top:24px"><div class="card">
+      <div class="card-label">⚠️ Trampa de morosidad · probabilidad de salir el año siguiente</div>
+      <div class="chart-wrap tall"><canvas id="chartProbSalir"></canvas></div>
+      <div class="card-note">A más años llevando moroso, menor es la probabilidad de pagar o salir. Quien lleva 1 año tiene 14,85% de chance de salir; quien lleva 4+ años apenas 2,85%. El sistema no logra rescatar a los crónicos — se consolidan.</div>
+    </div></div>
+
+    <div class="grid-2">
+      <div class="card"><div class="card-label">Monto promedio según antigüedad en la nómina</div><div class="chart-wrap tall"><canvas id="chartMontoAntig"></canvas></div><div class="card-note">Los deudores que llevan 5 años tienen una deuda promedio 8,5× mayor que los nuevos (207 vs 24 UTM). Los intereses son el motor.</div></div>
+      <div class="card"><div class="card-label">Retención por cohorte de ingreso</div><div class="chart-wrap tall"><canvas id="chartCohorts"></canvas></div><div class="card-note">% de cada cohorte que sigue moroso en 2026. El cohorte 2022 retiene 91,9% después de 4 años — la deserción del problema es mínima.</div></div>
+    </div>
+
+    <div class="full-row"><div class="card">
+      <div class="card-label">Balance anual · intereses acumulados vs recuperación</div>
+      <div class="chart-wrap tall"><canvas id="chartBalance"></canvas></div>
+      <div class="card-note">Cada transición, los intereses acumulados superan varias veces la recuperación (salidas + pagos parciales). El saldo siempre es negativo: la cartera crece más rápido de lo que se cobra.</div>
+    </div></div>
+
+    <div class="full-row"><div class="card">
+      <div class="card-label">📈 Proyección lineal 2027-2030 (en billones CLP)</div>
+      <div class="chart-wrap tall"><canvas id="chartProyeccion"></canvas></div>
+      <div class="card-note">Si el trend continúa, en 2030 la cartera alcanzará $5,47 billones CLP (+36% vs 2026). Regresión lineal simple basada en los 5 años observados.</div>
+    </div></div>
+  </div>
+
+  <div class="tab-content" id="tab-interesante">
+    <div class="section-tag">Hallazgos y cuñas</div>
+    <div class="section-title">Datos interesantes</div>
+    <div class="section-desc">Ángulos periodísticos construidos sobre el cruce de la nómina FSCU con datos de patrimonio (SII), perfil profesional (LinkedIn Chile) y exposición judicial (PJUD · Grupo Defensa). Cada hallazgo incluye su cifra principal y una interpretación global.</div>
+    <div style="margin-bottom:16px;padding:12px 16px;background:#FEF3C7;border-radius:8px;font-size:12px;color:#7C5700">
+      💡 <b>Tip</b>: haz click en cualquier tarjeta para ver la explicación simple ("como si fueras un niño o un golden retriever").
+    </div>
+    <div id="insightGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px"></div>
+  </div>
+
+  <!-- Modal ELI5 -->
+  <div class="modal-overlay" id="insightModal" onclick="if (event.target === this) closeInsightModal()">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeInsightModal()">✕</button>
+      <div class="modal-tag" id="modalTag">—</div>
+      <div class="modal-title" id="modalTitle">—</div>
+      <div class="modal-kpi" id="modalKpi">—</div>
+      <div class="modal-sub" id="modalSub">—</div>
+      <div class="modal-section-title">🐕 Explicación simple</div>
+      <div class="modal-eli5" id="modalEli5">—</div>
+      <div class="modal-section-title">📊 Detalle técnico</div>
+      <div class="modal-technical" id="modalTechnical">—</div>
+    </div>
   </div>
 
   <div class="tab-content" id="tab-evolucion">
@@ -138,6 +554,30 @@
       <div class="card-label">Evolución deudores por universidad (top 10)</div>
       <div class="chart-wrap tall"><canvas id="chartEvolUniv"></canvas></div>
     </div></div>
+
+    <div class="section-tag" style="margin-top:40px">Cronicidad de la morosidad</div>
+    <div class="section-title">¿Cuánto se repiten los mismos deudores?</div>
+    <div class="section-desc">Muchos deudores aparecen en las nóminas año tras año. Este análisis muestra cuántos años consecutivos figura el mismo RUT entre 2022 y 2026.</div>
+    <div class="kpi-grid cols-4 mb-sm" id="kpiCronicidad"></div>
+    <div class="grid-2">
+      <div class="card"><div class="card-label">¿En cuántos años aparece cada deudor?</div><div class="chart-wrap tall"><canvas id="chartCronicidad"></canvas></div><div class="card-note">Sobre el universo total de RUTs vistos en las 5 nóminas. "5" = estuvo moroso en los 5 años sin salir.</div></div>
+      <div class="card"><div class="card-label">Deudores 2026 · ¿estaban también en año X?</div><div class="chart-wrap tall"><canvas id="chartRetencion"></canvas></div><div class="card-note">De los 335.152 deudores del 2026, qué porcentaje ya figuraba en cada año previo.</div></div>
+    </div>
+
+    <div class="section-tag" style="margin-top:40px">Matriz de cohortes</div>
+    <div class="section-title">Retención año a año · ¿cuántos de cada generación siguen?</div>
+    <div class="section-desc">Cada fila es un "cohort" — personas que aparecieron por primera vez en ese año. Cada columna muestra cuántos de esa cohorte siguen presentes en los años siguientes. Lees de izquierda a derecha y ves cómo la cohorte se "derrite" muy lentamente con el tiempo. Este es el análisis longitudinal clásico (mismo usado en retención de usuarios de productos digitales).</div>
+    <div class="full-row"><div class="card"><div class="card-label">Matriz de cohortes · valor absoluto y % retenido</div><div id="cohortMatrix" style="overflow-x:auto"></div><div class="card-note">Verde oscuro = alta retención (la cohorte sigue en el sistema). Verde claro = menor retención. El cohort 2022 mantiene 91,9% después de 4 años — prácticamente nadie sale. Las celdas diagonales son el "100% inicial".</div></div></div>
+
+    <div class="full-row"><div class="card"><div class="card-label">Composición de cada año · ¿de qué cohorte vienen los deudores?</div><div class="chart-wrap tall"><canvas id="chartStream"></canvas></div><div class="card-note">Área apilada. Cada color representa una cohorte (año de primera aparición). En 2026, la mayoría (79,1%) sigue siendo gente que ya estaba en 2022. La población es mayoritariamente "vieja".</div></div></div>
+
+    <div class="section-tag" style="margin-top:40px">Análisis longitudinal</div>
+    <div class="section-title">Trayectoria de cada deudor · ¿pagan, acumulan o van saliendo?</div>
+    <div class="section-desc">Clasificación de cada RUT según cómo evolucionó su deuda entre 2022 y 2026. Las categorías "Crónico acumulando/pagando/estable" corresponden a deudores presentes en los 5 años; las otras a quienes entraron, salieron o aparecen esporádicamente.</div>
+    <div class="grid-2">
+      <div class="card"><div class="card-label">Distribución por trayectoria (deudores 2026)</div><div class="chart-wrap tall"><canvas id="chartTrayectorias"></canvas></div><div class="card-note">Crónico acumulando = monto creció >5% · Crónico pagando = monto bajó >5% · Crónico estable = ±5%.</div></div>
+      <div class="card"><div class="card-label">Mediana de deuda de los crónicos (5 años)</div><div class="chart-wrap tall"><canvas id="chartMediaCronicos"></canvas></div><div class="card-note">Los 247.300 deudores presentes los 5 años vieron su mediana casi duplicarse: 81 → 152 UTM (+87%).</div></div>
+    </div>
   </div>
 
   <div class="tab-content" id="tab-xray">
@@ -168,8 +608,8 @@
 
   <div class="tab-content" id="tab-justicia">
     <div class="section-tag">Cruce con Poder Judicial</div>
-    <div class="section-title">Exposición judicial de los deudores</div>
-    <div class="section-desc">Cruce de los 335.152 RUTs contra la base PJUD_Unholster (litigantes civiles y laborales del Poder Judicial chileno, ~22M registros). Un deudor aparece si figura en causas como demandante, demandado, acreedor u otro rol. Para morosidad crediticia, lo relevante es ser <b>demandado civil (DDO.)</b>.</div>
+    <div class="section-title">Demandados por cobranza de deuda</div>
+    <div class="section-desc">Cruce de los 335.152 RUTs contra PJUD_Unholster filtrando <b>sólo causas civiles de cobranza de deuda</b> donde el deudor aparece como demandado directo (DDO.). Se incluyen: Juicio Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Gestión Preparatoria (Confesión de Deuda / Notificación Cobro de Factura), Monitorio, Ley de Bancos, y Procedimiento Prenda. Se excluyen divorcios, daños, arrendamiento, voluntarios y demás causas civiles no vinculadas a deuda.</div>
     <div class="kpi-grid cols-4 mb-sm" id="kpiJusticia"></div>
     <div class="grid-2">
       <div class="card"><div class="card-label">Distribución por nº de causas</div><div class="chart-wrap tall"><canvas id="chartJustCausa"></canvas></div></div>
@@ -177,6 +617,15 @@
     </div>
     <div class="full-row"><div class="card"><div class="card-label">% demandados civil por región</div><div class="chart-wrap xtall"><canvas id="chartJustRegion"></canvas></div></div></div>
     <div class="full-row"><div class="card"><div class="card-label">% demandados civil por universidad</div><div class="chart-wrap xtall"><canvas id="chartJustUniv"></canvas></div></div></div>
+
+    <div class="section-tag" style="margin-top:40px">¿Quién los demanda?</div>
+    <div class="section-title">Cobradores que persiguen a los deudores FSCU</div>
+    <div class="section-desc">Instituciones que aparecen como demandantes (DTE.) en las causas civiles de cobranza contra los morosos FSCU. Muestra que los deudores del Fondo Solidario suelen tener múltiples acreedores: bancos, tarjetas retail, el propio Estado y algunas universidades que optan por cobranza judicial.</div>
+    <div class="full-row"><div class="card"><div class="card-label">Top 20 cobradores por nº de deudores FSCU demandados</div><div class="chart-wrap xtall"><canvas id="chartDemandantes"></canvas></div></div></div>
+    <div class="grid-2">
+      <div class="card"><div class="card-label">Cobradores por categoría</div><div class="chart-wrap tall"><canvas id="chartDemandantesCat"></canvas></div></div>
+      <div class="card"><div class="card-label">Universidades que demandan a sus ex-alumnos morosos</div><div class="chart-wrap tall"><canvas id="chartUnivDemandantes"></canvas></div><div class="card-note">Del CRUCH, sólo algunas ejercen cobranza judicial. Las demás prefieren retención de impuestos vía TGR.</div></div>
+    </div>
   </div>
 
   <div class="tab-content" id="tab-montos">
@@ -184,6 +633,42 @@
     <div class="section-title">Montos de deuda</div>
     <div class="section-desc">Valores expresados en UTM, CLP y USD al 17 de abril de 2026 (SII y Banco Central de Chile).</div>
     <div class="kpi-grid cols-4 mb-sm" id="kpiMontos"></div>
+
+    <div class="card" style="margin-bottom:16px;padding:28px">
+      <div class="card-label">Conversor interactivo UTM · CLP · USD</div>
+      <div style="font-size:13px;color:#6B7280;font-weight:300;margin-bottom:20px">Escribe un monto en cualquiera de los 3 campos y los otros se actualizan automáticamente. Conversión al 17 de abril de 2026 (1 UTM = $69.889 CLP · 1 USD = $886,32 CLP).</div>
+      <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:14px" id="convGrid">
+        <label style="display:flex;flex-direction:column;gap:6px;cursor:pointer">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#6B7280">UTM</span>
+          <input id="convUTM" type="text" value="172" inputmode="decimal"
+            style="font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;padding:12px 14px;border:2px solid #E5E7EB;border-radius:8px;background:#fff;color:#266FE0;outline:none;transition:border-color .2s">
+          <span style="font-size:11px;color:#6B7280">Unidad Tributaria Mensual · abril 2026</span>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:6px;cursor:pointer">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#6B7280">CLP</span>
+          <input id="convCLP" type="text" value="12.020.908" inputmode="decimal"
+            style="font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;padding:12px 14px;border:2px solid #E5E7EB;border-radius:8px;background:#fff;color:#10B981;outline:none;transition:border-color .2s">
+          <span style="font-size:11px;color:#6B7280">Pesos chilenos</span>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:6px;cursor:pointer">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#6B7280">USD</span>
+          <input id="convUSD" type="text" value="13.562" inputmode="decimal"
+            style="font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;padding:12px 14px;border:2px solid #E5E7EB;border-radius:8px;background:#fff;color:#F59E0B;outline:none;transition:border-color .2s">
+          <span style="font-size:11px;color:#6B7280">Dólares observados</span>
+        </label>
+      </div>
+      <div style="margin-top:16px;padding:14px 16px;background:#F5F5F5;border-radius:8px;font-size:12px;color:#3A3A3A">
+        <b>Valores preestablecidos</b> (click para usar):
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+          <button class="conv-preset" onclick="convSet(172)" style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 10px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;cursor:pointer">Deuda promedio · 172 UTM</button>
+          <button class="conv-preset" onclick="convSet(113)" style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 10px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;cursor:pointer">Deuda mediana · 113 UTM</button>
+          <button class="conv-preset" onclick="convSet(1000)" style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 10px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;cursor:pointer">Ultra-ricos · 1.000 UTM</button>
+          <button class="conv-preset" onclick="convSet(2362)" style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 10px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;cursor:pointer">Deuda máxima · 2.362 UTM</button>
+          <button class="conv-preset" onclick="convSet(57549699)" style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 10px;border:1px solid #E5E7EB;border-radius:6px;background:#fff;cursor:pointer">Cartera total · 57,5M UTM</button>
+        </div>
+      </div>
+    </div>
+
     <div class="full-row"><div class="card"><div class="card-label">Rango de deuda por deudor</div><div class="chart-wrap tall"><canvas id="chartMontoBucket2"></canvas></div></div></div>
   </div>
 
@@ -196,6 +681,11 @@
       <div class="card"><div class="card-label">Cartera vencida total (UTM)</div><div class="chart-wrap xtall"><canvas id="chartUnivUtm"></canvas></div></div>
       <div class="card"><div class="card-label">Deuda promedio por deudor (UTM)</div><div class="chart-wrap xtall"><canvas id="chartUnivAvg"></canvas></div></div>
     </div>
+
+    <div class="section-tag" style="margin-top:40px">Ranking de crecimiento</div>
+    <div class="section-title">¿Qué universidades cobran mejor (o peor)?</div>
+    <div class="section-desc">Variación porcentual de la cartera en UTM entre 2022 y 2026 por universidad. Un crecimiento bajo (o negativo) sugiere buena recuperación; un crecimiento alto implica que la cartera se está expandiendo a pesar de los mecanismos de cobro.</div>
+    <div class="full-row"><div class="card"><div class="card-label">Δ% cartera UTM 2022 → 2026</div><div class="chart-wrap xtall"><canvas id="chartRankingRec"></canvas></div><div class="card-note">Verde = menor crecimiento (mejor recuperación relativa). Rojo = cartera creciendo fuerte. Se excluye U. de O'Higgins porque su base 2022 era de 1 deudor (no comparable).</div></div></div>
   </div>
 
   <div class="tab-content" id="tab-geografia">
@@ -238,7 +728,141 @@
     </div>
     <div class="full-row"><div class="card"><div class="card-label">Top 20 industrias</div><div class="chart-wrap xtall"><canvas id="chartIndustria"></canvas></div></div></div>
     <div class="full-row"><div class="card"><div class="card-label">Top 30 empresas con más deudores</div><div class="chart-wrap xtall"><canvas id="chartEmpresa"></canvas></div><div class="card-note">Excluye categorías genéricas ("autónomo", "independiente"). Solo empresas con k ≥ 10 deudores.</div></div></div>
+
+    <div class="section-tag" style="margin-top:40px">Geografía del perfil profesional</div>
+    <div class="section-title">¿Dónde viven los deudores según cargo?</div>
+    <div class="section-desc">Cruce del subconjunto enriquecido con LinkedIn contra la comuna de domicilio declarada en la rutificación civil. Muestra la concentración territorial de cada tipo de perfil. Sólo comunas con ≥ 10 deudores del perfil se muestran (supresión k-anónima).</div>
+    <div class="grid-2">
+      <div class="card"><div class="card-label">Top comunas · Ejecutivos (C-Level / Director)</div><div class="chart-wrap tall"><canvas id="chartComunaEjec"></canvas></div></div>
+      <div class="card"><div class="card-label">Top comunas · Gerentes</div><div class="chart-wrap tall"><canvas id="chartComunaGer"></canvas></div></div>
+    </div>
+    <div class="full-row"><div class="card"><div class="card-label">Top comunas · Académicos</div><div class="chart-wrap tall"><canvas id="chartComunaAcad"></canvas></div></div></div>
   </div>
+
+  <div class="tab-content" id="tab-metodologia">
+    <div class="section-tag">Transparencia técnica</div>
+    <div class="section-title">Metodología</div>
+    <div class="section-desc">Fuentes utilizadas, cruces realizados, decisiones de diseño y limitaciones del análisis. Esta sección está destinada a periodistas, académicos y cualquier persona que quiera verificar o replicar los cálculos.</div>
+
+    <div style="display:flex;flex-direction:column;gap:20px;margin-top:8px">
+
+      <div class="card">
+        <div class="card-label">Fuentes primarias</div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
+          <b>1. Nóminas oficiales del CRUCH</b> (Consejo de Rectoras y Rectores de las Universidades Chilenas) correspondientes a los años tributarios 2022, 2023, 2024, 2025 y 2026, publicadas conforme al Art. 15 inciso 2° de la Ley 19.287, Art. 13 bis de la Ley 19.848 y Art. Único de la Ley 19.899. Descargadas de <a href="https://consejoderectores.cl/fondo-solidario-de-credito-universitario/" target="_blank" style="color:#266FE0">consejoderectores.cl</a>. Formatos: XLSX (2022, 2023) y PDF (2024, 2025, 2026). Cada deudor aparece con RUT, dígito verificador, nombres, apellidos, monto en UTM y universidad administradora.
+          <br><br>
+          <b>2. Enriquecimiento de patrimonio</b>: cruce con bases de datos SII (avalúo fiscal, decil, vehículos, propiedades, GSE, NSE) vía servicios internos Unholster. Cobertura: 89% de los deudores 2026.
+          <br><br>
+          <b>3. Perfil profesional (LinkedIn Chile)</b>: pipeline propietario Unholster que rutifica 5,26 millones de perfiles LinkedIn usando el stack AutoResearch + OpenSearch Audiencias. Sólo se usan matches con confianza "high" (score ≥ 0,87). Cobertura: 15,9% de los deudores FSCU.
+          <br><br>
+          <b>4. Cruce judicial (PJUD)</b>: base PJUD_Unholster (Grupo Defensa) con litigantes civiles (22,3M registros). Se filtra por <i>participante = 'DDO.'</i> (demandado directo) y procedimiento en {Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Monitorio, Ley de Bancos, Procedimiento Prenda - Ley 20.190, Gestión Preparatoria Confesión de Deuda, Gestión Preparatoria Notificación Cobro de Factura}. Excluye divorcios, daños, arrendamiento y demás causas civiles no vinculadas a cobranza.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Conversiones de moneda</div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
+          Fecha de referencia: <b>17 de abril de 2026</b>.
+          <br>• UTM Abril 2026: <b>$69.889 CLP</b> (fuente: Servicio de Impuestos Internos, <a href="https://www.sii.cl/valores_y_fechas/utm/utm2026.htm" target="_blank" style="color:#266FE0">sii.cl</a>).
+          <br>• Dólar observado 2026-04-17: <b>$886,32 CLP/USD</b> (fuente: Banco Central de Chile vía mindicador.cl).
+          <br>• Tipo derivado: <b>1 UTM ≈ US$ 78,85</b>.
+          <br>• PIB Chile 2024 referencial: US$ 330 mil millones nominal.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Privacidad y k-anonimato</div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
+          Todas las cifras publicadas en el dashboard están <b>agregadas con supresión k-anónima (k ≥ 10)</b>: cualquier cruce que arroje menos de 10 personas en una celda se omite del JSON. El archivo <code>aggregates.json</code> que consume el frontend contiene exclusivamente agregados; <b>ningún dato individual (RUT, nombre, dirección, patente, empleador específico) es accesible desde esta página</b>. Los parquet intermedios con datos individuales están en <code>.gitignore</code> y nunca se suben al repositorio ni al deploy de Vercel.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Clasificación de trayectorias (análisis longitudinal)</div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
+          Cada RUT se clasifica en una de 7 categorías según cómo evolucionó su monto entre 2022 y 2026:
+          <br>• <b>Crónico acumulando</b>: presente los 5 años, monto 2026 &gt; monto 2022 × 1,05.
+          <br>• <b>Crónico pagando</b>: presente los 5 años, monto 2026 &lt; monto 2022 × 0,95.
+          <br>• <b>Crónico estable</b>: presente los 5 años, monto 2026 ≈ monto 2022 (±5%).
+          <br>• <b>Incorporado</b>: no estaba en 2022, sí en 2026.
+          <br>• <b>Reciente</b>: ingresó en los últimos 2 años.
+          <br>• <b>Salió</b>: estaba en 2022, no está en 2026 (pago total o condonación).
+          <br>• <b>Intermitente / Ocasional</b>: aparece y desaparece a lo largo del período.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Limitaciones y qué NO dice el análisis</div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
+          • Los <b>montos pagados individuales</b> no son públicos; se infieren comparando mismo RUT año a año (si en 2023 debe menos que en 2022, se asume que pagó la diferencia neta). Esto no distingue condonaciones de pagos efectivos.
+          <br>• La <b>tasa de recuperación real</b> requeriría datos de TGR (monto retenido vía devolución de impuestos), que no son públicos. Hay una solicitud de Transparencia Ley 20.285 en curso.
+          <br>• La <b>rutificación LinkedIn cubre 15,9%</b>: no es un censo del perfil profesional. Ejecutivos / gerentes pueden estar subrepresentados si no tienen perfil público.
+          <br>• Los <b>datos de patrimonio SII</b> reflejan únicamente avalúo fiscal — no ingresos ni capacidad de pago real. Alguien puede estar en decil 8-10 de avalúo (porque heredó una casa) pero tener ingresos bajos.
+          <br>• Los <b>procedimientos judiciales</b> en PJUD son causas iniciadas, no sentencias finales. Una causa no implica condena ni deuda confirmada.
+          <br>• Las <b>proyecciones 2027-2030</b> son regresión lineal simple, no modelo econométrico. Suponen continuación del trend sin cambio de política, condonaciones masivas ni recesión.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Solicitudes de Transparencia (Ley 20.285) en curso</div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
+          Para cerrar la serie histórica hacia atrás (2015-2021) y tener datos agregados oficiales, se están preparando solicitudes de acceso a información pública a:
+          <br>• <b>Tesorería General de la República</b>: monto total retenido por concepto de FSCU vía devolución de impuestos a la renta, por año 2015-2025.
+          <br>• <b>Subsecretaría de Educación Superior (MINEDUC)</b>: monto total condonado bajo la Ley 21.738 (2024), desagregado por universidad administradora.
+          <br>• <b>CRUCH y universidades administradoras individuales</b>: nóminas 2015-2021 (actualmente archivadas o no disponibles en el sitio).
+          <br>• <b>DIPRES</b>: Fichas de Monitoreo y Seguimiento Oferta Pública del programa FSCU para años 2015-2023 (las disponibles online no cubren todos los indicadores).
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Reproducibilidad</div>
+        <div style="font-size:14px;font-weight:300;color:#3A3A3A;line-height:1.7">
+          Todo el código fuente está publicado en <a href="https://github.com/diazaraujo/deudores-fscu" target="_blank" style="color:#266FE0">github.com/diazaraujo/deudores-fscu</a> bajo licencia pública. Pipeline principal:
+          <br>• <code>parse_nominas.py</code> — parser unificado (XLSX + PDF → parquet).
+          <br>• <code>normalize_nominas.py</code> — mapa de aliases → 27 universidades canónicas.
+          <br>• <code>cross_pjud_deudas.py</code> — cruce judicial filtrado a cobranza de deuda.
+          <br>• <code>cross_demandantes.py</code> — identificación de quién demanda (DTE.) a los morosos.
+          <br>• <code>app/aggregates_v3.py</code> — consolidación + generación del JSON con k-anonimato.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ CONTENIDO PRE-RENDERED PARA SEO/LLM (oculto visualmente en desktop si tab inactiva, pero indexable) ═══ -->
+  <article id="seo-content" aria-label="Resumen completo para motores de búsqueda" style="margin-top:48px;padding:32px;background:#fff;border:1px solid #E5E7EB;border-radius:12px">
+    <h2 style="font-size:24px;font-weight:700;margin-bottom:16px">Radiografía de Deudores del Fondo Solidario de Crédito Universitario · Chile 2026</h2>
+    <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
+      <strong>335.152 personas</strong> figuran en la <strong>nómina oficial de morosos del Fondo Solidario de Crédito Universitario (FSCU)</strong> publicada por el Consejo de Rectoras y Rectores de las Universidades Chilenas (CRUCH) para el año tributario 2026, conforme al Art. 15 inciso 2° de la Ley 19.287 y Art. 13 bis de la Ley 19.848. La <strong>cartera vencida total asciende a 57,5 millones de UTM, equivalentes a $4,02 billones de pesos chilenos o US$ 4,54 mil millones</strong> — un <strong>1,38% del PIB nominal chileno</strong> de 2024.
+    </p>
+    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">¿Quiénes son los deudores?</h3>
+    <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
+      El 54,9% son hombres y 45,1% mujeres, con edad mediana entre 35 y 44 años (típico de egresados universitarios de hace 10 a 15 años). El nivel socioeconómico predominante es "Medio Alto". <strong>118.579 deudores (35%) están en el decil 8-10 de avalúo fiscal SII</strong> — el 30% más rico de Chile por patrimonio declarado. Entre quienes están en LinkedIn (53.383 matches, 15,9%), identificamos <strong>3.628 ejecutivos C-Level o directores, 6.664 académicos y 17.871 empleados de empresas grandes</strong> como Codelco (257), Arauco (206), Banco Santander (198), PUC Chile (194), BCI (189) y BancoEstado (131).
+    </p>
+    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Morosidad crónica, no coyuntural</h3>
+    <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
+      <strong>258.596 deudores (77,2%) figuran en las 5 nóminas 2022-2026 sin interrupción.</strong> Sólo 13.174 personas (3,9%) son ingresos nuevos en 2026 sin antecedentes previos. La <strong>probabilidad de salir de la nómina cae con la antigüedad</strong>: 14,85% para quien lleva 1 año, 8,19% para 2, 4,62% para 3, apenas 2,85% para quienes llevan 4 o más. Es una trampa de morosidad: a más tiempo deudor, menor chance de pago. La mediana de deuda de los crónicos pasó de 81 UTM en 2022 a 152 UTM en 2026 — casi se duplicó en 4 años por intereses acumulados.
+    </p>
+    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Universidades acreedoras y cobranza judicial</h3>
+    <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
+      26 universidades del CRUCH administran el Fondo Solidario. Las que más deudores concentran son U. de Santiago (25.293), U. de Concepción (24.634), U. Federico Santa María (20.324), PUC de Valparaíso (19.721), U. del Bío-Bío (19.305), U. de Valparaíso (18.208), U. de La Serena (17.452), U. de Chile (17.327). <strong>Sólo 8 de 26 universidades demandan judicialmente a sus propios ex-alumnos morosos</strong>. La Universidad de Chile lidera ampliamente con 2.129 demandas (12% de sus deudores), seguida de U. de Valparaíso (436), U. del Bío-Bío (329), UTEM (306), U. Arturo Prat (271) y U. de La Serena (222). Las restantes 18 universidades del CRUCH se apoyan exclusivamente en el mecanismo pasivo de retención de impuestos vía Tesorería General de la República.
+    </p>
+    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">¿Quién los demanda?</h3>
+    <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
+      <strong>72.014 deudores FSCU (21,5%) tienen causas civiles de cobranza de deuda en el Poder Judicial chileno</strong>, filtrando procedimientos de ejecución (Ejecutivo Obligación de Dar, Ejecutivo Mínima Cuantía, Monitorio, Ley de Bancos, Procedimiento Prenda, Gestión Preparatoria de Cobranza). Los principales cobradores son la <strong>Tesorería General de la República (10.256 demandas)</strong>, BancoEstado (8.678), CMR Falabella (8.582), Banco Itaú (7.467), BCI (7.328), Scotiabank (7.220) y Banco de Chile (6.335). <strong>La banca privada más BancoEstado acumulan 45.310 demandas — 4 veces más que la TGR.</strong> Los deudores FSCU no tienen sólo una deuda con el Estado: típicamente tienen múltiples obligaciones vencidas con el sistema financiero.
+    </p>
+    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Evolución 2022-2026 y proyección 2030</h3>
+    <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
+      La cartera FSCU creció de <strong>288.290 deudores (37,3M UTM) en 2022</strong> a <strong>335.152 (57,5M UTM) en 2026</strong> — +16% en personas y +54,4% en UTM. Durante el mismo período la UTM sólo se revalorizó ~12%, por lo que la morosidad real crece 4,5 veces más rápido que la inflación. Cada transición anual los nuevos ingresos superan a las salidas: saldo neto +93.024 deudores en 4 años. La <strong>tasa de recuperación anual es apenas 5,27%</strong> (salidas + pagos parciales). Los intereses acumulados superan por 3-5 veces la recuperación cada año. <strong>Si el trend continúa, la cartera alcanzará $5,47 billones CLP (US$ 6,17 mil millones, +36%) en 2030.</strong>
+    </p>
+    <h3 style="font-size:18px;font-weight:600;margin:24px 0 10px">Metodología</h3>
+    <p style="font-size:14px;line-height:1.7;color:#3A3A3A;margin-bottom:14px">
+      Los datos provienen de (1) las nóminas oficiales del CRUCH 2022-2026 publicadas en <a href="https://consejoderectores.cl/fondo-solidario-de-credito-universitario/" rel="nofollow">consejoderectores.cl</a>, (2) enriquecimiento de patrimonio con bases SII (avalúo fiscal, decil, vehículos, propiedades), (3) cruce con LinkedIn Chile mediante rutificación propietaria Unholster con 5,26M perfiles indexados, y (4) cruce con base PJUD del Poder Judicial (22M litigantes). Todas las cifras publicadas están agregadas con <strong>supresión k-anónima (k ≥ 10)</strong>. Ningún dato individual (RUT, nombre, dirección, patente) es accesible desde este dashboard. Conversiones de moneda al 17 de abril de 2026: 1 UTM = $69.889 CLP (fuente: SII), 1 USD = $886,32 CLP (fuente: Banco Central de Chile).
+    </p>
+    <p style="font-size:13px;color:#6B7280;margin-top:20px;line-height:1.6">
+      <strong>Código fuente y dataset descargables:</strong> repositorio público en <a href="https://github.com/diazaraujo/deudores-fscu" rel="nofollow">github.com/diazaraujo/deudores-fscu</a>. JSON agregado en <a href="/static/aggregates.json">/static/aggregates.json</a>. Resumen machine-readable para LLMs en <a href="/llms.txt">/llms.txt</a>. Procesado por Unholster para DecideChile · Abril 2026.
+    </p>
+  </article>
 
   <div class="dash-footer">
     Datos públicos según Art. 15 inciso 2º Ley 19.287, Art. 13 bis Ley 19.848 y Art. Único Ley 19.899.<br>
@@ -298,18 +922,31 @@ const kpiCard = (label, value, sub, icon, cls='') => {
 let D = null;
 const initialized = {};
 
-window.switchTab = function(name) {
+window.switchTab = function(name, skipHash) {
+  const el = document.querySelector(`[data-tab="${name}"]`);
+  if (!el) return;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector(`[data-tab="${name}"]`).classList.add('active');
+  el.classList.add('active');
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
   if (D && !initialized[name]) { initTab(name); initialized[name] = true; }
+  if (!skipHash) history.replaceState(null, '', '#' + name);
   setTimeout(() => document.querySelectorAll('.tab-content.active canvas').forEach(c => { const ci = Chart.getChart(c); if (ci) ci.resize(); }), 60);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+window.addEventListener('hashchange', () => {
+  const h = (location.hash || '').replace('#','');
+  if (h && document.querySelector(`[data-tab="${h}"]`)) switchTab(h, true);
+});
 
 function initTab(name) {
   const r = D.resumen;
-  if (name === 'general') { renderPerfiles(); renderMontoBucket('chartMontoBucket'); }
+  if (name === 'general') {
+    if (currentYear === 2026 || currentYear === 'todos') { renderPerfiles(); renderMontoBucket('chartMontoBucket'); }
+    else renderMontoBucketYear('chartMontoBucket');
+  }
+  if (name === 'global') renderGlobal();
+  if (name === 'interesante') renderInsights();
   if (name === 'evolucion') renderEvolucion();
   if (name === 'montos') {
     document.getElementById('kpiMontos').innerHTML =
@@ -317,9 +954,11 @@ function initTab(name) {
       kpiCard('Deuda promedio', fmt(Math.round(r.avg_utm)) + ' UTM', fmtCLP(r.avg_utm * r.utm_clp) + ' · ' + fmtUSD(r.avg_utm * r.utm_usd), 'chart') +
       kpiCard('Deuda mediana', fmt(Math.round(r.median_utm)) + ' UTM', fmtCLP(r.median_utm * r.utm_clp) + ' · ' + fmtUSD(r.median_utm * r.utm_usd), 'chart') +
       kpiCard('Factores de conversión', `UTM = $${fmt(r.utm_clp)}`, `USD = $${r.usd_clp} · al ${r.fecha_conversion}`, 'globe');
-    renderMontoBucket('chartMontoBucket2');
+    if (currentYear === 2026 || currentYear === 'todos') renderMontoBucket('chartMontoBucket2');
+    else renderMontoBucketYear('chartMontoBucket2');
+    initConversor();
   }
-  if (name === 'universidad') renderUniversidad();
+  if (name === 'universidad') renderUniversidadYear();
   if (name === 'xray') renderXrayInit();
   if (name === 'justicia') renderJusticia();
   if (name === 'geografia') renderGeografia();
@@ -402,6 +1041,127 @@ function renderEvolucion() {
       scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=1000?(v/1000)+'k':v } } }
     }
   });
+
+  // ═══ Cronicidad ═══
+  const cr = D.cronicidad;
+  document.getElementById('kpiCronicidad').innerHTML =
+    kpiCard('Crónicos (5 años)', fmt(cr.cronicos_5_anos), cr.pct_cronicos + '% del 2026', 'users', 'red') +
+    kpiCard('Nuevos 2026', fmt(cr.nuevos_2026), cr.pct_nuevos + '% sin historial previo', 'users', 'green') +
+    kpiCard('Retención vs 2022', D.retencion_2026_vs_year[0].pct + '%', fmt(D.retencion_2026_vs_year[0].n) + ' del 2026 ya estaban en 2022', 'chart', 'amber') +
+    kpiCard('Retención vs 2025', D.retencion_2026_vs_year[3].pct + '%', fmt(D.retencion_2026_vs_year[3].n) + ' del 2026 ya estaban en 2025', 'chart');
+
+  const rep = D.repetidores;
+  new Chart(document.getElementById('chartCronicidad'), {
+    type: 'bar', data: { labels: rep.map(x => x.n_years + (x.n_years === 1 ? ' año' : ' años')),
+      datasets: [{ label: 'Deudores', data: rep.map(x => x.deudores),
+        backgroundColor: rep.map(x => x.n_years === 5 ? C.red : x.n_years === 4 ? C.amber : x.n_years === 1 ? C.green : C.blue),
+        borderRadius: {topLeft:4,topRight:4}, borderSkipped: false }]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => fmt(ctx.parsed.y) + ' deudores · ' + rep[ctx.dataIndex].pct + '%' } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=1000?(v/1000)+'k':v }, beginAtZero: true } }
+    }
+  });
+  const ret = D.retencion_2026_vs_year;
+  new Chart(document.getElementById('chartRetencion'), {
+    type: 'bar', data: { labels: ret.map(x => String(x.year)),
+      datasets: [{ label: '% ya estaban', data: ret.map(x => x.pct),
+        backgroundColor: ret.map(x => x.pct >= 90 ? C.red : x.pct >= 80 ? C.amber : C.blue),
+        borderRadius: {topLeft:4,topRight:4}, borderSkipped: false }]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.parsed.y + '% · ' + fmt(ret[ctx.dataIndex].n) + ' deudores ya figuraban' } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' }, beginAtZero: true, max: 100 } }
+    }
+  });
+
+  // ═══ Matriz de cohortes (heatmap-style tabla) ═══
+  const cm = D.cohort_matrix || [];
+  const cohortYears = [2022, 2023, 2024, 2025, 2026];
+  let html = `<table style="width:100%;font-family:'JetBrains Mono',monospace;font-size:12px;border-collapse:collapse">
+    <thead><tr>
+      <th style="text-align:left;padding:10px;color:${C.gray500};text-transform:uppercase;font-size:10px;letter-spacing:.1em;border-bottom:2px solid ${C.gray200}">Cohort</th>
+      <th style="text-align:right;padding:10px;color:${C.gray500};text-transform:uppercase;font-size:10px;letter-spacing:.1em;border-bottom:2px solid ${C.gray200}">Base</th>`;
+  cohortYears.forEach(y => html += `<th style="text-align:right;padding:10px;color:${C.gray500};text-transform:uppercase;font-size:10px;letter-spacing:.1em;border-bottom:2px solid ${C.gray200}">${y}</th>`);
+  html += '</tr></thead><tbody>';
+  cm.forEach(row => {
+    html += `<tr><td style="padding:10px;font-weight:700;color:${C.blue};border-bottom:1px solid ${C.gray200}">${row.cohort}</td>`;
+    html += `<td style="text-align:right;padding:10px;color:${C.gray900};font-weight:600;border-bottom:1px solid ${C.gray200}">${fmt(row.base)}</td>`;
+    cohortYears.forEach(y => {
+      const v = row.years[String(y)];
+      if (v === null || v === undefined) {
+        html += `<td style="text-align:right;padding:10px;color:${C.gray200};border-bottom:1px solid ${C.gray200}">—</td>`;
+      } else {
+        const pct = (100 * v / row.base).toFixed(1);
+        const intensity = Math.min(1, v / row.base);
+        const bgAlpha = 0.15 + intensity * 0.55;
+        const bg = `rgba(16,185,129,${bgAlpha})`;
+        const isCurrent = y === row.cohort;
+        html += `<td style="text-align:right;padding:10px;background:${isCurrent ? C.green : bg};color:${isCurrent || intensity > 0.7 ? '#fff' : C.gray900};font-weight:${isCurrent ? '700' : '500'};border-bottom:1px solid ${C.gray200}"><div>${fmt(v)}</div><div style="font-size:10px;opacity:0.9;margin-top:2px">${pct}%</div></td>`;
+      }
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  document.getElementById('cohortMatrix').innerHTML = html;
+
+  // ═══ Stream graph · composición por cohort ═══
+  const sc = D.stream_composicion || {};
+  const cohortColors = [C.red, C.amber, C.green, C.cyan, C.blueDark];
+  const streamDatasets = cohortYears.map((cy, i) => ({
+    label: 'Cohort ' + cy,
+    data: cohortYears.map(y => (sc[String(y)] || {})[String(cy)] || 0),
+    backgroundColor: cohortColors[i],
+    borderColor: cohortColors[i],
+    fill: true,
+    tension: 0.4,
+  }));
+  new Chart(document.getElementById('chartStream'), {
+    type: 'line', data: { labels: cohortYears.map(String), datasets: streamDatasets },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', align: 'end', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 12, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } },
+        tooltip: { ...tooltipDefaults, mode: 'index',
+          callbacks: {
+            label: ctx => ctx.dataset.label + ': ' + fmt(ctx.parsed.y),
+            footer: items => {
+              const total = items.reduce((s, x) => s + x.parsed.y, 0);
+              return 'Total: ' + fmt(total);
+            }
+          } }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: axisMono },
+        y: { stacked: true, grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=1000?(v/1000)+'k':v }, beginAtZero: true }
+      }
+    }
+  });
+
+  // Trayectorias longitudinales
+  const tr = D.trayectorias || [];
+  const trColors = { 'Crónico acumulando': C.red, 'Crónico pagando': C.green, 'Crónico estable': C.gray500,
+    'Incorporado': C.amber, 'Reciente': C.cyan, 'Intermitente': C.violet, 'Ocasional': C.blueDark };
+  new Chart(document.getElementById('chartTrayectorias'), {
+    type: 'bar', data: { labels: tr.map(x => x.trayectoria),
+      datasets: [{ label: 'Deudores', data: tr.map(x => x.n),
+        backgroundColor: tr.map(x => trColors[x.trayectoria] || C.blue),
+        borderRadius: {topRight:4,bottomRight:4}, borderSkipped: false }]},
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => fmt(ctx.parsed.x) + ' · ' + tr[ctx.dataIndex].pct + '%' } } },
+      scales: { y: { grid: { display: false }, ticks: axisSans }, x: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=1000?(v/1000)+'k':v }, beginAtZero: true } }
+    }
+  });
+
+  const cev = D.trayectoria_cronicos_evol;
+  new Chart(document.getElementById('chartMediaCronicos'), {
+    type: 'line', data: { labels: ['2022','2023','2024','2025','2026'],
+      datasets: [
+        { label: 'Mediana UTM', data: cev.median, borderColor: C.red, backgroundColor: 'rgba(239,68,68,0.08)', borderWidth: 2, pointRadius: 4, pointBackgroundColor: C.red, fill: true, tension: 0.3 },
+        { label: 'Promedio UTM', data: cev.avg, borderColor: C.amber, backgroundColor: 'transparent', borderWidth: 2, borderDash: [4,4], pointRadius: 3, pointBackgroundColor: C.amber, fill: false, tension: 0.3 }
+      ]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'top', align: 'end', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 12, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.dataset.label + ': ' + fmt(Math.round(ctx.parsed.y)) + ' UTM · ' + fmtCLP(ctx.parsed.y * D.resumen.utm_clp) } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: axisMono, beginAtZero: false } }
+    }
+  });
 }
 
 function renderXrayInit() {
@@ -462,10 +1222,10 @@ function renderXray(uname) {
 function renderJusticia() {
   const jr = D.justicia_resumen;
   document.getElementById('kpiJusticia').innerHTML =
-    kpiCard('Con alguna causa', fmt(jr.con_pjud), jr.pct_con_pjud + '% del total', 'globe', 'amber') +
-    kpiCard('Demandados civil', fmt(jr.con_civil_ddo), jr.pct_con_civil_ddo + '% del total', 'cash', 'red') +
-    kpiCard('Total deudores', fmt(jr.total), 'Base de cruce', 'users') +
-    kpiCard('Fuente', 'PJUD · Grupo Defensa', 'Litigantes civiles + laborales', 'link');
+    kpiCard('Demandados por deuda', fmt(jr.con_demandado_deuda), jr.pct_con_demandado_deuda + '% del total', 'cash', 'red') +
+    kpiCard('Total deudores', fmt(jr.total), 'Base de cruce 2026', 'users') +
+    kpiCard('Tipos de causa', '7 procedimientos', 'Ejecutivo + Monitorio + Ley Bancos', 'chart', 'amber') +
+    kpiCard('Fuente', 'PJUD · Grupo Defensa', 'info_causas_civil filtrado', 'link');
 
   const jc = D.justicia_por_causa.sort((a,b) => b.n - a.n);
   makeHbar('chartJustCausa', jc.map(x=>x.bucket), jc.map(x=>x.n), C.blue);
@@ -499,6 +1259,25 @@ function renderJusticia() {
       scales: { y: { grid: { display: false }, ticks: { ...axisSans, font: { ...defaultFont, size: 11, weight: 300 } } }, x: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' } } }
     }
   });
+
+  // === Top demandantes ===
+  const dem = (D.top_demandantes || []).slice(0, 20);
+  makeHbar('chartDemandantes', dem.map(x => (x.dte_nombre||'').substring(0,45)), dem.map(x => x.n_deudores), C.red);
+
+  const dcat = D.demandantes_categorias || [];
+  new Chart(document.getElementById('chartDemandantesCat'), {
+    type: 'doughnut', data: { labels: dcat.map(x => x.cat),
+      datasets: [{ data: dcat.map(x => x.deudores_acumulados), backgroundColor: catColors, borderWidth: 0 }]},
+    options: { responsive: true, maintainAspectRatio: false, cutout: '60%',
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 10, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } },
+        tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.label + ': ' + fmt(ctx.parsed) + ' demandas acumuladas' } }
+      }
+    }
+  });
+
+  const ud = D.universidades_demandantes || [];
+  makeHbar('chartUnivDemandantes', ud.map(x => x.dte_nombre.substring(0,45)), ud.map(x => x.n_deudores), C.blueDark);
 }
 
 function makeHbar(id, labels, values, color) {
@@ -525,13 +1304,360 @@ function makeDonut(id, labels, values) {
   });
 }
 
+let currentYear = 2026;
+
 function renderMain() {
   const r = D.resumen;
-  document.getElementById('kpiMain').innerHTML =
-    kpiCard('Deudores totales', fmt(r.total), 'Año tributario 2026', 'users') +
-    kpiCard('Cartera vencida', fmtCLP(r.total_clp), fmtUSD(r.total_usd) + ' · ' + fmt(Math.round(r.total_utm)) + ' UTM', 'cash') +
-    kpiCard('Deuda promedio', fmt(Math.round(r.avg_utm)) + ' UTM', fmtCLP(r.avg_utm * r.utm_clp), 'chart') +
-    kpiCard('En LinkedIn', fmt(r.en_linkedin), `${r.pct_linkedin}% del total`, 'link', 'green');
+  const py = (D.per_year && D.per_year[currentYear]) || null;
+  if (currentYear === 'todos' && py) {
+    document.getElementById('dashYearTag').textContent = 'DecideChile · Consolidado 2022-2026';
+    document.getElementById('dashDesc').textContent =
+      `Vista consolidada de los 5 años de nóminas 2022-2026. ${fmt(py.total)} personas han figurado al menos una vez como morosas del Fondo Solidario en este período. La cartera actual (2026) asciende a ${fmtCLP(D.resumen.total_clp)}.`;
+  } else if (currentYear !== 2026 && py) {
+    document.getElementById('dashYearTag').textContent = 'DecideChile · Nómina ' + currentYear;
+    document.getElementById('dashDesc').textContent =
+      `Análisis agregado de los ${fmt(py.total)} deudores morosos de la nómina ${currentYear}. Los cortes de patrimonio, perfil LinkedIn y causas judiciales sólo están disponibles para 2026.`;
+  } else {
+    document.getElementById('dashYearTag').textContent = 'DecideChile · Nómina 2026';
+    document.getElementById('dashDesc').textContent =
+      'Análisis agregado y anonimizado de los 335.152 deudores morosos del Fondo Solidario de Crédito Universitario, a partir de la nómina publicada por el Consejo de Rectoras y Rectores de las Universidades Chilenas para el año tributario 2026.';
+  }
+  renderCarousel();
+}
+
+let carouselIdx = 0;
+let carouselTimer = null;
+let carouselPaused = false;
+
+function renderCarousel() {
+  const items = D.interesante || [];
+  const cBg = { executives:'#E7F0FF', academic:'#FEF3C7', chronic:'#FEE2E2', wealth:'#D1FAE5', employer:'#E7F0FF',
+    interest:'#FEE2E2', flow:'#FEF3C7', judicial:'#FEE2E2', demographics:'#E7F0FF', economy:'#D1FAE5',
+    education:'#FEF3C7', 'judicial-uni':'#FEE2E2', multi:'#E7F0FF', ultra:'#FEE2E2' };
+  const cFg = { executives:'#266FE0', academic:'#F59E0B', chronic:'#EF4444', wealth:'#10B981', employer:'#266FE0',
+    interest:'#EF4444', flow:'#F59E0B', judicial:'#EF4444', demographics:'#266FE0', economy:'#10B981',
+    education:'#F59E0B', 'judicial-uni':'#EF4444', multi:'#266FE0', ultra:'#EF4444' };
+  const track = document.getElementById('carouselTrack');
+  track.innerHTML = items.map((it, i) => {
+    const bg = cBg[it.tipo] || '#F5F5F5', fg = cFg[it.tipo] || '#266FE0';
+    const eli5Short = (it.eli5 || it.desc || '').substring(0, 260);
+    return `<div class="carousel-slide" onclick="openInsightModal(${i})">
+      <div class="c-badge" style="background:${bg};color:${fg}">#${String(i+1).padStart(2,'0')}</div>
+      <div class="c-left">
+        <div class="c-tag">Insight ${i+1} de ${items.length}</div>
+        <div class="c-title">${it.titulo}</div>
+        <div class="c-kpi" style="color:${fg}">${it.kpi}</div>
+        <div class="c-sub">${it.sub}</div>
+      </div>
+      <div>
+        <div class="c-eli5">${eli5Short}${(it.eli5 || it.desc || '').length > 260 ? '…' : ''}</div>
+        <div class="c-cta">Click para explicación simple →</div>
+      </div>
+    </div>`;
+  }).join('');
+  const dots = document.getElementById('carouselDots');
+  dots.innerHTML = items.map((_, i) => `<button class="carousel-dot${i===0?' active':''}" onclick="carouselGoto(${i})" aria-label="Ir a ${i+1}"></button>`).join('');
+  carouselIdx = 0;
+  carouselApply();
+  carouselStart();
+
+  // pausar al hover, resumir al salir
+  const wrap = track.closest('.carousel-wrap');
+  wrap.addEventListener('mouseenter', () => { carouselPaused = true; });
+  wrap.addEventListener('mouseleave', () => { carouselPaused = false; });
+  // swipe en móvil
+  let startX = 0;
+  wrap.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  wrap.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) dx < 0 ? carouselNext() : carouselPrev();
+  });
+}
+function carouselApply() {
+  const items = D.interesante || [];
+  document.getElementById('carouselTrack').style.transform = `translateX(-${carouselIdx * 100}%)`;
+  document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === carouselIdx));
+}
+window.carouselPrev = function() {
+  const n = (D.interesante || []).length;
+  carouselIdx = (carouselIdx - 1 + n) % n;
+  carouselApply();
+  carouselResetTimer();
+};
+window.carouselNext = function() {
+  const n = (D.interesante || []).length;
+  carouselIdx = (carouselIdx + 1) % n;
+  carouselApply();
+  carouselResetTimer();
+};
+window.carouselGoto = function(i) {
+  carouselIdx = i;
+  carouselApply();
+  carouselResetTimer();
+};
+function carouselStart() {
+  if (carouselTimer) clearInterval(carouselTimer);
+  carouselTimer = setInterval(() => { if (!carouselPaused && !carouselManualStop) carouselNext(); }, 6000);
+}
+function carouselResetTimer() { carouselStart(); }
+
+let carouselManualStop = false;
+window.carouselTogglePlay = function() {
+  carouselManualStop = !carouselManualStop;
+  const btn = document.getElementById('carouselPlayBtn');
+  btn.innerHTML = carouselManualStop ? '▶' : '⏸';
+  btn.title = carouselManualStop ? 'Reproducir' : 'Pausar';
+};
+
+/* ═══ Conversor UTM / CLP / USD ═══ */
+function parseNumberCL(s) {
+  if (s == null) return NaN;
+  s = String(s).trim().replace(/\./g, '').replace(',', '.');
+  const n = parseFloat(s);
+  return isNaN(n) ? NaN : n;
+}
+function formatNumberCL(n, decimals = 2) {
+  if (n == null || isNaN(n)) return '';
+  return n.toLocaleString('es-CL', { minimumFractionDigits: 0, maximumFractionDigits: decimals });
+}
+let convLock = false;
+function initConversor() {
+  if (document.getElementById('convUTM').dataset.init) return;
+  document.getElementById('convUTM').dataset.init = '1';
+  const utmF = D.resumen.utm_clp;
+  const usdF = D.resumen.usd_clp;
+  const i_utm = document.getElementById('convUTM');
+  const i_clp = document.getElementById('convCLP');
+  const i_usd = document.getElementById('convUSD');
+  function fromUTM() {
+    if (convLock) return; convLock = true;
+    const v = parseNumberCL(i_utm.value);
+    if (!isNaN(v)) {
+      i_clp.value = formatNumberCL(v * utmF, 0);
+      i_usd.value = formatNumberCL(v * utmF / usdF, 2);
+    }
+    convLock = false;
+  }
+  function fromCLP() {
+    if (convLock) return; convLock = true;
+    const v = parseNumberCL(i_clp.value);
+    if (!isNaN(v)) {
+      i_utm.value = formatNumberCL(v / utmF, 2);
+      i_usd.value = formatNumberCL(v / usdF, 2);
+    }
+    convLock = false;
+  }
+  function fromUSD() {
+    if (convLock) return; convLock = true;
+    const v = parseNumberCL(i_usd.value);
+    if (!isNaN(v)) {
+      i_clp.value = formatNumberCL(v * usdF, 0);
+      i_utm.value = formatNumberCL(v * usdF / utmF, 2);
+    }
+    convLock = false;
+  }
+  i_utm.addEventListener('input', fromUTM);
+  i_clp.addEventListener('input', fromCLP);
+  i_usd.addEventListener('input', fromUSD);
+  [i_utm, i_clp, i_usd].forEach(el => el.addEventListener('focus', e => e.target.style.borderColor = '#266FE0'));
+  [i_utm, i_clp, i_usd].forEach(el => el.addEventListener('blur', e => e.target.style.borderColor = '#E5E7EB'));
+  // inicializar con 172 UTM
+  convSet(172);
+}
+window.downloadJSON = function() {
+  if (!D) return;
+  const blob = new Blob([JSON.stringify(D, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `deudores-fscu-2026_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+};
+
+window.convSet = function(utm) {
+  const i_utm = document.getElementById('convUTM');
+  i_utm.value = formatNumberCL(utm, 2);
+  i_utm.dispatchEvent(new Event('input'));
+};
+
+function renderGlobal() {
+  const G = D.global; if (!G) return;
+  const k = G.kpis;
+  document.getElementById('kpiGlobal').innerHTML =
+    kpiCard('Tasa de recuperación anual', k.tasa_recuperacion_anual_pct + '%', 'Promedio 2022-2026 · salidas + pagos parciales', 'cash', 'red') +
+    kpiCard('Crecimiento cartera UTM', k.tasa_crecimiento_cartera_anual_pct + '%/año', 'CAGR 2022-2026', 'chart', 'amber') +
+    kpiCard('Crónicos 5 años', k.pct_cronicos_5_anos + '%', fmt(D.cronicidad.cronicos_5_anos) + ' deudores estructurales', 'users', 'red') +
+    kpiCard('Proyección 2030', fmtCLP(k.clp_2030_proyectado), `+${k.crecimiento_2026_2030_pct}% vs 2026`, 'globe', 'red');
+
+  // Probabilidad de salir por años consecutivos
+  const ps = G.prob_salir_por_antiguedad;
+  new Chart(document.getElementById('chartProbSalir'), {
+    type: 'bar', data: { labels: ps.map(x => x.anos_consec + (x.anos_consec===4?'+ años':' año'+(x.anos_consec>1?'s':''))),
+      datasets: [{ label: '% salida', data: ps.map(x => x.pct_salida),
+        backgroundColor: ps.map(x => x.pct_salida < 5 ? C.red : x.pct_salida < 10 ? C.amber : C.green),
+        borderRadius: {topLeft:4,topRight:4}, borderSkipped: false }]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.parsed.y + '% · ' + fmt(Math.round(ps[ctx.dataIndex].salieron)) + ' de ' + fmt(ps[ctx.dataIndex].estaban) + ' salieron' } } },
+      scales: { x: { grid: { display: false }, ticks: { ...axisSans, font: { ...defaultFont, size: 12, weight: 500 } }, title: { display: true, text: 'Años consecutivos en la nómina al 2025', font: { ...monoFont, size: 10 }, color: C.gray500 } }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' }, beginAtZero: true, max: 20 } }
+    }
+  });
+
+  // Monto vs antigüedad
+  const ma = G.monto_vs_antiguedad;
+  new Chart(document.getElementById('chartMontoAntig'), {
+    type: 'bar', data: { labels: ma.map(x => x.n_years + ' año' + (x.n_years>1?'s':'')),
+      datasets: [
+        { label: 'Promedio UTM', data: ma.map(x => x.avg_monto), backgroundColor: C.red, borderRadius: {topLeft:4,topRight:4}, borderSkipped: false },
+        { label: 'Mediana UTM', data: ma.map(x => x.med_monto), backgroundColor: C.amber, borderRadius: {topLeft:4,topRight:4}, borderSkipped: false }
+      ]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'top', align: 'end', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 12, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + ' UTM · ' + fmtCLP(ctx.parsed.y * D.resumen.utm_clp) } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + ' UTM' }, beginAtZero: true } }
+    }
+  });
+
+  // Cohort retention
+  const co = G.cohorts;
+  new Chart(document.getElementById('chartCohorts'), {
+    type: 'bar', data: { labels: co.map(x => 'Cohorte ' + x.cohort),
+      datasets: [{ label: '% retenido en 2026', data: co.map(x => x.pct_retenido),
+        backgroundColor: co.map(x => x.pct_retenido > 85 ? C.red : x.pct_retenido > 75 ? C.amber : C.blue),
+        borderRadius: {topLeft:4,topRight:4}, borderSkipped: false }]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.parsed.y + '% · ' + fmt(co[ctx.dataIndex].en_2026) + ' de ' + fmt(co[ctx.dataIndex].base) } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + '%' }, beginAtZero: true, max: 100 } }
+    }
+  });
+
+  // Balance (intereses vs recuperación)
+  const t = G.transiciones;
+  new Chart(document.getElementById('chartBalance'), {
+    type: 'bar', data: { labels: t.map(x => x.transicion),
+      datasets: [
+        { label: 'Recuperado (salidas)', data: t.map(x => x.utm_salido), backgroundColor: C.green, stack: 'rec' },
+        { label: 'Pago parcial', data: t.map(x => x.utm_pago_parcial), backgroundColor: C.cyan, stack: 'rec' },
+        { label: 'Intereses acumulados', data: t.map(x => -x.utm_intereses), backgroundColor: C.red, stack: 'int' }
+      ]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'top', align: 'end', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 12, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.dataset.label + ': ' + fmt(Math.abs(ctx.parsed.y)) + ' UTM · ' + fmtCLP(Math.abs(ctx.parsed.y) * D.resumen.utm_clp) } } },
+      scales: { x: { stacked: false, grid: { display: false }, ticks: axisMono }, y: { stacked: false, grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=0?(v/1e6).toFixed(0)+'M':(v/1e6).toFixed(0)+'M' } } }
+    }
+  });
+
+  // Proyección
+  const real = D.evolucion;
+  const proj = G.proyeccion;
+  const allYears = real.map(x => x.year).concat(proj.map(x => x.year));
+  const dataReal = real.map(x => x.utm_total / 1e6).concat(proj.map(_ => null));
+  const dataProj = real.map(_ => null).concat([real[real.length-1].utm_total / 1e6]).concat(proj.slice(1).map(x => x.utm_total / 1e6));
+  // adjust: the connection point
+  const dataProjPlot = real.map((x, i) => i === real.length-1 ? x.utm_total / 1e6 : null).concat(proj.map(x => x.utm_total / 1e6));
+  new Chart(document.getElementById('chartProyeccion'), {
+    type: 'line', data: { labels: allYears,
+      datasets: [
+        { label: 'Histórico', data: dataReal, borderColor: C.blue, backgroundColor: 'rgba(38,111,224,0.08)', borderWidth: 2, pointRadius: 4, pointBackgroundColor: C.blue, fill: true, tension: 0.3 },
+        { label: 'Proyección', data: dataProjPlot, borderColor: C.red, backgroundColor: 'rgba(239,68,68,0.06)', borderWidth: 2, borderDash: [6,4], pointRadius: 4, pointBackgroundColor: C.red, fill: false, tension: 0.3 }
+      ]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'top', align: 'end', labels: { font: { ...defaultFont, size: 11, weight: 300 }, color: C.gray500, padding: 12, usePointStyle: true, pointStyle: 'circle', boxWidth: 6, boxHeight: 6 } }, tooltip: { ...tooltipDefaults, callbacks: { label: ctx => ctx.dataset.label + ': ' + fmt(Math.round(ctx.parsed.y)) + 'M UTM · ' + fmtCLP(ctx.parsed.y * 1e6 * D.resumen.utm_clp) } } },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v + 'M UTM' }, beginAtZero: false } }
+    }
+  });
+}
+
+function renderInsights() {
+  const items = D.interesante || [];
+  const cBg = { executives:'#E7F0FF', academic:'#FEF3C7', chronic:'#FEE2E2', wealth:'#D1FAE5', employer:'#E7F0FF',
+    interest:'#FEE2E2', flow:'#FEF3C7', judicial:'#FEE2E2', demographics:'#E7F0FF', economy:'#D1FAE5',
+    education:'#FEF3C7', 'judicial-uni':'#FEE2E2', multi:'#E7F0FF', ultra:'#FEE2E2' };
+  const cFg = { executives:'#266FE0', academic:'#F59E0B', chronic:'#EF4444', wealth:'#10B981', employer:'#266FE0',
+    interest:'#EF4444', flow:'#F59E0B', judicial:'#EF4444', demographics:'#266FE0', economy:'#10B981',
+    education:'#F59E0B', 'judicial-uni':'#EF4444', multi:'#266FE0', ultra:'#EF4444' };
+  document.getElementById('insightGrid').innerHTML = items.map((it, i) => {
+    const bg = cBg[it.tipo] || '#F5F5F5', fg = cFg[it.tipo] || '#266FE0';
+    return `<div class="card insight-card" style="display:flex;gap:16px;align-items:flex-start" onclick="openInsightModal(${i})">
+      <div style="flex-shrink:0;width:44px;height:44px;border-radius:10px;background:${bg};color:${fg};display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px">#${String(i+1).padStart(2,'0')}</div>
+      <div style="flex:1">
+        <div class="kpi-label">${it.titulo}</div>
+        <div style="font-size:26px;font-weight:800;color:${fg};line-height:1.1;margin:6px 0 4px">${it.kpi}</div>
+        <div class="kpi-sub" style="font-weight:500;font-size:12px">${it.sub}</div>
+        <div style="font-size:13px;font-weight:300;color:#3A3A3A;line-height:1.55;margin-top:12px">${it.desc.length > 160 ? it.desc.substring(0, 160) + '…' : it.desc}</div>
+        <div class="insight-cta">Ver explicación simple →</div>
+      </div></div>`;
+  }).join('');
+}
+
+window.openInsightModal = function(i) {
+  const it = (D.interesante || [])[i];
+  if (!it) return;
+  const cBg = { executives:'#E7F0FF', academic:'#FEF3C7', chronic:'#FEE2E2', wealth:'#D1FAE5', employer:'#E7F0FF',
+    interest:'#FEE2E2', flow:'#FEF3C7', judicial:'#FEE2E2', demographics:'#E7F0FF', economy:'#D1FAE5',
+    education:'#FEF3C7', 'judicial-uni':'#FEE2E2', multi:'#E7F0FF', ultra:'#FEE2E2' };
+  const cFg = { executives:'#266FE0', academic:'#F59E0B', chronic:'#EF4444', wealth:'#10B981', employer:'#266FE0',
+    interest:'#EF4444', flow:'#F59E0B', judicial:'#EF4444', demographics:'#266FE0', economy:'#10B981',
+    education:'#F59E0B', 'judicial-uni':'#EF4444', multi:'#266FE0', ultra:'#EF4444' };
+  const fg = cFg[it.tipo] || '#266FE0';
+  const tag = document.getElementById('modalTag');
+  tag.textContent = `Cuña #${String(i+1).padStart(2,'0')} · ${it.titulo}`;
+  tag.style.color = fg;
+  document.getElementById('modalTitle').textContent = it.titulo;
+  const kpiEl = document.getElementById('modalKpi');
+  kpiEl.textContent = it.kpi;
+  kpiEl.style.color = fg;
+  document.getElementById('modalSub').textContent = it.sub;
+  document.getElementById('modalEli5').textContent = it.eli5 || 'Sin explicación simple todavía.';
+  document.getElementById('modalTechnical').textContent = it.desc;
+  document.getElementById('insightModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+window.closeInsightModal = function() {
+  document.getElementById('insightModal').classList.remove('active');
+  document.body.style.overflow = '';
+};
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeInsightModal(); });
+
+function onYearChange() {
+  const raw = document.getElementById('yearSelect').value;
+  const y = raw === 'todos' ? 'todos' : parseInt(raw);
+  if (y === currentYear) return;
+  currentYear = y;
+  renderMain();
+  ['general','montos','universidad'].forEach(t => { initialized[t] = false; });
+  const active = document.querySelector('.tab-btn.active').dataset.tab;
+  document.querySelectorAll('#tab-' + active + ' canvas').forEach(c => { const ci = Chart.getChart(c); if (ci) ci.destroy(); });
+  if (['general','montos','universidad'].includes(active)) {
+    initTab(active);
+    initialized[active] = true;
+  }
+}
+
+// Adaptar renderMontoBucket y renderMontos para soportar year distinto
+function renderMontoBucketYear(canvasId) {
+  const py = (currentYear !== 2026 && currentYear !== 'todos') ? D.per_year[currentYear] : null;
+  const d = py && py.por_monto_bucket ? py.por_monto_bucket : D.por_monto_bucket.filter(x => x.bucket !== '(sin registro)');
+  new Chart(document.getElementById(canvasId), {
+    type: 'bar',
+    data: { labels: d.map(x=>x.bucket),
+      datasets: [{ label: 'Deudores ' + currentYear, data: d.map(x=>x.n), backgroundColor: C.blue, borderRadius: {topLeft:4,topRight:4}, borderSkipped:false }]},
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: tooltipDefaults },
+      scales: { x: { grid: { display: false }, ticks: axisMono }, y: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => v>=1000?(v/1000)+'k':v }, beginAtZero: true } }
+    }
+  });
+}
+function renderUniversidadYear() {
+  const py = (currentYear !== 2026 && currentYear !== 'todos') ? D.per_year[currentYear] : null;
+  if (py && py.top_universidades) {
+    const topU = py.top_universidades.slice(0, 26);
+    hbar('chartUnivN', topU.map(x => x.universidad), topU.map(x => x.n), C.blue, ctx => fmt(ctx.parsed.x) + ' deudores en ' + currentYear);
+    hbar('chartUnivUtm', topU.map(x => x.universidad), topU.map(x => x.utm_total), C.green, ctx => fmt(ctx.parsed.x) + ' UTM');
+    // Sólo el primer chart de ranking para hombogeneidad, el avg requiere cálculo
+    const byAvg = topU.map(x => ({ ...x, utm_avg: x.n > 0 ? x.utm_total / x.n : 0 })).sort((a,b) => b.utm_avg - a.utm_avg);
+    hbar('chartUnivAvg', byAvg.map(x => x.universidad), byAvg.map(x => Math.round(x.utm_avg)), C.violet, ctx => fmt(ctx.parsed.x) + ' UTM prom.');
+  } else {
+    renderUniversidad();
+  }
 }
 
 function renderPerfiles() {
@@ -586,6 +1712,28 @@ function renderUniversidad() {
   hbar('chartUnivN', byN.map(x=>x.universidad), byN.map(x=>x.n), C.blue, ctx => fmt(ctx.parsed.x) + ' deudores');
   hbar('chartUnivUtm', byUtm.map(x=>x.universidad), byUtm.map(x=>x.utm_total), C.green, ctx => fmt(ctx.parsed.x) + ' UTM · ' + fmtCLP(ctx.parsed.x * D.resumen.utm_clp) + ' · ' + fmtUSD(ctx.parsed.x * D.resumen.utm_usd));
   hbar('chartUnivAvg', byAvg.map(x=>x.universidad), byAvg.map(x=>x.utm_avg), C.violet, ctx => fmt(ctx.parsed.x) + ' UTM prom.');
+
+  // Ranking recuperación (Δ% 2022→2026, excluye O'Higgins por base=1)
+  const rr = (D.ranking_recuperacion || [])
+    .filter(r => !(r.universidad || '').toLowerCase().includes("higgins") || r.deudores_2022 > 100)
+    .sort((a,b) => a.pct_delta_cartera_utm - b.pct_delta_cartera_utm);
+  if (rr.length) {
+    new Chart(document.getElementById('chartRankingRec'), {
+      type: 'bar', data: { labels: rr.map(x => x.universidad),
+        datasets: [{ label: 'Δ% cartera UTM', data: rr.map(x => x.pct_delta_cartera_utm),
+          backgroundColor: rr.map(x => x.pct_delta_cartera_utm < 30 ? C.green : x.pct_delta_cartera_utm < 60 ? C.amber : C.red),
+          borderRadius: {topRight:4,bottomRight:4}, borderSkipped: false }]},
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false },
+          tooltip: { ...tooltipDefaults, callbacks: { label: ctx => {
+            const r = rr[ctx.dataIndex];
+            return `+${ctx.parsed.x}% · ${fmt(r.deudores_2022)}→${fmt(r.deudores_2026)} deudores · +${fmt(Math.round(r.utm_delta/1000))}k UTM`;
+          } } }
+        },
+        scales: { y: { grid: { display: false }, ticks: { ...axisSans, font: { ...defaultFont, size: 11, weight: 300 } } }, x: { grid: { color: C.gray200 }, border: { dash:[4,4], display:false }, ticks: { ...axisMono, callback: v => '+' + v + '%' } } }
+      }
+    });
+  }
 }
 
 function renderGeografia() {
@@ -621,6 +1769,14 @@ function renderLinkedIn() {
   donut('chartTier', D.por_tier.map(x=>x.tier), D.por_tier.map(x=>x.n));
   hbar('chartIndustria', D.top_industrias.slice(0,20).map(x=>x.industry), D.top_industrias.slice(0,20).map(x=>x.n), C.blue, ctx => fmt(ctx.parsed.x) + ' deudores');
   hbar('chartEmpresa', D.top_empresas.slice(0,30).map(x=>x.company), D.top_empresas.slice(0,30).map(x=>x.n), C.blueDark, ctx => fmt(ctx.parsed.x) + ' deudores');
+
+  // Comunas por perfil
+  const ejec = (D.comunas_ejecutivos || []);
+  const ger = (D.comunas_gerentes || []);
+  const acad = (D.comunas_academicos || []);
+  if (ejec.length) hbar('chartComunaEjec', ejec.map(x => x.comuna), ejec.map(x => x.n), C.red, ctx => fmt(ctx.parsed.x) + ' ejecutivos · ' + ejec[ctx.dataIndex].region);
+  if (ger.length) hbar('chartComunaGer', ger.map(x => x.comuna), ger.map(x => x.n), C.amber, ctx => fmt(ctx.parsed.x) + ' gerentes · ' + ger[ctx.dataIndex].region);
+  if (acad.length) hbar('chartComunaAcad', acad.map(x => x.comuna), acad.map(x => x.n), C.violet, ctx => fmt(ctx.parsed.x) + ' académicos · ' + acad[ctx.dataIndex].region);
 }
 
 function hbar(id, labels, values, color, tooltipLbl) {
@@ -657,11 +1813,18 @@ function donut(id, labels, values) {
   });
 }
 
-fetch('/static/aggregates.json?v=7').then(r => r.json()).then(d => {
+fetch('/static/aggregates.json?v=21').then(r => r.json()).then(d => {
   D = d;
   renderMain();
-  initTab('general');
-  initialized.general = true;
+  // Check URL hash for deep link
+  const h = (location.hash || '').replace('#','');
+  if (h && document.querySelector(`[data-tab="${h}"]`)) {
+    switchTab(h, true);
+  } else {
+    initTab('general');
+    initialized.general = true;
+  }
+  document.getElementById('yearSelect').onchange = onYearChange;
 });
 </script>
 </body>

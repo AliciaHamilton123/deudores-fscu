@@ -1312,7 +1312,7 @@ function renderMain() {
   if (currentYear === 'todos' && py) {
     document.getElementById('dashYearTag').textContent = 'DecideChile · Consolidado 2022-2026';
     document.getElementById('dashDesc').textContent =
-      `Vista consolidada de los 5 años de nóminas 2022-2026. ${fmt(py.total)} personas han figurado al menos una vez como morosas del Fondo Solidario en este período. La cartera actual (2026) asciende a ${fmtCLP(D.resumen.total_clp)}.`;
+      `Vista consolidada de los 5 años de nóminas 2022-2026. ${fmt(py.total)} personas han figurado al menos una vez como morosas del Fondo Solidario en este período — se trata del conteo único (no de la suma): quienes aparecen en varios años se contabilizan una sola vez. La cartera actual (2026) asciende a ${fmtCLP(D.resumen.total_clp)}.`;
   } else if (currentYear !== 2026 && py) {
     document.getElementById('dashYearTag').textContent = 'DecideChile · Nómina ' + currentYear;
     document.getElementById('dashDesc').textContent =

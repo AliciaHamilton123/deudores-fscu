@@ -1599,7 +1599,7 @@ window.openInsightModal = function(i) {
     education:'#F59E0B', 'judicial-uni':'#EF4444', multi:'#266FE0', ultra:'#EF4444' };
   const fg = cFg[it.tipo] || '#266FE0';
   const tag = document.getElementById('modalTag');
-  tag.textContent = `Cuña #${String(i+1).padStart(2,'0')} · ${it.titulo}`;
+  tag.textContent = `Insight #${String(i+1).padStart(2,'0')} · ${it.titulo}`;
   tag.style.color = fg;
   document.getElementById('modalTitle').textContent = it.titulo;
   const kpiEl = document.getElementById('modalKpi');
